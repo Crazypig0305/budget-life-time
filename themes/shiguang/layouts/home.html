@@ -1,0 +1,162 @@
+{{ define "main" }}
+
+{{/* ── DATE STRIP ── */}}
+<div class="date-strip">
+  <span id="today-date">{{ now.Format "2006年1月2日" }}</span>
+  <span class="date-sep">·</span>
+  <span id="today-weekday">星期{{ slice "日一二三四五六" (int (now.Weekday)) (add (int (now.Weekday)) 1) }}</span>
+  <span class="date-sep">·</span>
+  <span>用時間換幸福</span>
+</div>
+
+{{/* ── HERO ── */}}
+<section class="hero">
+  <div class="hero-label">時光存摺 · 理財日記</div>
+  <h1 class="hero-h1">你每天有幾分鐘？<br>找到最適合你的起點。</h1>
+  <p class="hero-sub">
+    不管你的時間多或少，每一分鐘都值得好好運用。<br>
+    告訴我你能投入多少，我幫你找到最適合的方法。
+  </p>
+  <div class="hero-cards">
+    <a href="/saving-tips/" class="time-card">
+      <span class="time-card-label">完全沒有多餘時間</span>
+      <span class="time-card-title">省錢優化<br>＆ 零時間躺賺</span>
+      <span class="time-card-arrow">→ 從這裡開始</span>
+    </a>
+    <a href="/daily-5min/" class="time-card">
+      <span class="time-card-label">每天有 5～30 分鐘</span>
+      <span class="time-card-title">每天 5 分鐘<br>＆ 每週任務</span>
+      <span class="time-card-arrow">→ 從這裡開始</span>
+    </a>
+    <a href="/setup-once/" class="time-card">
+      <span class="time-card-label">願意花時間好好學</span>
+      <span class="time-card-title">一次設定<br>＆ 需要學但值得</span>
+      <span class="time-card-arrow">→ 從這裡開始</span>
+    </a>
+  </div>
+</section>
+
+{{/* ── 省錢快訊 ── */}}
+{{ with site.Params.tipWeek }}
+<div class="savings-section">
+  <div class="savings-tip">
+    <div class="tip-week">
+      <span class="tip-week-num">{{ . }}</span>
+      <span class="tip-week-label">週</span>
+    </div>
+    <div class="tip-body">
+      <div class="tip-tag">{{ site.Params.tipTag }}</div>
+      <h3 class="tip-title">{{ site.Params.tipTitle }}</h3>
+      <p class="tip-text">{{ site.Params.tipText }}</p>
+      <div class="tip-body-row">
+        <a href="{{ site.Params.tipLink }}" class="tip-link">{{ site.Params.tipLinkText }}</a>
+        <span class="tip-date">{{ site.Params.tipDate }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{/* ── TIME LADDER ── */}}
+<div class="section-wrap">
+  <div class="section-header">
+    <h2 class="section-title">找到你的時間起點</h2>
+    <span class="section-sub">Time to Return · 投入越多，回報越深</span>
+  </div>
+  <div class="time-ladder-list">
+
+    {{ $ladderData := slice
+      (dict "step" "0" "timeMain" "0 min"     "timeSub" "不需額外時間" "cat" "省錢優化"       "url" "/saving-tips/"    "name" "每天在花的錢，偷偷幫你賺"      "desc" "信用卡現金回饋、高利活存帳戶、日常省錢技巧——設好一次，自動省。不需改變消費習慣，只換工具。")
+      (dict "step" "1" "timeMain" "set once"  "timeSub" "設定後不用管" "cat" "零時間躺賺"     "url" "/passive-zero/"  "name" "電腦開著，流量在賺錢"          "desc" "Honeygain、EarnApp 等流量掛機 App，安裝後掛著跑，每月自動出金到 PayPal。完全不用看顧。")
+      (dict "step" "2" "timeMain" "5 min"     "timeSub" "每天一點點"   "cat" "每天 5 分鐘"   "url" "/daily-5min/"    "name" "通勤途中就能累積點數"          "desc" "問卷調查、每日簽到任務、APP 積分活動。每天只要 5 分鐘，一個月累積起來也很可觀。")
+      (dict "step" "3" "timeMain" "30 min"    "timeSub" "每週固定操作" "cat" "每週花點時間"   "url" "/weekly-tasks/"  "name" "定期整理，讓回饋最大化"          "desc" "信用卡方案切換、帳戶整理、消費回顧。每週投入半小時，讓已設定好的工具持續優化。")
+      (dict "step" "4" "timeMain" "1–2 hr"   "timeSub" "前期投入一次" "cat" "一次設定長期受益" "url" "/setup-once/"   "name" "花兩小時，往後幾年都受益"        "desc" "數位帳戶開戶、信用卡申辦、自動扣繳設定。前期有點麻煩，設好之後幾乎不需要再動。")
+      (dict "step" "5" "timeMain" "ongoing"   "timeSub" "持續學習"     "cat" "需要學但值得"   "url" "/worth-learning/" "name" "學一次，用一輩子"               "desc" "ETF 入門、指數化投資、記帳習慣建立。需要學習成本，但這些知識能跟著你一輩子。")
+    }}
+
+    {{ range $ladderData }}
+    <a href="{{ .url }}" class="ladder-item" style="--step-color:var(--step-{{ .step }})">
+      <div class="ladder-time">
+        <div class="ladder-time-main">{{ .timeMain }}</div>
+        <div class="ladder-time-sub">{{ .timeSub }}</div>
+      </div>
+      <div class="ladder-node"></div>
+      <div class="ladder-content-box">
+        <div class="ladder-cat">{{ .cat }}</div>
+        <div class="ladder-name">{{ .name }}</div>
+        <div class="ladder-desc">{{ .desc }}</div>
+      </div>
+    </a>
+    {{ end }}
+
+  </div>
+</div>
+
+{{/* ── LATEST ARTICLES ── */}}
+{{ $pages := site.RegularPages.ByDate.Reverse | first 4 }}
+{{ if gt (len $pages) 0 }}
+<div class="section-wrap">
+  <div class="section-header">
+    <h2 class="section-title">最新記錄</h2>
+    <span class="section-sub">Latest Entries</span>
+  </div>
+
+  {{ $stepMap := dict "saving-tips" "0" "passive-zero" "1" "daily-5min" "2" "weekly-tasks" "3" "setup-once" "4" "worth-learning" "5" }}
+  {{ $emojiMap := dict "saving-tips" "💳" "passive-zero" "📱" "daily-5min" "✏️" "weekly-tasks" "📋" "setup-once" "🏦" "worth-learning" "📚" }}
+  {{ $badgeMap := dict "saving-tips" "0 分鐘" "passive-zero" "設定一次" "daily-5min" "5 分鐘/天" "weekly-tasks" "30 分鐘/週" "setup-once" "1–2 小時" "worth-learning" "持續學習" }}
+  {{ $coverMap := dict "saving-tips" "linear-gradient(135deg,#F0E5C0 0%,#F5F0E4 100%)" "passive-zero" "linear-gradient(135deg,#E8E5D0 0%,#F5F0E4 100%)" "daily-5min" "linear-gradient(135deg,#E0E8D4 0%,#F5F0E4 100%)" "weekly-tasks" "linear-gradient(135deg,#D8E8DC 0%,#F5F0E4 100%)" "setup-once" "linear-gradient(135deg,#D4E4D8 0%,#F5F0E4 100%)" "worth-learning" "linear-gradient(135deg,#D0E0DC 0%,#F5F0E4 100%)" }}
+
+  <div class="latest-grid">
+    {{ range $i, $p := $pages }}
+    {{ $step := index $stepMap $p.Section | default "0" }}
+    {{ $emoji := index $emojiMap $p.Section | default "📝" }}
+    {{ $badge := index $badgeMap $p.Section | default "" }}
+    {{ $cover := index $coverMap $p.Section | default "linear-gradient(135deg,#F0E5C0 0%,#F5F0E4 100%)" }}
+    {{ if lt $i 3 }}
+    <a href="{{ $p.RelPermalink }}" class="article-card">
+      <div class="article-cover"{{ if gt $i 0 }} style="height:118px"{{ end }}>
+        <div class="cover-fill" style="background:{{ $cover }}">
+          <span class="cover-icon"{{ if gt $i 0 }} style="font-size:28px"{{ end }}>{{ $emoji }}</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <div class="article-cat-tag" style="color:var(--step-{{ $step }})">{{ $p.CurrentSection.Title }}</div>
+        <h3 class="article-title">{{ $p.Title }}</h3>
+        {{ if eq $i 0 }}{{ with $p.Params.description }}<p class="article-excerpt">{{ . }}</p>{{ end }}{{ end }}
+        <div class="article-meta">
+          <span>{{ $p.Date.Format "2006-01-02" }}</span>
+          {{ with $badge }}<span class="time-badge">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+    </a>
+    {{ else }}
+    <a href="{{ $p.RelPermalink }}" class="article-card">
+      <div style="height:6px;background:linear-gradient(90deg,var(--step-5) 0%,var(--step-4) 50%,var(--step-3) 100%);opacity:.70;"></div>
+      <div class="article-body">
+        <div class="article-body-main">
+          <div class="article-cat-tag" style="color:var(--step-{{ $step }})">{{ $p.CurrentSection.Title }}</div>
+          <h3 class="article-title">{{ $p.Title }}</h3>
+          {{ with $p.Params.description }}<p class="article-excerpt">{{ . }}</p>{{ end }}
+        </div>
+        <div class="article-body-aside">
+          {{ with $badge }}<span class="time-badge">{{ . }}</span>{{ end }}
+          <span style="font-size:12px;color:var(--ink-lt);font-family:var(--mono);font-style:italic">{{ $p.Date.Format "2006-01-02" }}</span>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{/* ── NEWBIE BANNER ── */}}
+<div class="newbie-banner">
+  <div>
+    <h3 class="banner-h">不確定從哪裡開始？</h3>
+    <p class="banner-desc">告訴我你的時間狀況，我幫你找到最適合的第一步。</p>
+  </div>
+  <a href="/start/" class="banner-btn">新手從這裡開始 →</a>
+</div>
+
+{{ end }}

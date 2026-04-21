@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{/* ── DATE STRIP ── */}}
+<div class="date-strip">
+  <span id="today-date">{{ now.Format "2006年1月2日" }}</span>
+  <span class="date-sep">·</span>
+  <span id="today-weekday">星期{{ slice "日一二三四五六" (int (now.Weekday)) (add (int (now.Weekday)) 1) }}</span>
+</div>
+
+{{/* ── PAGE CONTENT ── */}}
+<div class="page-wrap-inner">
+  <h1 class="page-h1">{{ .Title }}</h1>
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+</div>
+
+{{ end }}

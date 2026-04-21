@@ -1,0 +1,81 @@
+baseURL = 'https://budget-life-time.pages.dev/'
+title = '時光存摺'
+languageCode = 'zh-TW'
+theme = 'shiguang'
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 12
+
+[params]
+  tagline = '用時間換幸福'
+  description = '省錢優化、掛機躺賺、每日習慣、一次設定——每篇文章都有真實時間成本記錄，幫你找到最適合自己節奏的理財方式'
+  brand_sub = '用時間換幸福'
+  brand_en = 'Budget Life × Time'
+
+  tipWeek = '17'
+  tipTag = '本週省錢快訊 · WEEKLY TIP'
+  tipTitle = '電費帳單自動扣繳設定教學：一次搞定，再也不怕忘繳'
+  tipText = '台電、各縣市水務、瓦斯公司都支援約定轉帳自動扣繳，分散在不同官網，整合成一份設定手冊。'
+  tipLink = '/setup-once/bill-autopay-setup/'
+  tipLinkText = '看完整文章 →'
+  tipDate = '2026-04-22'
+
+[menus]
+  [[menus.sidebar]]
+    name = '省錢優化'
+    url = '/saving-tips/'
+    weight = 1
+    [menus.sidebar.params]
+      step = '0'
+      time_label = '0 min'
+
+  [[menus.sidebar]]
+    name = '零時間躺賺'
+    url = '/passive-zero/'
+    weight = 2
+    [menus.sidebar.params]
+      step = '1'
+      time_label = 'set once'
+
+  [[menus.sidebar]]
+    name = '每天 5 分鐘'
+    url = '/daily-5min/'
+    weight = 3
+    [menus.sidebar.params]
+      step = '2'
+      time_label = '5 min/d'
+
+  [[menus.sidebar]]
+    name = '每週花點時間'
+    url = '/weekly-tasks/'
+    weight = 4
+    [menus.sidebar.params]
+      step = '3'
+      time_label = '30 min/w'
+
+  [[menus.sidebar]]
+    name = '一次設定長期受益'
+    url = '/setup-once/'
+    weight = 5
+    [menus.sidebar.params]
+      step = '4'
+      time_label = '1–2 hr'
+
+  [[menus.sidebar]]
+    name = '需要學但值得'
+    url = '/worth-learning/'
+    weight = 6
+    [menus.sidebar.params]
+      step = '5'
+      time_label = 'ongoing'
+
+[taxonomies]
+  tag = 'tags'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false

@@ -1,0 +1,25 @@
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-row">
+      <a href="/" class="brand-icon" aria-label="首頁">⏱</a>
+      <a href="/" class="brand-name">{{ site.Title }}</a>
+    </div>
+    <div class="brand-sub">{{ site.Params.brand_sub }}<br>{{ site.Params.brand_en }}</div>
+  </div>
+
+  <nav class="sidebar-nav" aria-label="時間階梯分類">
+    <div class="nav-section-label">時間階梯</div>
+    {{ range site.Menus.sidebar }}
+    <a href="{{ .URL }}" class="nav-item">
+      <span class="nav-dot" style="background:var(--step-{{ .Params.step }})"></span>
+      {{ .Name }}
+      <span class="nav-time">{{ .Params.time_label }}</span>
+    </a>
+    {{ end }}
+  </nav>
+
+  <div class="sidebar-footer">
+    <a href="/start/">新手從這裡開始</a>
+    <a href="/about/">關於這個部落格</a>
+  </div>
+</aside>

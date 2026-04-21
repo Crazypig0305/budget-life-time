@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="開啟選單">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="page-wrap">
+    {{ partial "sidebar.html" . }}
+    <main class="main">
+      {{ block "main" . }}{{ end }}
+      {{ partial "footer.html" . }}
+    </main>
+  </div>
+
+  <script>
+  (function(){
+    // Live date strip
+    var d = new Date();
+    var days = ['日','一','二','三','四','五','六'];
+    var dateEl = document.getElementById('today-date');
+    var weekEl = document.getElementById('today-weekday');
+    if (dateEl) dateEl.textContent = d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日';
+    if (weekEl) weekEl.textContent = '星期'+days[d.getDay()];
+    // Mobile sidebar toggle
+    var btn = document.getElementById('sidebarToggle');
+    var overlay = document.getElementById('sidebarOverlay');
+    var sidebar = document.querySelector('.sidebar');
+    function openSidebar(){ sidebar.classList.add('open'); overlay.classList.add('open'); }
+    function closeSidebar(){ sidebar.classList.remove('open'); overlay.classList.remove('open'); }
+    if(btn){ btn.addEventListener('click', function(){ sidebar.classList.contains('open') ? closeSidebar() : openSidebar(); }); }
+    if(overlay){ overlay.addEventListener('click', closeSidebar); }
+    // Active nav highlight
+    var path = window.location.pathname;
+    document.querySelectorAll('.nav-item').forEach(function(a){
+      if(path.startsWith(a.getAttribute('href'))) a.classList.add('active');
+    });
+  })();
+  </script>
+</body>
+</html>

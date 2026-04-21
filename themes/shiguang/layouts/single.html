@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+{{ $stepMap  := dict "saving-tips" "0" "passive-zero" "1" "daily-5min" "2" "weekly-tasks" "3" "setup-once" "4" "worth-learning" "5" }}
+{{ $badgeMap := dict "saving-tips" "0 分鐘" "passive-zero" "設定一次" "daily-5min" "5 分鐘/天" "weekly-tasks" "30 分鐘/週" "setup-once" "1–2 小時" "worth-learning" "持續學習" }}
+{{ $step     := index $stepMap .Section | default "0" }}
+{{ $badge    := index $badgeMap .Section | default "" }}
+
+{{/* ── DATE STRIP ── */}}
+<div class="date-strip">
+  <span id="today-date">{{ now.Format "2006年1月2日" }}</span>
+  <span class="date-sep">·</span>
+  <span id="today-weekday">星期{{ slice "日一二三四五六" (int (now.Weekday)) (add (int (now.Weekday)) 1) }}</span>
+</div>
+
+{{/* ── ARTICLE ── */}}
+<div class="article-wrap">
+  <header class="article-header">
+    <div class="article-eyebrow">
+      <a href="{{ .CurrentSection.RelPermalink }}" style="color:var(--step-{{ $step }});letter-spacing:.10em;font-family:var(--sans);font-weight:400;text-decoration:none;font-size:12.5px;">
+        {{ .CurrentSection.Title }}
+      </a>
+    </div>
+    <h1 class="article-h1">{{ .Title }}</h1>
+    <div class="article-meta-bar">
+      <span>{{ .Date.Format "2006-01-02" }}</span>
+      {{ if .Lastmod }}
+      <span class="article-meta-sep">·</span>
+      <span>更新：{{ .Lastmod.Format "2006-01-02" }}</span>
+      {{ end }}
+      <span class="article-meta-sep">·</span>
+      <span>{{ .ReadingTime }} 分鐘閱讀</span>
+      {{ with $badge }}
+      <span class="article-meta-sep">·</span>
+      <span class="time-badge">{{ . }}</span>
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+
+  {{/* ── RELATED / BACK ── */}}
+  <div style="padding: 32px 0 20px; border-top: 1px solid var(--border-md); margin-top: 20px;">
+    <a href="{{ .CurrentSection.RelPermalink }}" style="color:var(--gold);font-family:var(--sans);font-size:14px;text-decoration:none;font-weight:300;">
+      ← 回到{{ .CurrentSection.Title }}
+    </a>
+  </div>
+</div>
+
+{{ end }}

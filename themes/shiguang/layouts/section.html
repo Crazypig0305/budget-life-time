@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+{{ $stepMap  := dict "saving-tips" "0" "passive-zero" "1" "daily-5min" "2" "weekly-tasks" "3" "setup-once" "4" "worth-learning" "5" }}
+{{ $badgeMap := dict "saving-tips" "0 分鐘" "passive-zero" "設定一次" "daily-5min" "5 分鐘/天" "weekly-tasks" "30 分鐘/週" "setup-once" "1–2 小時" "worth-learning" "持續學習" }}
+{{ $step     := index $stepMap .Section | default "0" }}
+{{ $badge    := index $badgeMap .Section | default "" }}
+
+{{/* ── DATE STRIP ── */}}
+<div class="date-strip">
+  <span id="today-date">{{ now.Format "2006年1月2日" }}</span>
+  <span class="date-sep">·</span>
+  <span id="today-weekday">星期{{ slice "日一二三四五六" (int (now.Weekday)) (add (int (now.Weekday)) 1) }}</span>
+</div>
+
+{{/* ── CATEGORY HEADER ── */}}
+<div class="cat-header">
+  <div class="cat-eyebrow">時光存摺 · 時間階梯</div>
+  <h1 class="cat-h1">{{ .Title }}</h1>
+  {{ with .Params.description }}<p class="cat-desc-text">{{ . }}</p>{{ end }}
+  <div class="cat-count-badge">共 {{ len .RegularPages }} 篇文章</div>
+</div>
+
+{{/* ── ARTICLE LIST ── */}}
+<div class="cat-posts">
+  {{ range .RegularPages.ByDate.Reverse }}
+  <a href="{{ .RelPermalink }}" class="post-row" style="--step-color:var(--step-{{ $step }})">
+    <div class="post-row-title">{{ .Title }}</div>
+    {{ with .Params.description }}<div class="post-row-excerpt">{{ . }}</div>{{ end }}
+    <div class="post-row-meta">
+      <span>{{ .Date.Format "2006-01-02" }}</span>
+      {{ with $badge }}<span class="time-badge">{{ . }}</span>{{ end }}
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+  </a>
+  {{ end }}
+</div>
+
+{{/* ── NEWBIE BANNER ── */}}
+<div class="newbie-banner">
+  <div>
+    <h3 class="banner-h">不確定從哪裡開始？</h3>
+    <p class="banner-desc">告訴我你的時間狀況，找到最適合的第一步。</p>
+  </div>
+  <a href="/start/" class="banner-btn">新手從這裡開始 →</a>
+</div>
+
+{{ end }}
