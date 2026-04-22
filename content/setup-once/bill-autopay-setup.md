@@ -6,7 +6,7 @@ slug: "bill-autopay-setup"
 categories: ["一次設定長期受益"]
 tags: ["自動扣繳", "電費自動轉帳", "水費自動繳費", "信用卡自動扣繳", "帳單自動化"]
 description: "57 分鐘把電費、水費、瓦斯費、信用卡四項全部設完自動扣繳，之後每年省回約 12 小時帳單管理時間，滯納金歸零。做一次，此後這件事從待辦清單永久消失。"
-coverImage: ""
+coverImage: "/images/cover-bill-autopay.svg"
 canonicalURL: ""
 ---
 
@@ -121,6 +121,30 @@ canonicalURL: ""
 | 瓦斯費自動扣繳 | 20 分鐘 |
 | 信用卡全額自動扣款 | 10 分鐘 |
 | **合計** | **57 分鐘** |
+
+<figure style="margin:2rem 0;text-align:center">
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;height:auto">
+  <rect width="560" height="200" fill="#FDFAF4" rx="8"/>
+  <text x="280" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#231608" font-family="sans-serif">各項帳單設定時間（分鐘）</text>
+  <!-- Max 20 min, bar area x=190–490=300px, 1min=15px -->
+  <text x="185" y="64" text-anchor="end" font-size="12" fill="#6B5A3E" font-family="sans-serif">電費自動轉帳</text>
+  <rect x="190" y="50" width="225" height="22" fill="#326648" rx="3"/>
+  <text x="420" y="65" font-size="11" fill="#231608" font-family="sans-serif">15 分鐘</text>
+
+  <text x="185" y="104" text-anchor="end" font-size="12" fill="#6B5A3E" font-family="sans-serif">水費自動轉帳</text>
+  <rect x="190" y="90" width="180" height="22" fill="#3C6A38" rx="3"/>
+  <text x="375" y="105" font-size="11" fill="#231608" font-family="sans-serif">12 分鐘</text>
+
+  <text x="185" y="144" text-anchor="end" font-size="12" fill="#6B5A3E" font-family="sans-serif">瓦斯費自動扣繳</text>
+  <rect x="190" y="130" width="300" height="22" fill="#2A6058" rx="3"/>
+  <text x="495" y="145" font-size="11" fill="#231608" font-family="sans-serif">20 分鐘</text>
+
+  <text x="185" y="184" text-anchor="end" font-size="12" fill="#6B5A3E" font-family="sans-serif">信用卡全額扣繳</text>
+  <rect x="190" y="170" width="150" height="22" fill="#326648" rx="3"/>
+  <text x="345" y="185" font-size="11" fill="#231608" font-family="sans-serif">10 分鐘</text>
+</svg>
+<figcaption style="font-size:12px;color:#6B5A3E;margin-top:6px">合計 57 分鐘，一次完成，此後維護時間幾乎為零</figcaption>
+</figure>
 
 <!-- [PERSONAL EXPERIENCE] -->
 瓦斯這一項花最多時間，不是因為申請步驟複雜，而是因為「要先知道自己的瓦斯是哪家公司管的」。帳單拿出來看了才知道是欣欣天然氣，然後才能找到正確的官網。這種「先找對入口再做事」的時間，往往比實際操作還長。

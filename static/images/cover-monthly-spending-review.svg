@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E120A"/>
+      <stop offset="100%" stop-color="#1C2A10"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="110" x2="1200" y2="110" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="150" x2="1200" y2="150" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="190" x2="1200" y2="190" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="230" x2="1200" y2="230" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="270" x2="1200" y2="270" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="310" x2="1200" y2="310" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="350" x2="1200" y2="350" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="390" x2="1200" y2="390" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="430" x2="1200" y2="430" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="470" x2="1200" y2="470" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="510" x2="1200" y2="510" stroke="#1A2C0C" stroke-width="1" opacity="0.7"/>
+  <line x1="120" y1="0" x2="120" y2="630" stroke="#1A3A0A" stroke-width="2" opacity="0.5"/>
+  <rect x="140" y="80" width="144" height="28" rx="4" fill="#3C6A38" opacity="0.8"/>
+  <text x="212" y="99" text-anchor="middle" font-size="13" fill="#EDE8D8" font-family="sans-serif">每週花點時間</text>
+  <text x="140" y="200" font-size="54" font-weight="700" fill="#EDE8D8" font-family="sans-serif">每月 30 分鐘消費回顧</text>
+  <text x="140" y="270" font-size="36" fill="#6A8A60" font-family="sans-serif">記帳 APP 打開之後，你應該看什麼</text>
+  <rect x="140" y="310" width="200" height="3" rx="1" fill="#3C6A38"/>
+  <text x="140" y="380" font-size="28" fill="#8ABF7A" font-family="sans-serif">每月固定 30 分鐘</text>
+  <text x="400" y="380" font-size="28" fill="#6B5A3E" font-family="sans-serif">  ·  三個月省下</text>
+  <text x="640" y="380" font-size="42" font-weight="700" fill="#6A9A58" font-family="sans-serif">NT$3,210</text>
+  <rect x="140" y="490" width="200" height="44" rx="22" fill="none" stroke="#3C6A38" stroke-width="2"/>
+  <text x="240" y="518" text-anchor="middle" font-size="16" fill="#6A9A58" font-family="sans-serif">⏱ 30 min / 每月</text>
+  <text x="1060" y="590" text-anchor="middle" font-size="16" fill="#6B5A3E" font-family="sans-serif">時光存摺</text>
+</svg>

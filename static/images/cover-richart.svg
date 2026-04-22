@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E120A"/>
+      <stop offset="100%" stop-color="#0A1E20"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="0" y1="110" x2="1200" y2="110" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="150" x2="1200" y2="150" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="190" x2="1200" y2="190" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="230" x2="1200" y2="230" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="270" x2="1200" y2="270" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="310" x2="1200" y2="310" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="350" x2="1200" y2="350" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="390" x2="1200" y2="390" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="430" x2="1200" y2="430" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="470" x2="1200" y2="470" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="0" y1="510" x2="1200" y2="510" stroke="#0A2022" stroke-width="1" opacity="0.7"/>
+  <line x1="120" y1="0" x2="120" y2="630" stroke="#082028" stroke-width="2" opacity="0.5"/>
+  <rect x="140" y="80" width="168" height="28" rx="4" fill="#2A6058" opacity="0.8"/>
+  <text x="224" y="99" text-anchor="middle" font-size="13" fill="#EDE8D8" font-family="sans-serif">一次設定長期受益</text>
+  <text x="140" y="195" font-size="66" font-weight="700" fill="#EDE8D8" font-family="sans-serif">Richart 開戶教學</text>
+  <text x="140" y="265" font-size="34" fill="#3A8888" font-family="sans-serif">花一個下午設定好，之後每月自動領息</text>
+  <rect x="140" y="305" width="200" height="3" rx="1" fill="#2A6058"/>
+  <text x="140" y="375" font-size="28" fill="#5ACFCF" font-family="sans-serif">55 分鐘設定完</text>
+  <text x="360" y="375" font-size="28" fill="#6B5A3E" font-family="sans-serif">  ·  第一年多領利息約</text>
+  <text x="720" y="375" font-size="42" font-weight="700" fill="#3AAFAF" font-family="sans-serif">NT$1,800</text>
+  <rect x="140" y="490" width="240" height="44" rx="22" fill="none" stroke="#2A6058" stroke-width="2"/>
+  <text x="260" y="518" text-anchor="middle" font-size="16" fill="#5ACFCF" font-family="sans-serif">⏱ 55 min 設定 + 5 min / 月維護</text>
+  <text x="1060" y="590" text-anchor="middle" font-size="16" fill="#6B5A3E" font-family="sans-serif">時光存摺</text>
+</svg>

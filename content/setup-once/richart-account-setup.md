@@ -6,7 +6,7 @@ slug: "richart-account-setup"
 categories: ["一次設定長期受益"]
 tags: ["Richart", "數位帳戶", "高利活存", "開戶教學", "台新銀行", "被動收入"]
 description: "55 分鐘完成 Richart 線上開戶與設定，以 NT$120,000 存款估算，第一年比傳統銀行多領約 NT$1,800 利息。每月只需 5 分鐘確認條件達成，不需要去臨櫃。"
-coverImage: ""
+coverImage: "/images/cover-richart.svg"
 canonicalURL: ""
 ---
 
@@ -97,6 +97,42 @@ Richart 的高利活存通常有條件，其中一個常見條件是「薪資轉
 | 四年累計多領（2020–2023 估計）| 約 NT$6,000–8,000 |
 
 > **利率說明：** Richart 的活存利率多次調整，2020 年與 2026 年當前的數字不同。本文以「比傳統銀行活存高出的差距」為基礎計算效益，比較基準不變；實際利率請至官網確認最新方案與條件。
+
+<figure style="margin:2rem 0;text-align:center">
+<svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;height:auto">
+  <rect width="560" height="280" fill="#FDFAF4" rx="8"/>
+  <text x="280" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#231608" font-family="sans-serif">比傳統銀行累計多領利息（NT$120,000 存款估算）</text>
+  <!-- Gridlines -->
+  <line x1="80" y1="191" x2="520" y2="191" stroke="#E8E0D0" stroke-width="1"/>
+  <line x1="80" y1="143" x2="520" y2="143" stroke="#E8E0D0" stroke-width="1"/>
+  <line x1="80" y1="94" x2="520" y2="94" stroke="#E8E0D0" stroke-width="1"/>
+  <line x1="80" y1="45" x2="520" y2="45" stroke="#E8E0D0" stroke-width="1"/>
+  <line x1="80" y1="240" x2="520" y2="240" stroke="#C8BAA8" stroke-width="1"/>
+  <!-- Y axis labels -->
+  <text x="72" y="195" text-anchor="end" font-size="10" fill="#9B8A7A" font-family="sans-serif">2,000</text>
+  <text x="72" y="147" text-anchor="end" font-size="10" fill="#9B8A7A" font-family="sans-serif">4,000</text>
+  <text x="72" y="98" text-anchor="end" font-size="10" fill="#9B8A7A" font-family="sans-serif">6,000</text>
+  <text x="72" y="49" text-anchor="end" font-size="10" fill="#9B8A7A" font-family="sans-serif">8,000</text>
+  <!-- Bar 1: Year 1, NT$1,800 -->
+  <rect x="118" y="196" width="70" height="44" fill="#D4B860" rx="3"/>
+  <text x="153" y="192" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">1,800</text>
+  <!-- Bar 2: Year 2, NT$3,600 -->
+  <rect x="216" y="152" width="70" height="88" fill="#C9A84C" rx="3"/>
+  <text x="251" y="148" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">3,600</text>
+  <!-- Bar 3: Year 3, NT$5,400 -->
+  <rect x="314" y="108" width="70" height="132" fill="#A8832A" rx="3"/>
+  <text x="349" y="104" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">5,400</text>
+  <!-- Bar 4: Year 4, NT$7,200 -->
+  <rect x="412" y="64" width="70" height="176" fill="#7A5C14" rx="3"/>
+  <text x="447" y="60" text-anchor="middle" font-size="10" fill="#3C6A38" font-family="sans-serif">7,200</text>
+  <!-- X axis labels -->
+  <text x="153" y="258" text-anchor="middle" font-size="11" fill="#231608" font-family="sans-serif">第 1 年</text>
+  <text x="251" y="258" text-anchor="middle" font-size="11" fill="#231608" font-family="sans-serif">第 2 年</text>
+  <text x="349" y="258" text-anchor="middle" font-size="11" fill="#231608" font-family="sans-serif">第 3 年</text>
+  <text x="447" y="258" text-anchor="middle" font-size="11" fill="#231608" font-family="sans-serif">第 4 年</text>
+</svg>
+<figcaption style="font-size:12px;color:#6B5A3E;margin-top:6px">個人估算，以 NT$120,000 × 1.5% 利率差 × 年數計算，2020 年起</figcaption>
+</figure>
 
 <!-- [UNIQUE INSIGHT] -->
 開了四年之後回頭看，效益最大的不是某一年的利息，而是「從此不再讓存款吃零利率」的習慣。活存帳戶設好之後，薪資進來、支出出去，高利部分自動計息，不需要額外操作——這是最接近「設完就不用管」的被動收益形態。

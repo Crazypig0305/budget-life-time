@@ -6,7 +6,7 @@ slug: "invoice-lottery-habit"
 categories: ["每天 5 分鐘"]
 tags: ["電子發票", "發票對獎", "發票載具", "省錢習慣", "台灣理財"]
 description: "15 分鐘設定悠遊卡載具，之後每兩個月 5 分鐘對獎，2020 年全年換回 NT$1,340，時薪等效 NT$2,010。都是之前放棄不查就憑空消失的小獎，設了載具才拿回來。"
-coverImage: ""
+coverImage: "/images/cover-invoice-lottery.svg"
 canonicalURL: ""
 ---
 
@@ -93,6 +93,55 @@ canonicalURL: ""
 | 2020 年 11–12 月 | 約 140 張 | 六獎 × 1 | NT$140 |
 
 2020 年全年合計：**NT$1,340**
+
+<figure style="margin:2rem 0;text-align:center">
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;height:auto">
+  <rect width="560" height="240" fill="#FDFAF4" rx="8"/>
+  <text x="280" y="24" text-anchor="middle" font-size="13" font-weight="600" fill="#231608" font-family="sans-serif">2019–2020 各期對獎金額（NT$）</text>
+  <!-- 9 periods, bar area x=40–530, each bar width=44px, gap=10px -->
+  <!-- Max 400, chart height=160px, y=200 baseline, scale 160/400=0.4 px/NT$ -->
+  <line x1="40" y1="200" x2="530" y2="200" stroke="#C8BAA8" stroke-width="1"/>
+  <!-- Period labels and bars -->
+  <!-- P1: 400 → height 160 -->
+  <rect x="48" y="40" width="40" height="160" fill="#7A5C14" rx="3"/>
+  <text x="68" y="36" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">400</text>
+  <text x="68" y="215" text-anchor="middle" font-size="9" fill="#9B8A7A" font-family="sans-serif">19 7-8</text>
+  <!-- P2: 0 -->
+  <rect x="102" y="200" width="40" height="0" fill="#C8BAA8" rx="3"/>
+  <text x="122" y="215" text-anchor="middle" font-size="9" fill="#9B8A7A" font-family="sans-serif">19 9-10</text>
+  <text x="122" y="196" text-anchor="middle" font-size="10" fill="#C8BAA8" font-family="sans-serif">—</text>
+  <!-- P3: 280 → height 112 -->
+  <rect x="156" y="88" width="40" height="112" fill="#8A6A1E" rx="3"/>
+  <text x="176" y="84" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">280</text>
+  <text x="176" y="215" text-anchor="middle" font-size="9" fill="#9B8A7A" font-family="sans-serif">19 11-12</text>
+  <!-- P4: 200 → height 80 -->
+  <rect x="210" y="120" width="40" height="80" fill="#7A5C14" rx="3"/>
+  <text x="230" y="116" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">200</text>
+  <text x="230" y="215" text-anchor="middle" font-size="9" fill="#9B8A7A" font-family="sans-serif">20 1-2</text>
+  <!-- P5: 400 → height 160 -->
+  <rect x="264" y="40" width="40" height="160" fill="#A8832A" rx="3"/>
+  <text x="284" y="36" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">400</text>
+  <text x="284" y="215" text-anchor="middle" font-size="9" fill="#9B8A7A" font-family="sans-serif">20 3-4</text>
+  <!-- P6: 400 → height 160 -->
+  <rect x="318" y="40" width="40" height="160" fill="#8A6A1E" rx="3"/>
+  <text x="338" y="36" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">400</text>
+  <text x="338" y="215" text-anchor="middle" font-size="9" fill="#9B8A7A" font-family="sans-serif">20 5-6</text>
+  <!-- P7: 200 → height 80 -->
+  <rect x="372" y="120" width="40" height="80" fill="#7A5C14" rx="3"/>
+  <text x="392" y="116" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">200</text>
+  <text x="392" y="215" text-anchor="middle" font-size="9" fill="#9B8A7A" font-family="sans-serif">20 7-8</text>
+  <!-- P8: 0 -->
+  <text x="446" y="196" text-anchor="middle" font-size="10" fill="#C8BAA8" font-family="sans-serif">—</text>
+  <text x="446" y="215" text-anchor="middle" font-size="9" fill="#9B8A7A" font-family="sans-serif">20 9-10</text>
+  <!-- P9: 140 → height 56 -->
+  <rect x="480" y="144" width="40" height="56" fill="#8A6A1E" rx="3"/>
+  <text x="500" y="140" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">140</text>
+  <text x="500" y="215" text-anchor="middle" font-size="9" fill="#9B8A7A" font-family="sans-serif">20 11-12</text>
+  <!-- Total annotation -->
+  <text x="530" y="48" text-anchor="end" font-size="11" fill="#A8832A" font-family="sans-serif">2020 全年：NT$1,340</text>
+</svg>
+<figcaption style="font-size:12px;color:#6B5A3E;margin-top:6px">個人實際對獎記錄，2019 下半年至 2020 全年</figcaption>
+</figure>
 
 這個數字沒有特別高，也沒有中過大獎，都是每張 NT$200 以內的小獎。但這些錢如果沒有設定載具，它就憑空消失——不是不見了，是你放棄了它。
 

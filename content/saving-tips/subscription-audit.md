@@ -6,7 +6,7 @@ slug: "subscription-audit"
 categories: ["省錢優化"]
 tags: ["訂閱費清查", "取消訂閱", "省錢", "APP訂閱", "信用卡帳單"]
 description: "花 58 分鐘清查訂閱、砍掉 5 個，一年少付 NT$9,696，時薪等效 NT$4,848。流程只做一次，之後每半年複查 30 分鐘，不需要每天管。"
-coverImage: ""
+coverImage: "/images/cover-subscription-audit.svg"
 canonicalURL: ""
 ---
 
@@ -95,6 +95,34 @@ Android 用戶的訂閱集中在這裡。如果兩個系統都有用，兩個都
 | 串流音樂（家庭方案中的額外費用）| $62 | 主帳號更換後多付了三個月沒發現 |
 
 一年少扣：**NT$8,256**。
+
+<figure style="margin:2rem 0;text-align:center">
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;height:auto">
+  <rect width="560" height="240" fill="#FDFAF4" rx="8"/>
+  <text x="280" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#231608" font-family="sans-serif">砍掉的 5 個訂閱｜每月費用（NT$）</text>
+  <!-- Max=299, bar area x=190–490=300px -->
+  <text x="185" y="64" text-anchor="end" font-size="11" fill="#6B5A3E" font-family="sans-serif">MusicXmatch</text>
+  <rect x="190" y="50" width="99" height="22" fill="#7A5C14" rx="3"/>
+  <text x="294" y="65" font-size="11" fill="#231608" font-family="sans-serif">$99</text>
+
+  <text x="185" y="104" text-anchor="end" font-size="11" fill="#6B5A3E" font-family="sans-serif">記帳APP付費版</text>
+  <rect x="190" y="90" width="129" height="22" fill="#8A6A1E" rx="3"/>
+  <text x="324" y="105" font-size="11" fill="#231608" font-family="sans-serif">$129</text>
+
+  <text x="185" y="144" text-anchor="end" font-size="11" fill="#6B5A3E" font-family="sans-serif">Dropbox Plus</text>
+  <rect x="190" y="130" width="300" height="22" fill="#A8832A" rx="3"/>
+  <text x="495" y="145" font-size="11" fill="#231608" font-family="sans-serif">$299</text>
+
+  <text x="185" y="184" text-anchor="end" font-size="11" fill="#6B5A3E" font-family="sans-serif">遊戲月訂閱</text>
+  <rect x="190" y="170" width="99" height="22" fill="#7A5C14" rx="3"/>
+  <text x="294" y="185" font-size="11" fill="#231608" font-family="sans-serif">$99</text>
+
+  <text x="185" y="224" text-anchor="end" font-size="11" fill="#6B5A3E" font-family="sans-serif">串流音樂額外費</text>
+  <rect x="190" y="210" width="62" height="22" fill="#8A6A1E" rx="3"/>
+  <text x="257" y="225" font-size="11" fill="#231608" font-family="sans-serif">$62</text>
+</svg>
+<figcaption style="font-size:12px;color:#6B5A3E;margin-top:6px">個人實際記錄，2019 年 6 月清查結果</figcaption>
+</figure>
 
 清查時還順手評估了保留項目的方案：Netflix 從標準方案降成基本方案，差 NT$120 / 月，一年省回 NT$1,440。
 

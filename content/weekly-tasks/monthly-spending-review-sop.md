@@ -6,7 +6,7 @@ slug: "monthly-spending-review-sop"
 categories: ["每週花點時間"]
 tags: ["記帳習慣", "消費回顧", "記帳APP", "上班族理財", "Moze"]
 description: "每月底固定 30 分鐘，只看三件事、做兩個決定。建立這個習慣後三個月，外食加娛樂少了 NT$1,070 / 月，合計省下 NT$3,210，不是靠節食，是靠看清楚錢流向哪裡。"
-coverImage: ""
+coverImage: "/images/cover-monthly-spending-review.svg"
 canonicalURL: ""
 ---
 
@@ -109,6 +109,43 @@ canonicalURL: ""
 | 合計食娛調整 | NT$5,900 | NT$4,830 | **−NT$1,070 / 月** |
 
 三個月下來少了 NT$3,210。不是在節衣縮食，只是把一些「懶得思考就花了」的消費換成稍微有意識的選擇。
+
+<figure style="margin:2rem 0;text-align:center">
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;height:auto">
+  <rect width="560" height="260" fill="#FDFAF4" rx="8"/>
+  <text x="280" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#231608" font-family="sans-serif">建立回顧習慣前後對比（月均，NT$）</text>
+  <!-- Legend -->
+  <rect x="180" y="38" width="14" height="14" fill="#C9A84C" rx="2"/>
+  <text x="198" y="50" font-size="11" fill="#6B5A3E" font-family="sans-serif">改變前（2019 Q1）</text>
+  <rect x="330" y="38" width="14" height="14" fill="#3C6A38" rx="2"/>
+  <text x="348" y="50" font-size="11" fill="#6B5A3E" font-family="sans-serif">改變後（2019 Q3）</text>
+  <!-- Y axis labels -->
+  <text x="50" y="80" text-anchor="middle" font-size="10" fill="#9B8A7A" font-family="sans-serif">4000</text>
+  <text x="50" y="120" text-anchor="middle" font-size="10" fill="#9B8A7A" font-family="sans-serif">3000</text>
+  <text x="50" y="160" text-anchor="middle" font-size="10" fill="#9B8A7A" font-family="sans-serif">2000</text>
+  <text x="50" y="200" text-anchor="middle" font-size="10" fill="#9B8A7A" font-family="sans-serif">1000</text>
+  <!-- Gridlines -->
+  <line x1="65" y1="75" x2="520" y2="75" stroke="#E8E0D0" stroke-width="1"/>
+  <line x1="65" y1="115" x2="520" y2="115" stroke="#E8E0D0" stroke-width="1"/>
+  <line x1="65" y1="155" x2="520" y2="155" stroke="#E8E0D0" stroke-width="1"/>
+  <line x1="65" y1="195" x2="520" y2="195" stroke="#E8E0D0" stroke-width="1"/>
+  <line x1="65" y1="230" x2="520" y2="230" stroke="#C8BAA8" stroke-width="1"/>
+  <!-- 外食+外送: before 3600, after 2780 (baseline y=230, scale: 50px per 1000) -->
+  <rect x="120" y="50" width="50" height="180" fill="#C9A84C" rx="3"/>
+  <text x="145" y="46" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">3,600</text>
+  <rect x="175" y="89" width="50" height="141" fill="#3C6A38" rx="3"/>
+  <text x="200" y="85" text-anchor="middle" font-size="10" fill="#3C6A38" font-family="sans-serif">2,780</text>
+  <!-- 娛樂雜支: before 2300, after 2050 -->
+  <rect x="320" y="115" width="50" height="115" fill="#C9A84C" rx="3"/>
+  <text x="345" y="111" text-anchor="middle" font-size="10" fill="#7A5C14" font-family="sans-serif">2,300</text>
+  <rect x="375" y="127" width="50" height="103" fill="#3C6A38" rx="3"/>
+  <text x="400" y="123" text-anchor="middle" font-size="10" fill="#3C6A38" font-family="sans-serif">2,050</text>
+  <!-- Labels -->
+  <text x="170" y="248" text-anchor="middle" font-size="11" fill="#231608" font-family="sans-serif">外食 + 外送</text>
+  <text x="370" y="248" text-anchor="middle" font-size="11" fill="#231608" font-family="sans-serif">娛樂雜支</text>
+</svg>
+<figcaption style="font-size:12px;color:#6B5A3E;margin-top:6px">個人消費記錄，2019 年 Q1 vs Q3 月均對比</figcaption>
+</figure>
 
 以這個節奏估計，一年能維持的話大約省 **NT$10,000–12,000**。
 
