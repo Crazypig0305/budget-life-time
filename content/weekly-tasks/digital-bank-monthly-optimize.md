@@ -7,6 +7,7 @@ categories: ["每週花點時間"]
 tags: ["數位帳戶", "高利活存", "利息", "存款優化", "Richart", "每月理財"]
 description: "數位帳戶有利率分級條件，每月花 15 分鐘確認餘額分布和條件達成狀態，一年可以多拿幾百到千元利息。整理 3 個步驟的流程與時間帳。"
 coverImage: "/images/cover-digital-bank-monthly-optimize.svg"
+image: "/images/weekly-tasks/digital-bank-monthly-optimize.jpg"
 canonicalURL: ""
 ---
 
@@ -16,6 +17,8 @@ canonicalURL: ""
 數位帳戶的高利活存，大多有條件：每月要達到一定的消費次數、轉帳次數、或綁定信用卡帳單，才能享有優惠利率，或者利率分成幾個級距，前 N 萬才有高利率，超過部分適用低利率。
 
 如果你設好帳戶之後就再也不管它，很可能每個月都沒有達到最優條件——利息少拿，但因為差距不大，所以你也不會注意到。
+
+{{< figure src="/images/weekly-tasks/digital-bank-monthly-optimize.jpg" alt="數位銀行帳戶月度優化操作示意圖" >}}
 
 > **這篇的重點數字**
 > - 每月整理：約 **15 分鐘**（3 個步驟）

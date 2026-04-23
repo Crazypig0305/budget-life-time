@@ -7,6 +7,7 @@ categories: ["每天 5 分鐘"]
 tags: ["Surveyon", "問卷", "簽到", "積分", "被動收入", "每日任務"]
 description: "Surveyon 每日簽到花 1–2 分鐘，累積到可兌換需要 3–6 個月。整理簽到頻率、積分累積速度、兌換時薪換算，以及什麼時候值得加做問卷。"
 coverImage: "/images/cover-surveyon-daily-checkin.svg"
+image: "/images/daily-5min/surveyon-daily-checkin.jpg"
 canonicalURL: ""
 ---
 
@@ -17,6 +18,8 @@ canonicalURL: ""
 Surveyon 是台灣常見的問卷平台，除了填問卷，它有一個每日簽到功能。只要打開 App 點一下，就能累積積分。
 
 我開始用 Surveyon 不是因為想填問卷，而是看到有人說每日簽到就有積分可以兌換，覺得這個時間成本很低，決定試試看。
+
+{{< figure src="/images/daily-5min/surveyon-daily-checkin.jpg" alt="手機線上問卷簽到示意圖" >}}
 
 > **這篇的重點數字**
 > - 每日簽到：**1–2 分鐘**（包含打開 App 和點擊）

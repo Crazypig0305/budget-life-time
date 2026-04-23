@@ -7,6 +7,7 @@ categories: ["一次設定長期受益"]
 tags: ["Richart", "數位帳戶", "高利活存", "開戶教學", "台新銀行", "被動收入"]
 description: "55 分鐘完成 Richart 線上開戶與設定，以 NT$120,000 存款估算，第一年比傳統銀行多領約 NT$1,800 利息。每月只需 5 分鐘確認條件達成，不需要去臨櫃。"
 coverImage: "/images/cover-richart.svg"
+image: "/images/setup-once/richart-account-setup.jpg"
 canonicalURL: ""
 ---
 
@@ -16,6 +17,8 @@ canonicalURL: ""
 2020 年 4 月，看到同事在用一個叫 Richart 的數位帳戶，說活存利率比傳統銀行高很多。我的活存大概放了 NT$120,000，在原本的傳統銀行，0.001% 利率，一年利息大概 NT$1。不是比喻，是真的差不多這個數字。
 
 翻了一些文章、看了幾個條件，覺得這件事值得花時間設定一次。五月的一個週五晚上做完，到現在沒有後悔過。
+
+{{< figure src="/images/setup-once/richart-account-setup.jpg" alt="數位銀行開戶與存款帳戶設定示意圖" >}}
 
 > **這篇的重點數字**
 > - 全程線上開戶，**55 分鐘**完成，不需要去銀行臨櫃

@@ -7,6 +7,7 @@ categories: ["一次設定長期受益"]
 tags: ["LINE Pay", "街口支付", "悠遊付", "行動支付", "信用卡", "一次設定", "回饋"]
 description: "花 40 分鐘把所有行動支付的綁卡設定好，之後每次付款自動走最優回饋路徑。整理 LINE Pay、街口、悠遊付各自適合綁哪張卡，以及設定後的維護節奏。"
 coverImage: "/images/cover-mobile-payment-card-setup.svg"
+image: "/images/setup-once/mobile-payment-card-setup.jpg"
 canonicalURL: ""
 ---
 
@@ -16,6 +17,8 @@ canonicalURL: ""
 行動支付的選項很多：LINE Pay、街口、悠遊付、Apple Pay、Google Pay……每個平台又可以綁不同的信用卡或金融卡。
 
 如果每次付款都臨時想「應該用哪個」，其實反而比較麻煩。比較好的做法是：**一次設定好，之後不用再想**——哪個場景走哪個平台，哪張卡跟哪個平台綁，設好就固定了。
+
+{{< figure src="/images/setup-once/mobile-payment-card-setup.jpg" alt="行動支付綁卡設定示意圖" >}}
 
 > **這篇的重點數字**
 > - 整體設定時間：約 **40 分鐘**（研究 + 操作）

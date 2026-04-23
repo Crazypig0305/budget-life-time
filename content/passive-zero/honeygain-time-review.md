@@ -7,6 +7,7 @@ categories: ["零時間躺賺"]
 tags: ["Honeygain", "掛機", "被動收入", "頻寬共享", "時間帳", "台灣實測"]
 description: "Honeygain 設定花了我 8 分鐘，之後幾乎不用管，三個月共賺到 $4.1 USD。換算時薪，設定時間的時薪很高，但月收益本來就是小錢。整理真實數字給你自己判斷。"
 coverImage: "/images/cover-honeygain-time-review.svg"
+image: "/images/passive-zero/honeygain-time-review.jpg"
 canonicalURL: ""
 ---
 
@@ -17,6 +18,8 @@ canonicalURL: ""
 我注意到 Honeygain 已經超過一年了。一直沒有裝，主要是有點懶，而且不確定值不值得花時間。後來有一個週末決定試試看，計時一下設定要花多久，之後就讓它自己跑。
 
 這篇不是工具評測，不會告訴你 Honeygain 的介面好不好用、功能有哪些。這篇是我的時間帳：**設定花了我多久，三個月賺了多少，換算下來值不值得**。
+
+{{< figure src="/images/passive-zero/honeygain-time-review.jpg" alt="在家用筆電掛機被動收入示意圖" >}}
 
 > **這篇的重點數字**
 > - 設定時間：**8 分鐘**（下載、註冊、啟動）

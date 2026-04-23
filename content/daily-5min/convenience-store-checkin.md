@@ -7,6 +7,7 @@ categories: ["每天5分鐘"]
 tags: ["超商", "7-ELEVEN", "全家", "集點", "Open Point", "My FamiPort", "每日簽到", "小資省錢"]
 description: "同時開著 7-ELEVEN Open Point 和全家 My FamiPort，每天花不到 1 分鐘簽到，記錄三個月的點數累積。換算了時間成本後才知道，值不值得看的是換什麼。"
 coverImage: "/images/cover-convenience-store-checkin.svg"
+image: "/images/daily-5min/convenience-store-checkin.jpg"
 canonicalURL: ""
 ---
 
@@ -14,6 +15,8 @@ canonicalURL: ""
 > 超商 App 功能與簽到規則定期調整，本文為當時的操作記錄，建議至各 App 確認最新簽到規則。
 
 我是那種進超商只買咖啡和茶葉蛋的人，不會刻意為了集點多消費。但簽到這件事不需要消費，只需要每天打開 App 點一下——這個條件讓我決定試試看。
+
+{{< figure src="/images/daily-5min/convenience-store-checkin.jpg" alt="超商 App 每日簽到集點示意圖" >}}
 
 > **這篇的重點數字**
 > - 每日操作時間：**不到 1 分鐘**（兩個 App 合計）

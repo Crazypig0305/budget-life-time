@@ -7,6 +7,7 @@ categories: ["省錢優化"]
 tags: ["Netflix", "Disney+", "Spotify", "YouTube Premium", "串流", "訂閱費", "砍訂閱", "省錢"]
 description: "年底花 30 分鐘做了一次串流訂閱費健診，列出所有訂閱、看過去三個月的實際使用頻率，最後砍了兩個訂閱。每月省 NT$200，一年 NT$2,400。"
 coverImage: "/images/cover-streaming-cost-review.svg"
+image: "/images/saving-tips/streaming-cost-review.jpg"
 canonicalURL: ""
 ---
 
@@ -18,6 +19,8 @@ canonicalURL: ""
 年底習慣做一次整理。2023 年 12 月初，我花了半小時把所有的串流訂閱列出來，確認哪些真的在用、哪些只是「有一天可能會看」。
 
 結果比想像中好：砍了兩個服務，每月少支出 NT$200，一年 NT$2,400。
+
+{{< figure src="/images/saving-tips/streaming-cost-review.jpg" alt="筆電螢幕上的串流平台訂閱畫面示意圖" >}}
 
 > **這篇的重點數字**
 > - 操作時間：**約 30 分鐘**

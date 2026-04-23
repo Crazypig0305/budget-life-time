@@ -7,6 +7,7 @@ categories: ["需要學但值得"]
 tags: ["信用卡", "選卡", "現金回饋", "上班族", "信用卡比較", "理財", "主力卡"]
 description: "花了一個週末研究選卡邏輯，最後用三個問題縮小選項，15 分鐘就選定了。整理選卡框架，適合從來沒有認真研究過信用卡的人。"
 coverImage: "/images/cover-credit-card-choose.svg"
+image: "/images/worth-learning/credit-card-choose.jpg"
 canonicalURL: ""
 ---
 
@@ -16,6 +17,8 @@ canonicalURL: ""
 我用的第一張信用卡是銀行主動推薦的，不是自己選的。那張卡用了四年多，後來才意識到回饋條件並不特別好，只是因為「沒有去研究」所以一直沒換。
 
 2023 年 8 月，趁著換工作的空檔，認真研究了一次「信用卡要怎麼選」這件事。
+
+{{< figure src="/images/worth-learning/credit-card-choose.jpg" alt="信用卡比較研究選卡示意圖" >}}
 
 > **這篇的重點數字**
 > - 研究時間：約 **1 個週末，6 小時**

@@ -7,6 +7,7 @@ categories: ["需要學但值得"]
 tags: ["高股息ETF", "0056", "0050", "市值型ETF", "上班族投資", "長期投資", "ETF比較"]
 description: "花了兩個週末研究高股息（0056）和市值型（0050）的差異，最後決定繼續用 0050。整理研究花的時間、判斷依據，以及「沒時間管理」這個條件如何影響選擇。"
 coverImage: "/images/cover-etf-dividend-vs-market.svg"
+image: "/images/worth-learning/etf-dividend-vs-market.jpg"
 canonicalURL: ""
 ---
 
@@ -18,6 +19,8 @@ canonicalURL: ""
 那段時間我看了不少文章，花了兩個週末研究這件事。不是要寫什麼深度分析，只是想搞清楚：**對我這種沒時間管理投資的上班族來說，哪個選擇比較適合？**
 
 結論先說：**我沒有換，繼續用 0050 定期定額。** 這篇是我研究的過程和判斷依據。
+
+{{< figure src="/images/worth-learning/etf-dividend-vs-market.jpg" alt="高股息與市值型 ETF 投資比較示意圖" >}}
 
 > **這篇的重點數字**
 > - 研究花的時間：**兩個週末，約 5–6 小時**

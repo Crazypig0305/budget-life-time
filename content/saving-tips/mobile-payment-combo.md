@@ -7,6 +7,7 @@ categories: ["省錢優化"]
 tags: ["LINE Pay", "街口支付", "超商", "行動支付", "信用卡回饋", "無腦省錢"]
 description: "花 45 分鐘設定完 LINE Pay、街口支付的最省綁卡組合，之後每次刷超商自動回饋，不需要再管。整理設定時間、回饋試算與換算時薪。"
 coverImage: "/images/cover-mobile-payment-combo.svg"
+image: "/images/saving-tips/mobile-payment-combo.jpg"
 canonicalURL: ""
 ---
 
@@ -18,6 +19,8 @@ canonicalURL: ""
 有一段時間我知道「用行動支付比較省」但一直沒有真的去研究哪個最划算、綁哪張卡。因為感覺很麻煩，而且選項太多了：LINE Pay、街口支付、Apple Pay、悠遊付……
 
 後來有個週末下午我決定花時間把這件事搞清楚，設定好，之後就不用再想了。
+
+{{< figure src="/images/saving-tips/mobile-payment-combo.jpg" alt="使用手機行動支付感應結帳示意圖" >}}
 
 > **這篇的重點數字**
 > - 研究 + 設定總計花了 **45 分鐘**

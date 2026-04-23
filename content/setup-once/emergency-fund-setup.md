@@ -7,6 +7,7 @@ categories: ["一次設定長期受益"]
 tags: ["緊急備用金", "備用金", "存錢", "理財基礎", "高利活存", "一次設定", "上班族"]
 description: "花了一個下午算出自己的緊急備用金目標金額，開了一個獨立帳戶存進去，設定好後就沒再動過。整理計算邏輯和帳戶選擇依據，適合還沒建立緊急備用金的人參考。"
 coverImage: "/images/cover-emergency-fund-setup.svg"
+image: "/images/setup-once/emergency-fund-setup.jpg"
 canonicalURL: ""
 ---
 
@@ -16,6 +17,8 @@ canonicalURL: ""
 緊急備用金這個概念我聽了很久，但一直沒有認真去做——因為不知道要存多少，也不確定存在哪裡才算「設定好了」。
 
 2022 年初趁著一個週末，我把這件事從頭到尾想清楚，花了大概一個半小時算清楚數字、找好帳戶、轉進去。現在那筆錢還在，基本上沒動過。
+
+{{< figure src="/images/setup-once/emergency-fund-setup.jpg" alt="存錢罐與緊急備用金儲蓄示意圖" >}}
 
 > **這篇的重點數字**
 > - 計算 + 設定時間：約 **1.5 小時**（一次性投入）

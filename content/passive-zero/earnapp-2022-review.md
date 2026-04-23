@@ -7,6 +7,7 @@ categories: ["零時間躺賺"]
 tags: ["EarnApp", "掛機", "被動收入", "頻寬共享", "2022", "時間帳", "台灣實測"]
 description: "EarnApp 2022 年改版後，設定花了我 10 分鐘，之後放著跑三個月賺了 $3.8 USD。和 Honeygain 並跑比較，兩個同時跑的組合收益和電費算給你看。"
 coverImage: "/images/cover-earnapp-2022-review.svg"
+image: "/images/passive-zero/earnapp-2022-review.jpg"
 canonicalURL: ""
 ---
 
@@ -16,6 +17,8 @@ canonicalURL: ""
 裝 EarnApp 是因為已經在跑 Honeygain 了，看到有人說兩個可以同時裝，流量分開走，想說試試看並跑會不會多一點收益。
 
 和之前裝 Honeygain 一樣，先計時設定過程，之後讓它自己跑，三個月後記錄結果。
+
+{{< figure src="/images/passive-zero/earnapp-2022-review.jpg" alt="手機掛機被動賺取收益示意圖" >}}
 
 > **這篇的重點數字**
 > - 設定時間：**10 分鐘**

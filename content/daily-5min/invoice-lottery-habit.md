@@ -7,6 +7,7 @@ categories: ["每天 5 分鐘"]
 tags: ["電子發票", "發票對獎", "發票載具", "省錢習慣", "台灣理財"]
 description: "15 分鐘設定悠遊卡載具，之後每兩個月 5 分鐘對獎，2020 年全年換回 NT$1,340，時薪等效 NT$2,010。都是之前放棄不查就憑空消失的小獎，設了載具才拿回來。"
 coverImage: "/images/cover-invoice-lottery.svg"
+image: "/images/daily-5min/invoice-lottery-habit.jpg"
 canonicalURL: ""
 ---
 
@@ -18,6 +19,8 @@ canonicalURL: ""
 這筆錢不大，但它是「你已經花出去的錢裡可以換回來的部分」。
 
 2019 年底，花了一個週末下午研究怎麼讓對獎這件事變成完全不需要記、不需要花時間的自動習慣。設定好之後，2019 年下半年六個月的小獎合計換了 NT$680，2020 年全年換了 NT$1,340。不多，但都是之前放著不管就消失的錢。
+
+{{< figure src="/images/daily-5min/invoice-lottery-habit.jpg" alt="電子發票對獎習慣示意圖" >}}
 
 > **這篇的重點數字**
 > - 一次性設定載具 **15 分鐘**，之後每兩個月花 3–5 分鐘對獎，全年約 25 分鐘

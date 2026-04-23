@@ -7,6 +7,7 @@ categories: ["省錢優化"]
 tags: ["攜碼", "電信費", "換方案", "省錢", "手機費", "台灣電信"]
 description: "電信費每月 NT$599 → NT$399，一年省 NT$2,400。整個攜碼過程花了我 2 小時，時薪等效 NT$1,200。整理流程、要注意的事項，以及什麼情況值得換。"
 coverImage: "/images/cover-telecom-porting-save.svg"
+image: "/images/saving-tips/telecom-porting-save.jpg"
 canonicalURL: ""
 ---
 
@@ -16,6 +17,8 @@ canonicalURL: ""
 我用同一個電信方案用了三年。不是特別喜歡，只是一直沒有去研究有沒有更划算的選擇。
 
 去年朋友說他攜碼後每月便宜了 NT$200，加上當時我的合約期剛好要到期，決定認真研究一次。花了兩個週末研究，加上實際辦理，整個流程大約 2 小時。
+
+{{< figure src="/images/saving-tips/telecom-porting-save.jpg" alt="手機與電信方案比較示意圖" >}}
 
 > **這篇的重點數字**
 > - 研究 + 辦理總時間：約 **2 小時**

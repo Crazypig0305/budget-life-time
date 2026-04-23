@@ -7,6 +7,7 @@ categories: ["每週花點時間"]
 tags: ["信用卡", "季度切換", "回饋", "現金回饋", "Richart", "CUBE卡", "省錢"]
 description: "部分信用卡每季有指定通路加碼回饋，切換主力卡每季只要 15 分鐘，一年額外回饋大約 NT$800–2,400。整理切換流程、值得追蹤的卡別與時間帳。"
 coverImage: "/images/cover-credit-card-seasonal-switch.svg"
+image: "/images/weekly-tasks/credit-card-seasonal-switch.jpg"
 canonicalURL: ""
 ---
 
@@ -18,6 +19,8 @@ canonicalURL: ""
 我知道有這回事，但一直沒有認真追。覺得要追很麻煩，每季要找資訊、要記得換、萬一忘了換就算了。
 
 後來有一次朋友問我「你這季主力刷哪張」，我才意識到這件事其實不難，有系統做的話每季只要 15 分鐘左右。
+
+{{< figure src="/images/weekly-tasks/credit-card-seasonal-switch.jpg" alt="多張信用卡與皮夾的季度切換示意圖" >}}
 
 > **這篇的重點數字**
 > - 每季切換主力卡：約 **15 分鐘**（查資訊 + 更新習慣）

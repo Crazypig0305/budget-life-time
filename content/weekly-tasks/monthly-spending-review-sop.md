@@ -7,6 +7,7 @@ categories: ["每週花點時間"]
 tags: ["記帳習慣", "消費回顧", "記帳APP", "上班族理財", "Moze"]
 description: "每月底固定 30 分鐘，只看三件事、做兩個決定。建立這個習慣後三個月，外食加娛樂少了 NT$1,070 / 月，合計省下 NT$3,210，不是靠節食，是靠看清楚錢流向哪裡。"
 coverImage: "/images/cover-monthly-spending-review.svg"
+image: "/images/weekly-tasks/monthly-spending-review-sop.jpg"
 canonicalURL: ""
 ---
 
@@ -20,6 +21,8 @@ canonicalURL: ""
 記帳 APP 的問題不是功能不夠，是我不知道「看到數字之後下一步是什麼」。
 
 後來花了一個月整理出一套每月底固定跑的流程，大概 30 分鐘。跑了三個月之後，食費比之前少了 NT$800 / 月，不是刻意節食，只是因為終於知道自己錢花到哪裡了。
+
+{{< figure src="/images/weekly-tasks/monthly-spending-review-sop.jpg" alt="筆記本與計算機的預算規劃示意圖" >}}
 
 > **這篇的重點數字**
 > - 初始設定 40 分鐘，之後每月底固定 30 分鐘，一年總投入約 **6 小時**

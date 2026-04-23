@@ -7,6 +7,7 @@ categories: ["需要學但值得"]
 tags: ["開戶", "證券戶", "定期定額", "凱基", "永豐", "新手投資", "ETF"]
 description: "2024 年選了一間券商，從開戶到設定定期定額，完整流程 3 小時 20 分鐘（含等待時間）。整理開戶前要準備什麼、每個步驟要多久，以及設定完後的維護節奏。"
 coverImage: "/images/cover-stock-account-setup.svg"
+image: "/images/worth-learning/stock-account-setup.jpg"
 canonicalURL: ""
 ---
 
@@ -16,6 +17,8 @@ canonicalURL: ""
 在這之前我已經有一個在 2020 年開的證券戶了（記錄在另一篇）。這篇是 2024 年初我幫家人開戶的紀錄——流程比幾年前更順暢，全程不需要跑臨櫃。
 
 記下來給有需要的人參考：從零開始開戶 + 設定定期定額，實際上要花多少時間。
+
+{{< figure src="/images/worth-learning/stock-account-setup.jpg" alt="新手開證券戶線上開戶示意圖" >}}
 
 > **這篇的重點數字**
 > - 開戶到設定完成：約 **3 小時 20 分鐘**（含等待時間）

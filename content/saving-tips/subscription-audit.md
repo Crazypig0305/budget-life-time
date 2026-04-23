@@ -7,6 +7,7 @@ categories: ["省錢優化"]
 tags: ["訂閱費清查", "取消訂閱", "省錢", "APP訂閱", "信用卡帳單"]
 description: "花 58 分鐘清查訂閱、砍掉 5 個，一年少付 NT$9,696，時薪等效 NT$4,848。流程只做一次，之後每半年複查 30 分鐘，不需要每天管。"
 coverImage: "/images/cover-subscription-audit.svg"
+image: "/images/saving-tips/subscription-audit.jpg"
 canonicalURL: ""
 ---
 
@@ -18,6 +19,8 @@ canonicalURL: ""
 搜尋了一下，是一個歌詞 APP 的訂閱服務。NT$99 一個月。完全不記得什麼時候訂的。打開手機找了很久，那個 APP 根本已經不在手機裡了——大概是哪次換機的時候沒有重新安裝，但訂閱卻還在每個月自動扣。
 
 這讓我開始懷疑：如果有一個 MusicXmatch，還有幾個我不知道的？
+
+{{< figure src="/images/saving-tips/subscription-audit.jpg" alt="手機螢幕上的訂閱 APP 清單示意圖" >}}
 
 > **這篇的重點數字**
 > - 全流程清查 58 分鐘，砍掉 5 個訂閱，合計一年省 **NT$9,696**

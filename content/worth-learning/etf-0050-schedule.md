@@ -7,6 +7,7 @@ categories: ["需要學但值得"]
 tags: ["0050", "定期定額", "指數化投資", "ETF", "長期投資", "上班族投資"]
 description: "開證券戶加設定 0050 定期定額，前後花了我 3 小時 40 分鐘。之後每個月只需要確認一次扣款，5 分鐘。整理完整流程時間與設定後的維護節奏。"
 coverImage: "/images/cover-etf-0050-schedule.svg"
+image: "/images/worth-learning/etf-0050-schedule.jpg"
 canonicalURL: ""
 ---
 
@@ -16,6 +17,8 @@ canonicalURL: ""
 這是我拖了快兩年才做的事。
 
 不是不知道該做，是一直覺得「開戶很麻煩」「不確定選哪間券商」「萬一搞錯設定怎麼辦」。後來有個長假，我決定把這件事從清單上劃掉。
+
+{{< figure src="/images/worth-learning/etf-0050-schedule.jpg" alt="股市指數基金定期定額投資示意圖" >}}
 
 > **這篇的重點數字**
 > - 開戶 + 設定定期定額，總計花了 **3 小時 40 分鐘**（含等待與驗證時間）
