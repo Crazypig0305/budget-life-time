@@ -1,41 +1,49 @@
 {{- /* schema.html — JSON-LD 結構化資料 */ -}}
 
 {{ if .IsHome }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": {{ site.Title | jsonify }},
-  "url": {{ site.BaseURL | jsonify }},
-  "description": {{ site.Params.description | jsonify }},
-  "inLanguage": "zh-TW"
-}
-</script>
+{{- $homeSchema := dict
+  "@context" "https://schema.org"
+  "@type" "WebSite"
+  "name" site.Title
+  "url" site.BaseURL
+  "description" site.Params.description
+  "inLanguage" "zh-TW"
+-}}
+<script type="application/ld+json">{{ $homeSchema | jsonify | safeJS }}</script>
 
 {{ else if .IsPage }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ .Title | jsonify }},
-  "url": {{ .Permalink | jsonify }},
-  "description": {{ with .Params.description }}{{ . | jsonify }}{{ else }}{{ site.Params.description | jsonify }}{{ end }},
-  "inLanguage": "zh-TW",
-  "datePublished": {{ if not .Date.IsZero }}{{ .Date.Format "2006-01-02" | jsonify }}{{ else }}"" {{ end }},
-  "dateModified": {{ if not .Lastmod.IsZero }}{{ .Lastmod.Format "2006-01-02" | jsonify }}{{ else if not .Date.IsZero }}{{ .Date.Format "2006-01-02" | jsonify }}{{ else }}""{{ end }},
-  "author": {
-    "@type": "Person",
-    "name": "時光存摺"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": {{ site.Title | jsonify }},
-    "url": {{ site.BaseURL | jsonify }}
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": {{ .Permalink | jsonify }}
-  }
-}
-</script>
+{{- $schemaImg := absURL "/og-default.jpg" -}}
+{{- with .Params.image -}}
+  {{- $schemaImg = absURL . -}}
+{{- else -}}
+  {{- with (index (.Resources.ByType "image") 0) -}}
+    {{- $schemaImg = .Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $datePublished := "" -}}
+{{- if not .Date.IsZero -}}{{- $datePublished = .Date.Format "2006-01-02" -}}{{- end -}}
+{{- $dateModified := $datePublished -}}
+{{- if not .Lastmod.IsZero -}}{{- $dateModified = .Lastmod.Format "2006-01-02" -}}{{- end -}}
+{{- $desc := site.Params.description -}}
+{{- with .Params.description -}}{{- $desc = . -}}{{- end -}}
+
+{{- $author := dict "@type" "Person" "name" "時光存摺" -}}
+{{- $publisher := dict "@type" "Organization" "name" site.Title "url" site.BaseURL -}}
+{{- $mainEntity := dict "@type" "WebPage" "@id" .Permalink -}}
+{{- $pageSchema := dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" .Title
+  "url" .Permalink
+  "description" $desc
+  "image" $schemaImg
+  "inLanguage" "zh-TW"
+  "datePublished" $datePublished
+  "dateModified" $dateModified
+  "author" $author
+  "publisher" $publisher
+  "mainEntityOfPage" $mainEntity
+-}}
+<script type="application/ld+json">{{ $pageSchema | jsonify | safeJS }}</script>
 {{ end }}
