@@ -105,4 +105,4 @@ canonicalURL: ""
 
 這也許就是這類工具最理想的使用方式：不期待，不追，設好就讓它跑，某天帳戶裡有多一點錢的時候再想到它。
 
-[INTERNAL-LINK: 同類型工具比較 → 零時間躺賺/EarnApp 2022 實測]
+延伸閱讀：[EarnApp 2022 實測：出金門檻更低，和 Honeygain 並跑的結果](/passive-zero/earnapp-2022-review/)

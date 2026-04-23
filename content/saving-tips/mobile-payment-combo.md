@@ -113,4 +113,4 @@ canonicalURL: ""
 
 這件事的特性是：設定品質決定未來一兩年的回饋效益，所以花 45 分鐘研究清楚值得。
 
-[INTERNAL-LINK: 完整的信用卡綁定策略 → 一次設定長期受益/行動支付設定指南]
+延伸閱讀：[LINE Pay + 街口 + 悠遊付完整設定流程](/setup-once/mobile-payment-card-setup/)
