@@ -105,3 +105,5 @@ canonicalURL: ""
 這件事的時間成本主要在前面，設定完後的維護時間很低。難的不是時間，是要搞清楚自己的投資邏輯，才能在市場波動時不亂動。
 
 延伸閱讀：[新手開證券戶 + 設定定期定額：完整流程需要幾分鐘？](/worth-learning/stock-account-setup/)
+
+延伸閱讀：[高股息 vs 市值型 ETF：哪個更適合沒時間管理的上班族？](/worth-learning/etf-dividend-vs-market/)

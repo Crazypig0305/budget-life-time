@@ -101,4 +101,4 @@ canonicalURL: ""
 
 這件事的特性是「輕投入，長期受益」：不需要每週花時間，每季一次更新就好，效益在接下來三個月自動發生。
 
-[INTERNAL-LINK: 信用卡基礎策略 → 一次設定長期受益/行動支付設定指南]
+[行動支付一次設定指南：LINE Pay、街口、悠遊付各綁哪張卡](/setup-once/mobile-payment-card-setup/)

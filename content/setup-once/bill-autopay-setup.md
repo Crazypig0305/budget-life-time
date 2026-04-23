@@ -161,7 +161,7 @@ canonicalURL: ""
 
 這兩件事不用特別排時間，正常對帳時順手看一下就好。
 
-[INTERNAL-LINK: 活存帳戶也可以最佳化 → 一次設定長期受益/Richart開戶教學]
+[Richart 開戶教學：花一個下午設定好，之後每月自動領息](/setup-once/richart-account-setup/)
 
 ---
 
@@ -201,7 +201,7 @@ canonicalURL: ""
 <!-- [UNIQUE INSIGHT] -->
 這類事情的邏輯不是「時薪多少」，而是「你願不願意花 57 分鐘，換掉一件每年要重複做 12 小時的事」。從投入產出比來看，這是所有理財設定裡回報率最確定的一種——省下的時間不是機率問題，是保證每年都會回來的。
 
-[INTERNAL-LINK: 想繼續優化財務設定 → 一次設定長期受益/Richart開戶教學]
+[Richart 開戶教學：花一個下午設定好，之後每月自動領息](/setup-once/richart-account-setup/)
 
 ---
 
@@ -232,7 +232,7 @@ canonicalURL: ""
 - 維護時間：幾乎零
 - 適用年數：直到你換帳戶為止
 
-[INTERNAL-LINK: 更多一次設定長期受益的方法 → 新手從這裡開始]
+[新手從這裡開始：所有省錢習慣的起點](/start/)
 
 ---
 
