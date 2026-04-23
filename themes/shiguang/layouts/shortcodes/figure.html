@@ -1,0 +1,40 @@
+{{/*
+  figure shortcode — 時光存摺（C站）合規圖片輸出
+  用法：{{< figure src="filename.webp" alt="圖片說明" caption="可選說明文字" loading="lazy" >}}
+
+  - alt     必填；漏填時印 build warning
+  - src     相對於 page bundle 目錄的檔名，或絕對路徑
+  - loading 可傳 "eager"（首屏 Hero 圖）；預設 lazy
+  - caption 可選說明文字
+  - width/height 自動從 page bundle 圖片資源讀取，避免 CLS
+*/}}
+
+{{ $alt := .Get "alt" }}
+{{ $src := .Get "src" }}
+{{ $loading := .Get "loading" | default "lazy" }}
+{{ $caption := .Get "caption" }}
+
+{{ if not $alt }}
+  {{ warnf "figure shortcode: alt 參數必填（檔案：%s）" .Page.File.Path }}
+{{ end }}
+
+{{ $imgRes := .Page.Resources.GetMatch $src }}
+{{ $width  := "" }}
+{{ $height := "" }}
+{{ if $imgRes }}
+  {{ $width  = $imgRes.Width }}
+  {{ $height = $imgRes.Height }}
+{{ end }}
+
+<figure class="article-figure">
+  <img
+    src="{{ $src }}"
+    alt="{{ $alt }}"
+    {{ if $width }}width="{{ $width }}"{{ end }}
+    {{ if $height }}height="{{ $height }}"{{ end }}
+    loading="{{ $loading }}"
+    decoding="async"
+    style="max-width:100%;height:auto;border-radius:4px;"
+  >
+  {{ with $caption }}<figcaption style="font-family:var(--serif);font-size:13px;color:var(--ink-lt);font-weight:300;margin-top:8px;text-align:center;font-style:italic;">{{ . }}</figcaption>{{ end }}
+</figure>

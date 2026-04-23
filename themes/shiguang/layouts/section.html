@@ -22,18 +22,20 @@
 
 {{/* ── ARTICLE LIST ── */}}
 <div class="cat-posts">
-  {{ range .RegularPages.ByDate.Reverse }}
+  {{ range .Paginator.Pages }}
   <a href="{{ .RelPermalink }}" class="post-row" style="--step-color:var(--step-{{ $step }})">
     <div class="post-row-title">{{ .Title }}</div>
     {{ with .Params.description }}<div class="post-row-excerpt">{{ . }}</div>{{ end }}
     <div class="post-row-meta">
-      <span>{{ .Date.Format "2006-01-02" }}</span>
+      {{ if not .Date.IsZero }}<span>{{ .Date.Format "2006-01-02" }}</span>{{ end }}
       {{ with $badge }}<span class="time-badge">{{ . }}</span>{{ end }}
       <span>{{ .ReadingTime }} min read</span>
     </div>
   </a>
   {{ end }}
 </div>
+
+{{ partial "pagination.html" . }}
 
 {{/* ── NEWBIE BANNER ── */}}
 <div class="newbie-banner">

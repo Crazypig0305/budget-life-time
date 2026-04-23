@@ -2,19 +2,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ if .IsHome }}{{ site.Title }} — {{ site.Params.tagline }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-{{ with .Params.canonicalURL }}<link rel="canonical" href="{{ . }}">{{ end }}
+
+{{/* Canonical — front matter 優先，fallback 用 .Permalink */}}
+<link rel="canonical" href="{{ with .Params.canonicalURL }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}">
+
+{{/* Google Search Console 驗證 — 取得驗證碼後填入 content */}}
+{{/* <meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_CODE"> */}}
 
 {{/* Open Graph */}}
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:locale" content="zh_TW">
 
+{{/* og:image — 優先順序：front matter image > page bundle 首張圖 > 全站預設 OG 圖 */}}
+{{ $ogImage := absURL "/og-default.jpg" }}
+{{ with .Params.image }}
+  {{ $ogImage = absURL . }}
+{{ else }}
+  {{ with (index (.Resources.ByType "image") 0) }}
+    {{ $ogImage = .Permalink }}
+  {{ end }}
+{{ end }}
+<meta property="og:image" content="{{ $ogImage }}">
+
 {{/* Twitter Card */}}
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
 
 {{/* Fonts */}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +43,9 @@
 <link rel="stylesheet" href="/css/main.css">
 
 {{/* Favicon */}}
-<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="shortcut icon" href="/favicon.png">
 <meta name="theme-color" content="#1E120A">

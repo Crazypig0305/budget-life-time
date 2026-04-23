@@ -1,0 +1,20 @@
+{{/* pagination.html — 時光存摺分頁導覽
+     呼叫方式：{{ partial "pagination.html" . }}
+     需搭配 section.html 中使用 .Paginator.Pages 而非 .RegularPages */}}
+
+{{ $paginator := .Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="pagination" aria-label="分頁導覽">
+  {{ if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL }}" class="pager-btn pager-prev" aria-label="上一頁">← 上一頁</a>
+  {{ end }}
+
+  <span class="pager-info">
+    第 {{ $paginator.PageNumber }} 頁 / 共 {{ $paginator.TotalPages }} 頁
+  </span>
+
+  {{ if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL }}" class="pager-btn pager-next" aria-label="下一頁">下一頁 →</a>
+  {{ end }}
+</nav>
+{{ end }}

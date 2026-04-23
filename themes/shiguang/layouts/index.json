@@ -1,0 +1,13 @@
+{{- /* index.json — 站內搜尋索引，供未來接 Fuse.js 等客戶端搜尋使用 */ -}}
+[
+  {{- range $i, $p := (site.RegularPages) -}}
+  {{- if $i -}},{{ end -}}
+  {
+    "title": {{ $p.Title | jsonify }},
+    "url": {{ $p.RelPermalink | jsonify }},
+    "section": {{ $p.Section | jsonify }},
+    "description": {{ with $p.Params.description }}{{ . | jsonify }}{{ else }}""{{ end }},
+    "date": {{ if not $p.Date.IsZero }}{{ $p.Date.Format "2006-01-02" | jsonify }}{{ else }}""{{ end }}
+  }
+  {{- end -}}
+]

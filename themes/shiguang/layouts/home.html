@@ -124,7 +124,7 @@
         <h3 class="article-title">{{ $p.Title }}</h3>
         {{ if eq $i 0 }}{{ with $p.Params.description }}<p class="article-excerpt">{{ . }}</p>{{ end }}{{ end }}
         <div class="article-meta">
-          <span>{{ $p.Date.Format "2006-01-02" }}</span>
+          {{ if not $p.Date.IsZero }}<span>{{ $p.Date.Format "2006-01-02" }}</span>{{ end }}
           {{ with $badge }}<span class="time-badge">{{ . }}</span>{{ end }}
         </div>
       </div>
@@ -140,7 +140,7 @@
         </div>
         <div class="article-body-aside">
           {{ with $badge }}<span class="time-badge">{{ . }}</span>{{ end }}
-          <span style="font-size:12px;color:var(--ink-lt);font-family:var(--mono);font-style:italic">{{ $p.Date.Format "2006-01-02" }}</span>
+          {{ if not $p.Date.IsZero }}<span style="font-size:12px;color:var(--ink-lt);font-family:var(--mono);font-style:italic">{{ $p.Date.Format "2006-01-02" }}</span>{{ end }}
         </div>
       </div>
     </a>
