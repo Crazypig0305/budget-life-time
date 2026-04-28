@@ -6,6 +6,7 @@ slug: "telecom-porting-save"
 categories: ["省錢優化"]
 tags: ["攜碼", "電信費", "換方案", "省錢", "手機費", "時薪換算"]
 description: "電信費攜碼換方案實際花了多少時間？研究加辦理約 2 小時，一年省 NT$2,400，等效時薪 NT$1,200。本文加入排除條件框、時薪比對表，讓你在動手前先判斷值不值得。"
+image: /images/saving-tips/telecom-porting-save.jpg
 draft: false
 ---
 

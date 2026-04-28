@@ -21,15 +21,31 @@
 </div>
 
 {{/* ── ARTICLE LIST ── */}}
+{{ $emojiMap := dict "saving-tips" "💳" "passive-zero" "📱" "daily-5min" "✏️" "weekly-tasks" "📋" "setup-once" "🏦" "worth-learning" "📚" }}
+{{ $coverMap := dict "saving-tips" "linear-gradient(135deg,#F0E5C0 0%,#F5F0E4 100%)" "passive-zero" "linear-gradient(135deg,#E8E5D0 0%,#F5F0E4 100%)" "daily-5min" "linear-gradient(135deg,#E0E8D4 0%,#F5F0E4 100%)" "weekly-tasks" "linear-gradient(135deg,#D8E8DC 0%,#F5F0E4 100%)" "setup-once" "linear-gradient(135deg,#D4E4D8 0%,#F5F0E4 100%)" "worth-learning" "linear-gradient(135deg,#D0E0DC 0%,#F5F0E4 100%)" }}
+{{ $emoji := index $emojiMap .Section | default "📝" }}
+{{ $cover := index $coverMap .Section | default "linear-gradient(135deg,#F0E5C0 0%,#F5F0E4 100%)" }}
 <div class="cat-posts">
   {{ range .Paginator.Pages }}
+  {{ $thumb := partial "thumb-resolve.html" . }}
   <a href="{{ .RelPermalink }}" class="post-row" style="--step-color:var(--step-{{ $step }})">
-    <div class="post-row-title">{{ .Title }}</div>
-    {{ with .Params.description }}<div class="post-row-excerpt">{{ . }}</div>{{ end }}
-    <div class="post-row-meta">
-      {{ if not .Date.IsZero }}<span>{{ .Date.Format "2006-01-02" }}</span>{{ end }}
-      {{ with $badge }}<span class="time-badge">{{ . }}</span>{{ end }}
-      <span>{{ .ReadingTime }} min read</span>
+    <div class="post-row__thumb">
+      {{ if $thumb }}
+      <img src="{{ $thumb }}" alt="{{ .Title }}" loading="lazy">
+      {{ else }}
+      <div class="post-row__thumb-fill" style="background:{{ $cover }}">
+        <span class="post-row__thumb-icon">{{ $emoji }}</span>
+      </div>
+      {{ end }}
+    </div>
+    <div class="post-row__body">
+      <div class="post-row-title">{{ .Title }}</div>
+      {{ with .Params.description }}<div class="post-row-excerpt">{{ . }}</div>{{ end }}
+      <div class="post-row-meta">
+        {{ if not .Date.IsZero }}<span>{{ .Date.Format "2006-01-02" }}</span>{{ end }}
+        {{ with $badge }}<span class="time-badge">{{ . }}</span>{{ end }}
+        <span>{{ .ReadingTime }} min read</span>
+      </div>
     </div>
   </a>
   {{ end }}

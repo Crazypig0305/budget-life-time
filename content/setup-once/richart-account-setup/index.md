@@ -6,6 +6,7 @@ slug: "richart-account-setup"
 categories: ["setup-once"]
 tags: ["Richart", "數位帳戶", "高利活存", "開戶設定", "時間成本"]
 description: "Richart 開戶實際要花多少時間？從下載 App 到設定完成我計時了：主動操作 40 分鐘，以 NT$120,000 存款、年利率差 1.5% 估算，第一年等效時薪約 NT$947，第二年起每年 NT$1,800。適合誰、不適合誰，時間帳一次算清楚。"
+image: /images/setup-once/richart-account-setup.jpg
 draft: false
 ---
 

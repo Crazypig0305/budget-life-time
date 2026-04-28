@@ -6,6 +6,7 @@ slug: "mobile-payment-card-setup"
 categories: ["setup-once"]
 tags: ["LINE Pay", "街口支付", "悠遊付", "行動支付", "一次設定", "時間成本"]
 description: "LINE Pay、街口支付、悠遊付各自綁卡要花多少時間？設定完不用再管的維護節奏是什麼？每月回饋 NT$50–150 換算等效時薪給你看，適合誰設、哪種情況可以跳過，時間帳算清楚再決定。"
+image: /images/setup-once/mobile-payment-card-setup.jpg
 draft: false
 ---
 

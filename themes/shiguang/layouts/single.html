@@ -36,6 +36,13 @@
     </div>
   </header>
 
+  {{ $thumb := partial "thumb-resolve.html" . }}
+  {{ if $thumb }}
+  <figure class="article-thumbnail">
+    <img src="{{ $thumb }}" alt="{{ .Title }}" loading="lazy">
+  </figure>
+  {{ end }}
+
   <div class="article-content">
     {{ .Content }}
   </div>

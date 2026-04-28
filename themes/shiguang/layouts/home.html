@@ -112,12 +112,17 @@
     {{ $emoji := index $emojiMap $p.Section | default "📝" }}
     {{ $badge := index $badgeMap $p.Section | default "" }}
     {{ $cover := index $coverMap $p.Section | default "linear-gradient(135deg,#F0E5C0 0%,#F5F0E4 100%)" }}
+    {{ $thumb := partial "thumb-resolve.html" $p }}
     {{ if lt $i 3 }}
     <a href="{{ $p.RelPermalink }}" class="article-card">
       <div class="article-cover"{{ if gt $i 0 }} style="height:118px"{{ end }}>
+        {{ if $thumb }}
+        <img src="{{ $thumb }}" alt="{{ $p.Title }}" class="article-cover__img" loading="lazy">
+        {{ else }}
         <div class="cover-fill" style="background:{{ $cover }}">
           <span class="cover-icon"{{ if gt $i 0 }} style="font-size:28px"{{ end }}>{{ $emoji }}</span>
         </div>
+        {{ end }}
       </div>
       <div class="article-body">
         <div class="article-cat-tag" style="color:var(--step-{{ $step }})">{{ $p.CurrentSection.Title }}</div>

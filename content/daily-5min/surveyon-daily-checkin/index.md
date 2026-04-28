@@ -6,6 +6,7 @@ slug: "surveyon-daily-checkin"
 categories: ["daily-5min"]
 tags: ["Surveyon", "問卷平台", "每日簽到", "等效時薪", "台灣理財"]
 description: "Surveyon 每日簽到加 Quickpoll 每天不到 2 分鐘，積分換 PayPal 現金。這篇用時光存摺的時間帳本算出等效時薪，讓你判斷這個習慣值不值得放進每天清單。"
+image: /images/daily-5min/surveyon-daily-checkin.jpg
 draft: false
 ---
 

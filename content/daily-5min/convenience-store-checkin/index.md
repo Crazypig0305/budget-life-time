@@ -6,6 +6,7 @@ slug: "convenience-store-checkin"
 categories: ["daily-5min"]
 tags: ["超商", "7-ELEVEN", "全家", "OPENPOINT", "FamiPoint", "集點", "每日簽到", "等效時薪", "台灣理財"]
 description: "超商 App 每日簽到 2026 年還值得做嗎？OPENPOINT 與全家 FamiPoint 機制都已改版，這篇把每天不到 1 分鐘的操作換算成等效時薪，讓你判斷這個習慣放不放進每天清單。"
+image: /images/daily-5min/convenience-store-checkin.jpg
 draft: false
 ---
 

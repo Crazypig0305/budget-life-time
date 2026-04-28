@@ -6,6 +6,7 @@ slug: "digital-account-setup-time"
 categories: ["setup-once"]
 tags: ["數位帳戶", "開戶教學", "高利活存", "時間成本", "一次設定"]
 description: "數位帳戶開戶實際要花多少時間？從選銀行研究到 App 開戶完成，我把每個步驟都計時了：選銀行約 45–90 分鐘、開戶操作約 15–20 分鐘、第一個月維護約 5 分鐘——加起來不超過兩小時，之後幾乎自動跑。"
+image: /images/setup-once/digital-account-setup-time.jpg
 draft: false
 ---
 

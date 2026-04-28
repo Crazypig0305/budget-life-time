@@ -6,6 +6,7 @@ slug: "daily-5min-finance-habits"
 categories: ["daily-5min"]
 tags: ["理財習慣", "每日理財", "手機通知", "省錢習慣", "記帳APP", "時間管理", "台灣上班族"]
 description: "每天 5 分鐘能做到什麼程度的理財？這篇整理四個可以嵌入手機通知的省錢習慣組合包：簽到、對帳、收據拍照、發票確認。用時光存摺的時間帳本框架算出，這組習慣每月等效時薪在哪個區間，你自己判斷值不值得放進每天清單。"
+image: /images/daily-5min/daily-5min-finance-habits.jpg
 draft: false
 ---
 
