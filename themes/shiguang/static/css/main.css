@@ -1,6 +1,13 @@
 /* ═══════════════════════════════════════════
    時光存摺 — Shiguang Theme
-   Main Stylesheet
+   Main Stylesheet  v4（2026-04-28）
+   v4 變更：
+   1. 字體：新增 --tabular（IBM Plex Mono），更新 nav-time / date-strip / ladder-time-main / tip-week-num 等等寬欄位
+   2. 新增元件：.num-highlight（數字突出框）
+   3. 新增元件：.skip-box（排除條件警示框）
+   4. 新增元件：.budget-table-wrap / .budget-table（預算比對表）
+   5. 新增 --warn-* CSS 變數（skip-box 警示色）
+   其餘 CSS 變數 / 色碼 / 佈局 / Washi tape / 時間軸 100% 沿用 v3。
 ═══════════════════════════════════════════ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,6 +29,8 @@ html { scroll-behavior: smooth; }
   --gold-lt:    #A8832A;
   --gold-pale:  #F0E5C0;
   --gold-xlt:   #FBF5E6;
+
+  --moss-pale:  #DDE8D4;
 
   --step-0: #7A5C14;
   --step-1: #6A6420;
@@ -46,6 +55,12 @@ html { scroll-behavior: smooth; }
   --serif:   'Noto Serif TC', Georgia, serif;
   --sans:    'Noto Sans TC', sans-serif;
   --mono:    'Libre Baskerville', Georgia, serif;
+  --tabular: 'IBM Plex Mono', 'Libre Baskerville', monospace; /* v4 NEW */
+
+  /* ── 警示色（僅 skip-box 使用，v3 既有色系延伸）── */
+  --warn-bg:     #F5EDD8;
+  --warn-border: #B8860B;
+  --warn-tape:   #C4813A;
 
   --sidebar-w: 240px;
 }
@@ -159,7 +174,7 @@ body {
   margin-left: auto;
   font-size: 12px;
   color: var(--sb-muted);
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular mono */
   font-style: italic;
 }
 
@@ -232,7 +247,7 @@ body {
   gap: 12px;
   font-size: 13px;
   color: var(--ink-lt);
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular */
   font-style: italic;
 }
 .date-sep { color: var(--ink-xs); }
@@ -376,9 +391,9 @@ body {
   flex-shrink: 0;
 }
 .tip-week-num {
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular */
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
   line-height: 1;
 }
@@ -404,7 +419,7 @@ body {
 .tip-date {
   font-size: 13px;
   color: var(--ink-lt);
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular */
   font-style: italic;
   white-space: nowrap;
 }
@@ -512,9 +527,9 @@ body {
   top: 22px;
 }
 .ladder-time-main {
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular mono */
   font-size: 14.5px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--step-color, var(--gold));
   letter-spacing: .02em;
   line-height: 1;
@@ -664,7 +679,7 @@ body {
   margin-top: 12px;
   font-size: 13px;
   color: var(--ink-lt);
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular */
   font-style: italic;
 }
 .time-badge {
@@ -790,7 +805,7 @@ body {
   gap: 6px;
   font-size: 13px;
   color: var(--ink-lt);
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular */
   font-style: italic;
   margin-top: 14px;
 }
@@ -841,7 +856,7 @@ body {
   gap: 10px;
   font-size: 12.5px;
   color: var(--ink-lt);
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular */
   font-style: italic;
 }
 
@@ -884,7 +899,7 @@ body {
   gap: 14px;
   font-size: 13px;
   color: var(--ink-lt);
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular */
   font-style: italic;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--border-md);
@@ -1023,6 +1038,227 @@ body {
   border-radius: 2px;
 }
 
+/* ─────────────────────────────────────────────
+   v4 NEW COMPONENT 1：數字突出框 .num-highlight
+   用途：等效時薪 / 設定分鐘 / 維護分鐘三數字放大強調
+───────────────────────────────────────────── */
+.num-highlight {
+  background: var(--gold-xlt);
+  border: 1px solid var(--border-md);
+  border-top: 3px solid var(--gold);
+  border-radius: 0 0 3px 3px;
+  padding: 24px 28px;
+  margin: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+/* Washi tape 裝飾（延續 v3 膠帶語言）*/
+.num-highlight::before {
+  content: '';
+  position: absolute;
+  top: -10px; left: 28px;
+  width: 42px; height: 13px;
+  background: #A88040;
+  border-radius: 1px; opacity: .50;
+}
+.num-cell {
+  text-align: center;
+  padding: 12px 8px;
+  border-right: 1px solid var(--border-md);
+}
+.num-cell:last-child { border-right: none; }
+.num-label {
+  font-size: 12px;
+  font-family: var(--sans);
+  color: var(--ink-lt);
+  letter-spacing: .09em;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.num-value {
+  font-family: var(--tabular);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1.1;
+  letter-spacing: -.01em;
+  font-variant-numeric: tabular-nums;
+}
+.num-unit {
+  font-size: 14px;
+  font-family: var(--tabular);
+  color: var(--ink-mid);
+  margin-top: 4px;
+  font-style: italic;
+}
+.num-note {
+  font-size: 13px;
+  font-family: var(--sans);
+  color: var(--ink-lt);
+  margin-top: 6px;
+  font-weight: 300;
+}
+
+/* ─────────────────────────────────────────────
+   v4 NEW COMPONENT 2：排除條件警示框 .skip-box
+   用途：「這種情況跳過」警示元件
+───────────────────────────────────────────── */
+.skip-box {
+  background: var(--warn-bg);
+  border: 1px solid rgba(184,134,11,.20);
+  border-left: 4px solid var(--warn-border);
+  border-radius: 0 3px 3px 0;
+  padding: 20px 22px 20px 26px;
+  margin: 2em 0;
+  position: relative;
+}
+/* 橙茶 Washi tape（區別正常金色膠帶）*/
+.skip-box::before {
+  content: '';
+  position: absolute;
+  top: -8px; left: 18px;
+  width: 36px; height: 12px;
+  background: var(--warn-tape);
+  border-radius: 1px; opacity: .55;
+}
+.skip-box-header {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 10px;
+}
+.skip-box-icon {
+  width: 22px; height: 22px;
+  background: var(--warn-border);
+  color: white;
+  border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--sans);
+  font-style: normal;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+.skip-box-title {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--warn-border);
+  letter-spacing: .07em;
+}
+.skip-box-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 6px;
+  font-size: 15px; color: var(--ink-mid);
+  font-family: var(--serif); font-weight: 300;
+  line-height: 1.75;
+}
+.skip-box-list li { display: flex; align-items: flex-start; gap: 8px; }
+.skip-box-list li::before {
+  content: '✕';
+  color: var(--warn-border);
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  font-family: var(--sans);
+}
+
+/* ─────────────────────────────────────────────
+   v4 NEW COMPONENT 3：預算比對表 .budget-table
+   用途：讓讀者填入個人時薪做比對
+───────────────────────────────────────────── */
+.budget-table-wrap {
+  margin: 2.2em 0;
+  background: var(--paper);
+  border: 1px solid var(--border-md);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+/* 表格頂部 Washi tape 裝飾 */
+.budget-table-wrap::before {
+  content: '';
+  position: absolute;
+  top: -8px; right: 36px;
+  width: 40px; height: 13px;
+  background: #7A9B70;
+  border-radius: 1px; opacity: .50;
+}
+.budget-table-head {
+  background: var(--gold-pale);
+  padding: 14px 20px;
+  display: flex; align-items: center; gap: 10px;
+  border-bottom: 1px solid var(--border-md);
+}
+.budget-table-head-title {
+  font-family: var(--display);
+  font-size: 15px; font-weight: 600;
+  color: var(--gold); letter-spacing: .06em;
+}
+.budget-table-head-sub {
+  font-size: 13px; font-family: var(--mono);
+  font-style: italic; color: var(--ink-lt);
+}
+.budget-table {
+  width: 100%; border-collapse: collapse;
+  font-family: var(--tabular);
+  font-size: 14.5px;
+}
+.budget-table th {
+  background: var(--surface);
+  padding: 10px 16px;
+  text-align: left;
+  font-family: var(--sans);
+  font-size: 12.5px; font-weight: 500;
+  color: var(--ink-lt);
+  letter-spacing: .08em;
+  border-bottom: 1px solid var(--border-md);
+}
+.budget-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  vertical-align: middle;
+}
+.budget-table tr:last-child td { border-bottom: none; }
+.budget-table tr:hover td { background: var(--gold-xlt); }
+.budget-table .td-label {
+  font-family: var(--serif); font-size: 14.5px;
+  font-weight: 300; color: var(--ink-mid);
+}
+.budget-table .td-value {
+  font-family: var(--tabular);
+  font-weight: 600;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.budget-table .td-input-hint {
+  font-family: var(--tabular);
+  font-size: 13px;
+  color: var(--ink-xs);
+  font-style: italic;
+  text-align: right;
+  letter-spacing: .04em;
+}
+.budget-table .td-result {
+  font-family: var(--tabular);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--step-4);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.budget-table-footer {
+  padding: 12px 20px;
+  background: var(--surface);
+  border-top: 1px solid var(--border-md);
+  font-size: 13px; font-family: var(--sans);
+  color: var(--ink-lt); font-weight: 300;
+  font-style: italic;
+}
+
 /* ── STATIC PAGES ── */
 .page-wrap-inner {
   padding: 52px 40px 80px;
@@ -1089,7 +1325,7 @@ body {
 .footer-copy {
   font-size: 13px;
   color: var(--ink-lt);
-  font-family: var(--mono);
+  font-family: var(--tabular); /* v4: tabular */
   font-style: italic;
 }
 
@@ -1114,6 +1350,10 @@ body {
   .newbie-banner { margin: 36px 20px 0; padding: 24px 20px; flex-direction: column; align-items: flex-start; }
   .footer { padding: 20px; }
   .page-wrap-inner { padding: 36px 20px 60px; }
+
+  .num-highlight { grid-template-columns: 1fr; gap: 0; }
+  .num-cell { border-right: none; border-bottom: 1px solid var(--border-md); }
+  .num-cell:last-child { border-bottom: none; }
 }
 
 @media (max-width: 680px) {

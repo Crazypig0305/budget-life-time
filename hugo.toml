@@ -6,6 +6,9 @@ enableRobotsTXT = true
 hasCJKLanguage = true
 enableGitInfo = false
 
+# sitemap 瘦身：停用 taxonomy / term archive 薄頁面（#28 制度化）
+disableKinds = ['taxonomy', 'term']
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 

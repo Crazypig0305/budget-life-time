@@ -1,4 +1,4 @@
-{{- /* schema.html — JSON-LD 結構化資料 */ -}}
+{{- /* schema.html — JSON-LD 結構化資料（#29 制度化：dict + jsonify + safeJS）*/ -}}
 
 {{ if .IsHome }}
 {{- $homeSchema := dict
@@ -9,16 +9,13 @@
   "description" site.Params.description
   "inLanguage" "zh-TW"
 -}}
-<script type="application/ld+json">{{ $homeSchema | jsonify | safeJS }}</script>
+<script type="application/ld+json">{{ $homeSchema | jsonify (dict "indent" "  ") | safeJS }}</script>
 
 {{ else if .IsPage }}
-{{- $schemaImg := absURL "/og-default.jpg" -}}
-{{- with .Params.image -}}
-  {{- $schemaImg = absURL . -}}
-{{- else -}}
-  {{- with (index (.Resources.ByType "image") 0) -}}
-    {{- $schemaImg = .Permalink -}}
-  {{- end -}}
+{{- /* OG image 統一由 og-image-resolve partial 解析（#27 制度化）*/ -}}
+{{- $schemaImg := partial "og-image-resolve.html" . -}}
+{{- if not $schemaImg -}}
+  {{- $schemaImg = "/og-default.jpg" | absURL -}}
 {{- end -}}
 
 {{- $datePublished := "" -}}
@@ -45,5 +42,5 @@
   "publisher" $publisher
   "mainEntityOfPage" $mainEntity
 -}}
-<script type="application/ld+json">{{ $pageSchema | jsonify | safeJS }}</script>
+<script type="application/ld+json">{{ $pageSchema | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{ end }}

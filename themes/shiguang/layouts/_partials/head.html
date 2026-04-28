@@ -9,6 +9,12 @@
 {{/* Google Search Console 驗證 — 取得驗證碼後填入 content */}}
 {{/* <meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_CODE"> */}}
 
+{{/* OG image 統一由 og-image-resolve partial 解析（#27 制度化）*/}}
+{{ $ogImage := partial "og-image-resolve.html" . }}
+{{ if not $ogImage }}
+  {{ $ogImage = "/og-default.jpg" | absURL }}
+{{ end }}
+
 {{/* Open Graph */}}
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
@@ -16,17 +22,9 @@
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:locale" content="zh_TW">
-
-{{/* og:image — 優先順序：front matter image > page bundle 首張圖 > 全站預設 OG 圖 */}}
-{{ $ogImage := absURL "/og-default.jpg" }}
-{{ with .Params.image }}
-  {{ $ogImage = absURL . }}
-{{ else }}
-  {{ with (index (.Resources.ByType "image") 0) }}
-    {{ $ogImage = .Permalink }}
-  {{ end }}
-{{ end }}
 <meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 {{/* Twitter Card */}}
 <meta name="twitter:card" content="summary_large_image">
@@ -34,10 +32,10 @@
 <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <meta name="twitter:image" content="{{ $ogImage }}">
 
-{{/* Fonts */}}
+{{/* Fonts — v4 加入 IBM Plex Mono（--tabular 字體）*/}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Serif+TC:wght@300;400&family=Noto+Sans+TC:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Serif+TC:wght@300;400&family=Noto+Sans+TC:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 {{/* CSS */}}
 <link rel="stylesheet" href="/css/main.css">

@@ -1,0 +1,21 @@
+{{/*
+  og-image-resolve.html — OG image 路徑統一解析 partial（#27 制度化）
+  輸入：呼叫端傳入 page context（partial "og-image-resolve.html" .）
+  輸出：解析後的絕對 URL 字串（為空字串時呼叫端 fallback 到 og-default.jpg）
+
+  解析優先順序：
+  1. Front Matter image 欄位 → Page bundle .Resources.GetMatch → .Permalink（完整路徑）
+  2. Front Matter image 欄位 → 非 bundle 路徑（/images/foo.jpg）→ absURL 補齊
+  3. 皆無 → 回傳空字串，由呼叫端決定 fallback
+*/}}
+{{ $page := . }}
+{{ $imgURL := "" }}
+{{ with $page.Params.image }}
+  {{ $imgRef := . }}
+  {{ with $page.Resources.GetMatch $imgRef }}
+    {{ $imgURL = .Permalink }}
+  {{ else }}
+    {{ $imgURL = $imgRef | absURL }}
+  {{ end }}
+{{ end }}
+{{ return $imgURL }}
