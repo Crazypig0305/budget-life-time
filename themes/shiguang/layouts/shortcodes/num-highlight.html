@@ -1,10 +1,7 @@
-{{- /* num-highlight shortcode: single-cell or 3-cell number highlight box */ -}}
+{{- /* num-highlight shortcode (self-closing): single-cell number highlight box.
+       For 3-cell layout, use raw HTML <div class="num-highlight"><div class="num-cell">...</div></div> */ -}}
 {{- $value := .Get "value" -}}
 {{- $unit := .Get "unit" -}}
 {{- $label := .Get "label" -}}
 {{- $note := .Get "note" -}}
-{{- if $value -}}
 <div class="num-highlight"><div class="num-cell">{{ with $label }}<div class="num-label">{{ . }}</div>{{ end }}<div class="num-value">{{ $value }}</div>{{ with $unit }}<div class="num-unit">{{ . }}</div>{{ end }}{{ with $note }}<div class="num-note">{{ . }}</div>{{ end }}</div></div>
-{{- else -}}
-<div class="num-highlight">{{ .Inner | markdownify }}</div>
-{{- end -}}
