@@ -1,26 +1,15 @@
-{{/*
-  thumb-resolve.html — 文章 thumbnail 路徑解析 partial
-  輸入：呼叫端傳入 page context（partial "thumb-resolve.html" .）
-  輸出：相對路徑字串（給 <img src> 用），無圖時回傳空字串
-
-  解析優先順序（與 og-image-resolve 相同邏輯，但回傳相對 URL 給 <img>）：
-  1. Front Matter image 欄位 → page bundle .Resources.GetMatch → .RelPermalink
-  2. Front Matter image 欄位 → 絕對路徑（/images/foo.jpg）→ 直接回傳
-  3. Front Matter image 欄位 → http(s):// → 直接回傳（hot-link）
-  4. 皆無 → 空字串，呼叫端走色塊 + emoji fallback
-*/}}
-{{ $page := . }}
-{{ $imgURL := "" }}
-{{ with $page.Params.image }}
-  {{ $imgRef := . }}
-  {{ if or (hasPrefix $imgRef "http://") (hasPrefix $imgRef "https://") }}
-    {{ $imgURL = $imgRef }}
-  {{ else if hasPrefix $imgRef "/" }}
-    {{ $imgURL = $imgRef }}
-  {{ else }}
-    {{ with $page.Resources.GetMatch $imgRef }}
-      {{ $imgURL = .RelPermalink }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-{{ return $imgURL }}
+{{- $page := . -}}
+{{- $imgURL := "" -}}
+{{- with $page.Params.image -}}
+  {{- $imgRef := . -}}
+  {{- if or (hasPrefix $imgRef "http://") (hasPrefix $imgRef "https://") -}}
+    {{- $imgURL = $imgRef -}}
+  {{- else if hasPrefix $imgRef "/" -}}
+    {{- $imgURL = $imgRef -}}
+  {{- else -}}
+    {{- with $page.Resources.GetMatch $imgRef -}}
+      {{- $imgURL = .RelPermalink -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $imgURL -}}

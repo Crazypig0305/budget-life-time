@@ -10,6 +10,14 @@
 {{/* ── PAGE CONTENT ── */}}
 <div class="page-wrap-inner">
   <h1 class="page-h1">{{ .Title }}</h1>
+
+  {{ $thumb := partial "thumb-resolve.html" . }}
+  {{ if $thumb }}
+  <figure class="article-thumbnail">
+    <img src="{{ $thumb }}" alt="{{ .Title }}" loading="lazy">
+  </figure>
+  {{ end }}
+
   <div class="page-content">
     {{ .Content }}
   </div>
