@@ -27,6 +27,27 @@ canonicalURL: ""
 > - 2020 年換回 **NT$1,340**，全部是六獎小獎，都是之前放棄不查就消失的錢
 > - 時薪等效 **NT$2,010**（含設定），第二年起提升至 NT$2,400–3,600
 
+<div class="num-highlight">
+  <div class="num-cell">
+    <div class="num-label">一次性設定載具</div>
+    <div class="num-value">15</div>
+    <div class="num-unit">分鐘</div>
+    <div class="num-note">悠遊卡 / 手機條碼擇一</div>
+  </div>
+  <div class="num-cell">
+    <div class="num-label">每年對獎時間</div>
+    <div class="num-value">25</div>
+    <div class="num-unit">分鐘</div>
+    <div class="num-note">每兩個月 5 分鐘 × 6 期</div>
+  </div>
+  <div class="num-cell">
+    <div class="num-label">2020 年換回金額</div>
+    <div class="num-value">1,340</div>
+    <div class="num-unit">NT$</div>
+    <div class="num-note">六獎小獎累積</div>
+  </div>
+</div>
+
 ---
 
 ## 電子發票載具要怎麼設定？需要多少時間？
@@ -197,6 +218,18 @@ APP 裡有「捐贈發票」的選項，可以指定捐給特定公益單位。�
 - 消費量本來就少：發票張數少，中獎機率本來就低，年均可能低於 NT$400
 - 不常在台灣消費（長期旅居海外等）
 
+<div class="skip-box">
+  <div class="skip-box-header">
+    <span class="skip-box-icon">!</span>
+    <span class="skip-box-title">這種情況建議跳過</span>
+  </div>
+  <ul class="skip-box-list">
+    <li>每月紙本發票 &lt; 10 張、且都是現金小消費——對獎期望值太低</li>
+    <li>已用其他載具歸戶、發票自動對獎正常運作中</li>
+    <li>不在意中獎機會、把發票直接視為丟棄物——本篇對你 ROI 不對等</li>
+  </ul>
+</div>
+
 ---
 
 ## 結論
@@ -213,6 +246,45 @@ APP 裡有「捐贈發票」的選項，可以指定捐給特定公益單位。�
 - 2020 年換回金額：NT$1,340
 - 時薪等效（含設定）：約 NT$2,010
 - 之後每年：約 25 分鐘，年均 NT$1,000–1,500
+
+<div class="budget-table-wrap">
+  <div class="budget-table-head">
+    <span class="budget-table-head-title">發票對獎習慣等效時薪比對表</span>
+    <span class="budget-table-head-sub">對照你自己的時間與期望年中獎金額</span>
+  </div>
+  <table class="budget-table">
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th style="text-align:right">我的實測數字</th>
+        <th style="text-align:right">你的數字（填入）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-label">一次性設定載具</td>
+        <td class="td-value">15 min</td>
+        <td class="td-input-hint">____ min</td>
+      </tr>
+      <tr>
+        <td class="td-label">每年對獎時間</td>
+        <td class="td-value">25 min</td>
+        <td class="td-input-hint">____ min</td>
+      </tr>
+      <tr>
+        <td class="td-label">2020 年換回金額</td>
+        <td class="td-value">NT$ 1,340</td>
+        <td class="td-input-hint">NT$ ____</td>
+      </tr>
+      <tr>
+        <td class="td-label">等效時薪</td>
+        <td class="td-result">NT$ 2,010 / hr</td>
+        <td class="td-input-hint">NT$ ____ / hr</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="budget-table-footer">時薪高於 NT$1,500/hr？這件事 ROI 高、值得一次設定。低於 NT$500/hr？對獎期望值可能不足以涵蓋你的時間機會成本、可跳過。</div>
+</div>
 
 ---
 
