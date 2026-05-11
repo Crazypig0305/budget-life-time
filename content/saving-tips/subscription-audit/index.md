@@ -82,7 +82,7 @@ draft: false
 訂閱費分散在三個地方，依序都要查：
 
 **1. 信用卡帳單**
-拿出過去六個月的帳單，逐行找帶有「App」「Premium」「Plus」「Subscribe」「Subscription」字樣的項目。商家名稱有時候很難認——「APPLE.COM/BILL」其實是 App Store，「SPOTIFYAB」是 Spotify，要花一點時間對照。
+拿出過去六個月的帳單，逐行找帶有「App」「Premium」「Plus」「Subscribe」「Subscription」字樣的項目。商家名稱有時候很難認——「APPLE.COM/BILL」其實是 App Store，「SPOTIFYAB」是 [Spotify](https://www.spotify.com/)，要花一點時間對照。
 
 **2. App Store 訂閱項目頁面**
 iOS：設定 → 右上角自己的名字 → 訂閱項目
@@ -94,7 +94,7 @@ Google Play → 右上角頭像 → 付款與訂閱 → 訂閱
 
 Android 用戶的訂閱集中在這裡。如果兩個系統都有用，兩個都要查。
 
-容易漏查的地方：Google 帳號的「管理訂閱內容」會列出 Google One、YouTube Premium 等 Google 自家服務；直接透過官網付款的服務（如 Netflix 官網版、Dropbox 官網版）不會出現在 App Store 或 Google Play，只能從信用卡帳單的逐行明細找。
+容易漏查的地方：Google 帳號的「管理訂閱內容」會列出 Google One、[YouTube Premium](https://www.youtube.com/premium) 等 Google 自家服務；直接透過官網付款的服務（如 [Netflix](https://www.netflix.com/) 官網版、Dropbox 官網版）不會出現在 App Store 或 Google Play，只能從信用卡帳單的逐行明細找。
 
 三個來源對照完，整理出 **12 個正在扣費的服務**，全部寫進手帳。
 

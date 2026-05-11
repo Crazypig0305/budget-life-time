@@ -19,7 +19,7 @@ draft: false
 
 結果比我想的短很多。
 
-{{< figure src="/images/worth-learning/etf-0050-schedule.jpg" alt="台灣股市 ETF 定期定額投資示意圖，手機查看投資帳戶" width="1200" height="630" loading="lazy" >}}
+{{< figure src="/images/worth-learning/etf-[0050](https://www.yuantaetfs.com/product/detail/0050)-schedule.jpg" alt="台灣股市 ETF [定期定額](https://zh.wikipedia.org/wiki/%E5%85%83%E6%97%A5%E5%B9%B3%E5%9D%87%E6%88%90%E6%9C%AC%E6%B3%95)投資示意圖，手機查看投資帳戶" width="1200" height="630" loading="lazy" >}}
 
 ---
 
@@ -67,9 +67,9 @@ draft: false
 
 設定之前，確實需要先建立基本概念。不是要讀一本書，而是「搞清楚自己在做什麼」，這樣市場下跌時才能不亂動。
 
-**1. 什麼是 ETF**
+**1. 什麼是 [ETF](https://zh.wikipedia.org/wiki/%E6%8C%87%E6%95%B8%E5%9E%8B%E5%9F%BA%E9%87%91)**
 
-0050 的全名是「元大台灣 50」，由元大投信發行，追蹤台灣市值前 50 大上市公司。你買了 0050，等於同時持有這 50 家公司的股票，包括台積電、聯發科、鴻海等。
+0050 的全名是「元大台灣 50」，由[元大投信](https://www.yuantaetfs.com/)發行，追蹤台灣市值前 50 大上市公司。你買了 0050，等於同時持有這 50 家公司的股票，包括[台積電](https://www.tsmc.com/static/chinese/)、[聯發科](https://www.mediatek.tw/)、鴻海等。
 
 這 50 家公司的成分根據市值自動調整，不需要你手動決定成分。
 
@@ -179,7 +179,7 @@ draft: false
 
 ## 等效時薪怎麼算？
 
-0050 定期定額和其他省錢設定不同：它不是「做了馬上換到錢」，而是「讓資產長期複利滾動」。
+0050 定期定額和其他省錢設定不同：它不是「做了馬上換到錢」，而是「讓資產長期[複利](https://zh.wikipedia.org/wiki/%E8%A4%87%E5%88%A9)滾動」。
 
 所以這裡的等效時薪要換一個方式算：
 

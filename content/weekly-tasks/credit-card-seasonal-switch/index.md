@@ -94,7 +94,7 @@ image: /images/weekly-tasks/credit-card-seasonal-switch.jpg
 
 | 卡別 | 切換頻率 | 結算方式 | 最高回饋率 | 適合族群 |
 |---|---|---|---|---|
-| 台新 Richart 卡 | 每日可切一次 | 當日切換當日生效 | 3.8%（台新 Pay）| 消費通路固定的人，每季查一次決定主力即可 |
+| [台新 Richart](https://richart.tw/) 卡 | 每日可切一次 | 當日切換當日生效 | 3.8%（台新 Pay）| 消費通路固定的人，每季查一次決定主力即可 |
 | 國泰 CUBE 卡 | 每日可切一次 | 同上 | 最高 10%（特定通路）| 消費金額大、單筆大買的人，沒上限優勢明顯 |
 | 玉山 Unicard | 每月最多 30 次 | **月底方案為最終結算依據** | 6%（既有卡友）| 消費習慣每月調整的人，只需月底前確認好 |
 
@@ -127,7 +127,7 @@ image: /images/weekly-tasks/credit-card-seasonal-switch.jpg
 
 把決定好的主力卡更新到以下三個地方：
 
-- **手機支付的預設卡**：LINE Pay、Apple Pay、Google Pay 的「常用付款方式」
+- **手機支付的預設卡**：[LINE Pay](https://pay.line.me/tw/)、[Apple Pay](https://www.apple.com/tw/apple-pay/)、[Google Pay](https://pay.google.com/) 的「常用付款方式」
 - **常用網購的儲存卡**：蝦皮、PChome、MOMO 的預設付款卡
 - **訂閱服務的付款卡**：如果這季有哪張卡在網購或數位服務有加碼，把對應訂閱換過去
 
@@ -165,7 +165,7 @@ image: /images/weekly-tasks/credit-card-seasonal-switch.jpg
 ## 適合誰 / 不適合誰
 
 **適合：**
-- 手上有 Richart、CUBE 或 Unicard 三張之一的人
+- 手上有 [Richart](https://richart.tw/)、CUBE 或 Unicard 三張之一的人
 - 每月信用卡消費超過 NT$8,000 的人
 - 消費通路相對固定（超商、網購、外送中有一個是主力消費場景）
 
@@ -188,7 +188,7 @@ image: /images/weekly-tasks/credit-card-seasonal-switch.jpg
 
 [數位帳戶每月整理術：讓利息自動最大化的 3 個步驟](/weekly-tasks/digital-bank-monthly-optimize/)
 
-[行動支付一次設定指南：LINE Pay、街口、悠遊付各綁哪張卡](/setup-once/mobile-payment-card-setup/)
+[行動支付一次設定指南：LINE Pay、街口、[悠遊付](https://easywallet.easycard.com.tw/)各綁哪張卡](/setup-once/mobile-payment-card-setup/)
 
 ---
 
@@ -200,7 +200,7 @@ image: /images/weekly-tasks/credit-card-seasonal-switch.jpg
 
 ### 不是這三張卡，有辦法做季度切換嗎？
 
-固定回饋率的卡（例如滙豐御璽 1.22% 無腦刷）沒有切換機制，本篇不適用。部分銀行有「季度指定通路加碼活動」但不是透過 App 切換，而是自動加碼（例如部分現金回饋卡在 Q4 百貨加碼），這種也值得追，但追法不同——不需要切換，只需要確認你持有的卡有沒有該通路的加碼活動。
+固定回饋率的卡（例如滙豐御璽 1.22% 無腦刷）沒有切換機制，本篇不適用。部分銀行有「季度指定通路加碼活動」但不是透過 App 切換，而是自動加碼（例如部分[現金回饋](https://zh.wikipedia.org/wiki/%E7%8F%BE%E9%87%91%E5%9B%9E%E9%A5%8B)卡在 Q4 百貨加碼），這種也值得追，但追法不同——不需要切換，只需要確認你持有的卡有沒有該通路的加碼活動。
 
 ### 每天切換和每季切換，回饋差很多嗎？
 

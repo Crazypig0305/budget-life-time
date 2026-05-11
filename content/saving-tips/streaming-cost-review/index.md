@@ -85,7 +85,7 @@ draft: false
 
 你的訂閱可能散落在這幾個地方：
 
-- **信用卡帳單**：搜尋關鍵字「Netflix」「Spotify」「Disney」「Apple」「Google」
+- **信用卡帳單**：搜尋關鍵字「[Netflix](https://www.netflix.com/)」「[Spotify](https://www.spotify.com/)」「Disney」「Apple」「Google」
 - **手機訂閱管理**：App Store → 帳號 → 訂閱；Google Play → 帳戶 → 訂閱
 - **Email 收件匣**：搜尋「訂閱確認」「訂閱成功」「發票」
 
@@ -97,8 +97,8 @@ draft: false
 |---|---|---|---|
 | Netflix 標準方案 | NT$330 | NT$380 | 昨天 |
 | Spotify 個人 | NT$99 | NT$168 | 每天 |
-| YouTube Premium | NT$179 | NT$199 | 每天 |
-| Disney+ 標準方案 | NT$270 | NT$320 | 上個月初 |
+| [YouTube Premium](https://www.youtube.com/premium) | NT$179 | NT$199 | 每天 |
+| [Disney+](https://www.disneyplus.com/) 標準方案 | NT$270 | NT$320 | 上個月初 |
 | Apple TV+（隨設備附贈）| NT$0 | NT$0 | 三個月前 |
 | Hami 書城 | NT$99 | NT$149 | 上週 |
 | Readmoo 讀墨 | NT$149 | NT$149 | 兩個月前 |
