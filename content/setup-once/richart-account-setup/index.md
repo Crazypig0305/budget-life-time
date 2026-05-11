@@ -12,7 +12,7 @@ draft: false
 
 > 📅 原文發布：2020 年 5 月｜最後更新：2026 年 4 月
 > 本文數字已於 2026 年 4 月對照 Richart 官方現況校對更新。
-> 活存利率與達標條件隨時可能調整，建議對照 [Richart 官網](https://richart.tw/TSDIB_[Richart](https://richart.tw/)Web/RC03/RC030100) 確認最新方案。
+> 活存利率與達標條件隨時可能調整，建議對照 [Richart 官網](https://richart.tw/) 確認最新方案。
 
 > 📌 本文含官網連結。點擊連結前往 Richart 官網不影響你的開戶條件，本文為親身設定記錄，非業配。
 
@@ -229,7 +229,7 @@ Richart 的高利活存不是永久保固的，有段時間條件收緊、有段
 
 如果你還在評估把錢放哪裡，可以參考這篇：[生活費帳單完全自動化：電費水費一次設定完](/setup-once/bill-autopay-setup/)
 
-設定好活存帳戶之後，下一步很多人會考慮長期資金怎麼配置：[0050 定期定額入門：設定完之後你每月只需要 5 分鐘](/worth-learning/etf-[0050](https://www.yuantaetfs.com/product/detail/0050)-schedule/)
+設定好活存帳戶之後，下一步很多人會考慮長期資金怎麼配置：[0050 定期定額入門：設定完之後你每月只需要 5 分鐘](https://www.yuantaetfs.com/product/detail/0050)
 
 ---
 
