@@ -3,7 +3,7 @@ title: "生活費帳單自動化：電費水費瓦斯信用卡一次設定，等
 date: 2019-12-07
 lastmod: 2026-04-28
 slug: "bill-autopay-setup"
-categories: ["一次設定長期受益"]
+categories: ["setup-once"]
 tags: ["自動扣繳", "電費自動轉帳", "水費自動繳費", "信用卡自動扣繳", "帳單自動化", "時薪換算"]
 description: "57 分鐘設定電費、水費、瓦斯費、信用卡四項自動扣繳，之後每年省回 12 小時、滯納金歸零。加入排除條件自查、等效時薪算法與預算比對表，讓你在動手前先判斷值不值得做這件事。"
 image: /images/setup-once/bill-autopay-setup.jpg

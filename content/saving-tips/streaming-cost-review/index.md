@@ -3,7 +3,7 @@ title: "串流訂閱費年度健診：30 分鐘，值不值得花這個時間？
 date: 2023-12-09
 lastmod: 2026-04-28
 description: "一次串流訂閱費健診實際花了我 30 分鐘，每年省下 NT$2,628。換算等效時薪是 NT$5,256，只要做一次，省錢就會自動發生。這篇記錄流程、判斷邏輯、以及哪些情況根本不需要做。"
-categories: ["saving-tips"]
+categories: ["省錢優化"]
 tags: ["串流訂閱費", "訂閱健診", "Netflix", "Disney+", "省錢", "時間成本"]
 image: /images/saving-tips/streaming-cost-review.jpg
 draft: false
