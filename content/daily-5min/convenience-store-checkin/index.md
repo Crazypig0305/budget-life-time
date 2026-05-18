@@ -43,7 +43,7 @@ draft: false
 
 先說清楚，因為名字和機制都跟幾年前不一樣了。
 
-**7-ELEVEN：OPENPOINT（App 名稱「有OPENPOINT真好」）**
+**7-ELEVEN：[OPENPOINT](https://www.7-11.com.tw/openpoint/)（App 名稱「有OPENPOINT真好」）**
 
 點數品牌叫 OPENPOINT。2020 年改制後，新制規則是 **1 點 = 1 元折抵**（在 7-ELEVEN 與統一集團指定通路消費折現用）。消費回饋率約 0.33%——消費 300 元累積約 1 點。
 
@@ -51,7 +51,7 @@ App 內有「任務牆」功能，可以透過看影片、完成指定任務賺�
 
 點數效期：當年度 1/1 到 12/31 累積的點數，需在次年 12/31 前使用完畢，逾期歸零，不延期。
 
-**全家：FamiPoint（整合進 My FamiPay）**
+**全家：[FamiPoint](https://famipoint-marketing.family.com.tw/)（整合進 [My FamiPay](https://www.family.com.tw/marketing/fami_member/famipay.html)）**
 
 2023 年 4 月起，全家把集點品牌改名為「FamiPoint」。App 功能整合進 My FamiPay，App 內有「記帳打卡」功能，每天記帳一次可以拿 Fa 點。
 
