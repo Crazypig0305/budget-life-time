@@ -1,5 +1,24 @@
-{{- /* schema.html — JSON-LD 結構化資料（#29 制度化：dict + jsonify + safeJS）*/ -}}
+{{- /* ══════════════════════════════════════════════════════════════════════
+     schema.html — JSON-LD 結構化資料、依頁面類型分流輸出（GEO 硬閘 G17-G21）
+     ─────────────────────────────────────────────────────────────────────
+     home（.IsHome）          → WebSite + Organization
+     section list（.IsSection）→ CollectionPage + BreadcrumbList
+     真正部落格文章            → BlogPosting (+image 僅非空) + BreadcrumbList + FAQPage(條件)
+     ceremony / 無真實日期頁   → WebPage（不輸出零日期 BlogPosting）
+     #27 制度化：OG image 統一由 og-image-resolve partial 解析
+     #29 制度化：dict + jsonify + safeJS
+     ══════════════════════════════════════════════════════════════════════ */ -}}
 
+{{- /* ── 共用：Organization dict（home + publisher 共用、logo 用站級 og-default 後備） ── */ -}}
+{{- $orgLogo := "/og-default.jpg" | absURL -}}
+{{- $organization := dict
+  "@type" "Organization"
+  "name" site.Title
+  "url" site.BaseURL
+  "logo" (dict "@type" "ImageObject" "url" $orgLogo)
+-}}
+
+{{- /* ════════════════ 1. HOME：WebSite + Organization ════════════════ */ -}}
 {{ if .IsHome }}
 {{- $homeSchema := dict
   "@context" "https://schema.org"
@@ -8,39 +27,149 @@
   "url" site.BaseURL
   "description" site.Params.description
   "inLanguage" "zh-TW"
+  "publisher" (dict "@type" "Organization" "name" site.Title "url" site.BaseURL)
 -}}
 <script type="application/ld+json">{{ $homeSchema | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- $orgHome := merge $organization (dict "@context" "https://schema.org") -}}
+<script type="application/ld+json">{{ $orgHome | jsonify (dict "indent" "  ") | safeJS }}</script>
 
-{{ else if .IsPage }}
-{{- /* OG image 統一由 og-image-resolve partial 解析（#27 制度化）*/ -}}
+{{- /* ════════════════ 2. SECTION LIST：CollectionPage + BreadcrumbList ════════════════
+     6 個內容分類列表頁（saving-tips / passive-zero / daily-5min / weekly-tasks /
+     setup-once / worth-learning）皆走此分支、補齊原本零 schema 的缺口。 */ -}}
+{{ else if .IsSection }}
+{{- $listDesc := "" -}}
+{{- with .Description }}{{ $listDesc = . }}{{ else }}{{ $listDesc = .Title }}{{ end -}}
+{{- $collection := dict
+  "@context" "https://schema.org"
+  "@type" "CollectionPage"
+  "name" .Title
+  "url" .Permalink
+  "description" $listDesc
+  "inLanguage" "zh-TW"
+  "isPartOf" (dict "@type" "WebSite" "name" site.Title "url" site.BaseURL)
+-}}
+<script type="application/ld+json">{{ $collection | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- /* BreadcrumbList：Home → 分類 */ -}}
+{{- $crumbs := slice -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 1 "name" site.Title "item" site.Home.Permalink) -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink) -}}
+{{- $breadcrumb := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs -}}
+<script type="application/ld+json">{{ $breadcrumb | jsonify (dict "indent" "  ") | safeJS }}</script>
+
+{{- /* ════════════════ 3 / 4. 單一頁面（.Kind page）：文章 vs ceremony 分流 ════════════════
+     真正部落格文章判定：在內容分類 section 下（.Section 為 6 分類之一）+ 有真實日期（非 0001-01-01）。
+     ceremony / 無真實日期頁（start / about / privacy / contact、.Section 空 或 零日期）
+     → 輸出 WebPage、不帶零日期 BlogPosting。 */ -}}
+{{ else if eq .Kind "page" }}
+{{- $contentSections := slice "saving-tips" "passive-zero" "daily-5min" "weekly-tasks" "setup-once" "worth-learning" -}}
+{{- $inContentSection := in $contentSections .Section -}}
+{{- $hasRealDate := not .Date.IsZero -}}
+{{- $isArticle := and $inContentSection $hasRealDate -}}
+
+{{ if $isArticle }}
+{{- /* OG image 統一由 og-image-resolve partial 解析（#27 制度化）、僅非空才輸出（A 站範式：
+     Google image 非必填、寧缺勿空、禁輸出 url:""）。 */ -}}
 {{- $schemaImg := partial "og-image-resolve.html" . -}}
-{{- if not $schemaImg -}}
-  {{- $schemaImg = "/og-default.jpg" | absURL -}}
-{{- end -}}
 
-{{- $datePublished := "" -}}
-{{- if not .Date.IsZero -}}{{- $datePublished = .Date.Format "2006-01-02" -}}{{- end -}}
-{{- $dateModified := $datePublished -}}
-{{- if not .Lastmod.IsZero -}}{{- $dateModified = .Lastmod.Format "2006-01-02" -}}{{- end -}}
+{{- /* 取 canonical URL */ -}}
+{{- $canonURL := .Permalink -}}
+{{- with .Params.canonicalURL }}{{ $canonURL = . }}{{ end -}}
+
+{{- /* 取 description（front-matter 優先、否則站級 description 後備） */ -}}
 {{- $desc := site.Params.description -}}
-{{- with .Params.description -}}{{- $desc = . -}}{{- end -}}
+{{- with .Params.description }}{{ $desc = . }}{{ end -}}
+
+{{- /* 取 datePublished / dateModified（lastmod 優先） */ -}}
+{{- $datePublished := .Date.Format "2006-01-02" -}}
+{{- $dateModified := $datePublished -}}
+{{- if not .Lastmod.IsZero }}{{ $dateModified = .Lastmod.Format "2006-01-02" }}{{ end -}}
 
 {{- $author := dict "@type" "Person" "name" "時光存摺" -}}
 {{- $publisher := dict "@type" "Organization" "name" site.Title "url" site.BaseURL -}}
-{{- $mainEntity := dict "@type" "WebPage" "@id" .Permalink -}}
+
+{{- /* BlogPosting：image 僅在解析到非空 url 時才以 merge 加入（解析不到整個 image 鍵省略） */ -}}
 {{- $pageSchema := dict
   "@context" "https://schema.org"
   "@type" "BlogPosting"
   "headline" .Title
-  "url" .Permalink
+  "url" $canonURL
   "description" $desc
-  "image" $schemaImg
   "inLanguage" "zh-TW"
   "datePublished" $datePublished
   "dateModified" $dateModified
   "author" $author
   "publisher" $publisher
-  "mainEntityOfPage" $mainEntity
+  "mainEntityOfPage" (dict "@type" "WebPage" "@id" $canonURL)
 -}}
+{{- if $schemaImg }}
+  {{- $pageSchema = merge $pageSchema (dict "image" (dict "@type" "ImageObject" "url" $schemaImg)) -}}
+{{- end -}}
 <script type="application/ld+json">{{ $pageSchema | jsonify (dict "indent" "  ") | safeJS }}</script>
+
+{{- /* ── BreadcrumbList：Home → 分類 → 文章 ── */ -}}
+{{- $crumbs := slice -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 1 "name" site.Title "item" site.Home.Permalink) -}}
+{{- $pos := 2 -}}
+{{- with .Parent }}
+  {{- if not .IsHome }}
+    {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) -}}
+    {{- $pos = add $pos 1 -}}
+  {{- end }}
+{{- end -}}
+{{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" $canonURL) -}}
+{{- $breadcrumb := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs -}}
+<script type="application/ld+json">{{ $breadcrumb | jsonify (dict "indent" "  ") | safeJS }}</script>
+
+{{- /* ── FAQPage（條件性硬閘 G19）──
+     偵測渲染後 .Content 中以「？/?」結尾的 H2/H3（問句 heading）、取該 heading 到
+     下一個 H2/H3 之間的 HTML 純文字為答案。≥ 2 組則輸出 FAQPage。
+     口徑對齊 stage-08 G19（H2/H3 結尾 ? / ？）。 */ -}}
+{{- $content := .Content -}}
+{{- $faqItems := slice -}}
+{{- $marked := replaceRE "(?i)(<h[23][ >])" "␟$1" $content -}}
+{{- $chunks := split $marked "␟" -}}
+{{- range $chunks -}}
+  {{- $chunk := . -}}
+  {{- $hMatch := findRE "(?is)<h[23][^>]*>(.*?)</h[23]>" $chunk 1 -}}
+  {{- if $hMatch -}}
+    {{- $hFull := index $hMatch 0 -}}
+    {{- $qText := $hFull | plainify | strings.TrimSpace -}}
+    {{- if or (hasSuffix $qText "？") (hasSuffix $qText "?") -}}
+      {{- $afterH := replaceRE "(?is)^.*?</h[23]>" "" $chunk -}}
+      {{- $answerRaw := replaceRE "(?is)<h[1-6][^>]*>.*$" "" $afterH -}}
+      {{- $answer := $answerRaw | plainify | strings.TrimSpace -}}
+      {{- if and (gt (len $qText) 0) (gt (len $answer) 0) -}}
+        {{- $faqItems = $faqItems | append (dict
+          "@type" "Question"
+          "name" $qText
+          "acceptedAnswer" (dict "@type" "Answer" "text" $answer)
+        ) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if ge (len $faqItems) 2 -}}
+{{- $faqPage := dict
+  "@context" "https://schema.org"
+  "@type" "FAQPage"
+  "mainEntity" $faqItems
+-}}
+<script type="application/ld+json">{{ $faqPage | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end -}}
+
+{{ else }}
+{{- /* ── ceremony / 無真實日期頁：WebPage（不輸出零日期 BlogPosting）── */ -}}
+{{- $pageDesc := site.Params.description -}}
+{{- with .Description }}{{ $pageDesc = . }}{{ else }}{{ with .Summary }}{{ $pageDesc = . | plainify | truncate 160 }}{{ end }}{{ end -}}
+{{- $webpage := dict
+  "@context" "https://schema.org"
+  "@type" "WebPage"
+  "name" .Title
+  "url" .Permalink
+  "description" $pageDesc
+  "inLanguage" "zh-TW"
+  "isPartOf" (dict "@type" "WebSite" "name" site.Title "url" site.BaseURL)
+-}}
+<script type="application/ld+json">{{ $webpage | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end }}
 {{ end }}
