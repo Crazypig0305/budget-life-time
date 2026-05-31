@@ -202,3 +202,5 @@ OPENPOINT 只靠消費掃碼，不刻意進任務牆。每個月拿 NT$5 左右�
 **相關文章**
 - [電子發票對獎習慣：每天 2 分鐘，年度等效時薪算給你看](/daily-5min/invoice-lottery-habit/)
 - [Surveyon 每日簽到攻略：懶人版積分最大化 SOP](/daily-5min/surveyon-daily-checkin/)
+- [每天 5 分鐘理財習慣清單：用手機通知讓省錢行為自動化](/daily-5min/daily-5min-finance-habits/)
+- [超商行動支付回饋最大化：LINE Pay + 街口一次設定完，每月自動省](/saving-tips/mobile-payment-combo/)

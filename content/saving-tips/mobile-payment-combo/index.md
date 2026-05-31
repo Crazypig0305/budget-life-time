@@ -189,4 +189,4 @@ LINE Pay 在超商使用**有銀行白名單**，這是很多人設完才發現�
 
 ---
 
-延伸閱讀：[行動支付完整設定指南：LINE Pay、街口、[悠遊付](https://easywallet.easycard.com.tw/)各綁哪張卡](/setup-once/mobile-payment-card-setup/)
+延伸閱讀：[行動支付完整設定指南：LINE Pay、街口、悠遊付各綁哪張卡](/setup-once/mobile-payment-card-setup/)

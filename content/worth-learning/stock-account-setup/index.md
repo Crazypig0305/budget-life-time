@@ -201,3 +201,4 @@ draft: false
 延伸閱讀：
 - [0050 定期定額入門：設定完之後你每月只需要 5 分鐘](/worth-learning/etf-0050-schedule/)
 - [高股息 vs 市值型 ETF：哪個更適合沒時間管理的上班族？](/worth-learning/etf-dividend-vs-market/)
+- 看完整分類：[需要學但值得：要花時間學、但能用一輩子的理財基礎](/worth-learning/)

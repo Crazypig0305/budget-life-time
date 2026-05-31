@@ -230,7 +230,7 @@ draft: false
 
 [生活費完全自動化手冊：電費、水費、瓦斯費、信用卡，一次設定完](/setup-once/bill-autopay-setup/)
 
-[串流訂閱費年度健診：[Netflix](https://www.netflix.com/)、[Disney+](https://www.disneyplus.com/)、[Spotify](https://www.spotify.com/) 該留哪個？](/saving-tips/streaming-cost-review/)
+[串流訂閱費年度健診：Netflix、Disney+、Spotify 該留哪個？](/saving-tips/streaming-cost-review/)
 
 ---
 

@@ -195,6 +195,8 @@ draft: false
 - [Surveyon 每日簽到攻略：懶人版積分最大化 SOP](/daily-5min/surveyon-daily-checkin/)
 - [電子發票對獎習慣：每天 2 分鐘換算等效時薪](/daily-5min/invoice-lottery-habit/)
 
+如果你連「每天 5 分鐘都不想花」，可以看連設定都只要一次的版本：[EarnApp 實測時間帳：設定 10 分鐘、三個月賺多少、2026 年還值不值得跑](/passive-zero/earnapp-2022-review/)
+
 ---
 
 *時效資訊：OPENPOINT 規則（1 點 = 1 元、任務牆機制）、FamiPoint 換算（300 點 = NT$1）、Surveyon 積分換算，資料查證日 2026-04-28。電子發票 115 年上半年雲端發票 500 元獎 385 萬組，資料來源：財政部。*

@@ -19,7 +19,7 @@ draft: false
 
 結果比我想的短很多。
 
-{{< figure src="/images/worth-learning/etf-[0050](https://www.yuantaetfs.com/product/detail/0050)-schedule.jpg" alt="台灣股市 ETF [定期定額](https://zh.wikipedia.org/wiki/%E5%85%83%E6%97%A5%E5%B9%B3%E5%9D%87%E6%88%90%E6%9C%AC%E6%B3%95)投資示意圖，手機查看投資帳戶" width="1200" height="630" loading="lazy" >}}
+{{< figure src="/images/worth-learning/etf-0050-schedule.jpg" alt="台灣股市 ETF 定期定額投資示意圖，手機查看投資帳戶" width="1200" height="630" loading="lazy" >}}
 
 ---
 
@@ -266,3 +266,5 @@ draft: false
 延伸閱讀：[新手開證券戶 + 設定定期定額：完整流程需要幾分鐘？](/worth-learning/stock-account-setup/)
 
 延伸閱讀：[高股息 vs 市值型 ETF：哪個更適合沒時間管理的上班族？](/worth-learning/etf-dividend-vs-market/)
+
+延伸閱讀：[指數化投資入門：從聽說到設好定期定額，我花了多久？](/worth-learning/indexing-investment-pillar/)

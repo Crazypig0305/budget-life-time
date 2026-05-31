@@ -219,6 +219,8 @@ draft: false
 
 延伸閱讀：[Honeygain 台灣時間帳：設定 8 分鐘、三個月賺多少、折算時薪值不值得](/passive-zero/honeygain-time-review/)
 
+延伸閱讀：看完整分類 [零時間躺賺：設定一次、之後完全不用管的被動收入實測](/passive-zero/)
+
 延伸閱讀：[新手從這裡開始：所有省錢習慣的起點](/start/)
 
 延伸閱讀：[緊急備用金設定：要存多少、放哪裡、設定需要多久？](/setup-once/emergency-fund-setup/)

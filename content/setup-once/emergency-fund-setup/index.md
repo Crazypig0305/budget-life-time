@@ -287,3 +287,5 @@ draft: false
 [生活費完全自動化：設定一次，每月不用再動](/setup-once/bill-autopay-setup/)
 
 [Richart 開戶實測：40 分鐘設定，第一年時薪等效 NT$947](/setup-once/richart-account-setup/)
+
+[上班族保險基本架構：4 大類保障，設定一次保一輩子](/setup-once/insurance-basic-setup/)

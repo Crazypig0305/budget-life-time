@@ -186,9 +186,11 @@ image: /images/weekly-tasks/credit-card-seasonal-switch.jpg
 
 時間成本這樣，值不值得你自己判斷。
 
+如果你連「主力卡要選哪張」都還沒決定，建議先看：[信用卡選卡研究筆記：我花了多少時間做功課，值得嗎？](/worth-learning/credit-card-choose/)
+
 [數位帳戶每月整理術：讓利息自動最大化的 3 個步驟](/weekly-tasks/digital-bank-monthly-optimize/)
 
-[行動支付一次設定指南：LINE Pay、街口、[悠遊付](https://easywallet.easycard.com.tw/)各綁哪張卡](/setup-once/mobile-payment-card-setup/)
+[行動支付一次設定指南：LINE Pay、街口、悠遊付各綁哪張卡](/setup-once/mobile-payment-card-setup/)
 
 ---
 

@@ -206,3 +206,4 @@ draft: false
 
 - [0050 定期定額入門 2026：開戶到設定完成要多久？時間帳全記錄](/worth-learning/etf-0050-schedule/)
 - [新手開證券戶完整流程：實際花了多少時間？](/worth-learning/stock-account-setup/)
+- 看完整分類：[需要學但值得：要花時間學、但能用一輩子的理財基礎](/worth-learning/)

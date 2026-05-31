@@ -247,7 +247,12 @@ Android 用戶的訂閱集中在這裡。如果兩個系統都有用，兩個都
 
 時間成本這樣，值不值得你自己判斷。
 
-[新手從這裡開始：所有省錢習慣的起點](/start/)
+延伸閱讀：
+
+- [月度開支健診 SOP：每月花 30 分鐘，一年能多省多少？](/saving-tips/monthly-spending-check/)
+- [帳單回顧術：每月 10 分鐘找出隱藏的自動扣款](/weekly-tasks/bill-review-hidden-charges/)
+- [串流訂閱費年度健診：30 分鐘，值不值得花這個時間？](/saving-tips/streaming-cost-review/)
+- [新手從這裡開始：所有省錢習慣的起點](/start/)
 
 ---
 

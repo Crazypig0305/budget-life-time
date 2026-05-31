@@ -219,7 +219,9 @@ draft: false
 
 如果你開完數位帳戶，想知道怎麼讓它的效益持續最大化，可以參考：[數位帳戶每月整理術：讓利息自動最大化的 3 個步驟](/weekly-tasks/digital-bank-monthly-optimize/)
 
-如果你的備用金放好之後，想考慮長期資金的配置：[0050 [定期定額](https://zh.wikipedia.org/wiki/%E5%85%83%E6%97%A5%E5%B9%B3%E5%9D%87%E6%88%90%E6%9C%AC%E6%B3%95)入門：設定完之後你每月只需要 5 分鐘](/worth-learning/etf-[0050](https://www.yuantaetfs.com/product/detail/0050)-schedule/)
+如果你的備用金放好之後，想考慮長期資金的配置：[0050 定期定額入門：設定完之後你每月只需要 5 分鐘](/worth-learning/etf-0050-schedule/)
+
+如果你還在猶豫要不要開始定期定額，可以先看：[指數化投資入門：從聽說到設好定期定額要花多久？](/worth-learning/indexing-investment-pillar/)
 
 ---
 
