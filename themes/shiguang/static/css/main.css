@@ -13,6 +13,21 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
+/* ── CLS fix (2026-05-31): metric-override fallback faces ──
+   Home above-fold is all-CJK text (hero-h1 / time-card / ladder) painted in the
+   system CJK fallback while Klee One / Noto Serif TC / Noto Sans TC load
+   (display=optional). The web fonts' default line box differs from the system
+   fallback's, so the swap-in reflowed above-fold text => mobile home CLS 0.123.
+   These faces pin the fallback's line box (ascent/descent/line-gap) to match the
+   web font, so the swap introduces zero layout shift. CJK glyphs are full-width
+   (1em advance) in both web fonts and system CJK fallbacks (PingFang TC /
+   Microsoft JhengHei / PMingLiU), so size-adjust:100% keeps horizontal advance
+   identical. Visual unchanged — same families/weights once the web fonts arrive.
+   Metric values shared with B site (grid-tools-diary) same-class fix. */
+@font-face{font-family:"Klee One Fallback";src:local("Songti TC"),local("PMingLiU"),local("Georgia");size-adjust:100%;ascent-override:88%;descent-override:22%;line-gap-override:0%}
+@font-face{font-family:"Noto Serif TC Fallback";src:local("Songti TC"),local("PMingLiU"),local("Georgia");size-adjust:100%;ascent-override:88%;descent-override:22%;line-gap-override:0%}
+@font-face{font-family:"Noto Sans TC Fallback";src:local("PingFang TC"),local("Microsoft JhengHei"),local("Heiti TC");size-adjust:100%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
+
 :root {
   --bg:         #EDE8D8;
   --paper:      #FDFAF4;
@@ -51,9 +66,9 @@ html { scroll-behavior: smooth; }
   --shadow-sm: 0 1px 4px rgba(35,22,8,.05), 0 2px 8px rgba(35,22,8,.03);
   --shadow-md: 0 3px 14px rgba(35,22,8,.08), 0 1px 4px rgba(35,22,8,.04);
 
-  --display: 'Klee One', 'Noto Serif TC', Georgia, serif;
-  --serif:   'Noto Serif TC', Georgia, serif;
-  --sans:    'Noto Sans TC', sans-serif;
+  --display: 'Klee One', 'Klee One Fallback', 'Noto Serif TC', Georgia, serif;
+  --serif:   'Noto Serif TC', 'Noto Serif TC Fallback', Georgia, serif;
+  --sans:    'Noto Sans TC', 'Noto Sans TC Fallback', sans-serif;
   --mono:    'Libre Baskerville', Georgia, serif;
   --tabular: 'IBM Plex Mono', 'Libre Baskerville', monospace; /* v4 NEW */
 
