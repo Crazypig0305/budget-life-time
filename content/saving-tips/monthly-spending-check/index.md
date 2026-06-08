@@ -121,6 +121,7 @@ draft: false
 - 想知道每天 5 分鐘記帳怎麼做：[每天 5 分鐘財務習慣]({{< ref "daily-5min/daily-5min-finance-habits" >}})
 - 想清單式檢視所有訂閱：[訂閱費大掃除]({{< ref "saving-tips/subscription-audit" >}})
 - 想設定一次受益的省錢方法：[電信費攜碼 SOP]({{< ref "saving-tips/telecom-porting-save" >}})
+- 健診抓到問題後不知道先處理哪個：[Dcard 熱門省錢方法按等效時薪排序]({{< ref "saving-tips/dcard-saving-methods" >}})、6 招哪些值得花時間一眼看完
 
 ---
 
