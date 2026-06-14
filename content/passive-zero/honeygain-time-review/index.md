@@ -10,7 +10,7 @@ draft: false
 ---
 
 > 📅 原文發布：2022 年 1 月｜最後更新：2026 年 4 月
-> 本文數字已於 2026 年 4 月對照 [Honeygain](https://www.honeygain.com/) 官方說明校對更新（出金門檻 / JumpTask 模式 / 台灣用戶月收區間）。
+> 本文數字已於 2026 年 4 月對照 <a href="https://www.honeygain.com/" rel="sponsored nofollow noopener" target="_blank">Honeygain</a> 官方說明校對更新（出金門檻 / JumpTask 模式 / 台灣用戶月收區間）。
 > 平台規則隨時可能調整，建議參考本文後仍至官網確認最新條件。
 
 > 📌 本文含聯盟連結。透過文中連結註冊，本站可能獲得分潤，但不影響你的費用或平台條款，也不影響本文評測立場。
@@ -100,7 +100,7 @@ Honeygain 目前有兩種出金方式：
 - 比標準模式多 +10% Credits 加成
 - 需要額外建立 JumpTask 錢包，涉及加密貨幣，操作門檻較高
 
-對不熟加密貨幣的人，標準模式門檻雖高（$20），流程反而更直接。
+對不熟加密貨幣的人，標準模式門檻雖高（$20），流程反而更直接。如果你想知道「領的是加密貨幣」的掛機工具出金到底要過幾關、各花多少時間，我在 [TRXFlow 協作軌時間帳](/passive-zero/trxflow-time-cost/)把交易所 KYC 到台幣到帳整段逐筆記過一次。
 
 ---
 
@@ -187,11 +187,13 @@ Honeygain 目前有兩種出金方式：
 
 ---
 
-官網連結：[Honeygain 官網](https://www.honeygain.com/){rel="sponsored nofollow"}（非推薦碼，純官方連結；user 後續如有提供推薦碼可替換）
+官網連結：<a href="https://www.honeygain.com/" rel="sponsored nofollow noopener" target="_blank">Honeygain 官網</a>（非推薦碼，純官方連結；user 後續如有提供推薦碼可替換）
 
 ---
 
 延伸閱讀：[EarnApp 2022 實測：改版後時薪換算給你看](/passive-zero/earnapp-2022-review/)
+
+延伸閱讀：[TRXFlow 協作軌時間帳：設定 30 分鐘、出金過三關，一年折算時薪值不值得](/passive-zero/trxflow-time-cost/)
 
 延伸閱讀：看完整分類 [零時間躺賺：設定一次、之後完全不用管的被動收入實測](/passive-zero/)
 
