@@ -7,9 +7,26 @@
   <span id="today-weekday">星期{{ slice "日一二三四五六" (int (now.Weekday)) (add (int (now.Weekday)) 1) }}</span>
 </div>
 
+{{/* 真正部落格文章判定（與 schema.html 口徑一致）：在 6 內容分類下 + 有真實日期 */}}
+{{ $contentSections := slice "saving-tips" "passive-zero" "daily-5min" "weekly-tasks" "setup-once" "worth-learning" }}
+{{ $isArticle := and (in $contentSections .Section) (not .Date.IsZero) }}
+
 {{/* ── PAGE CONTENT ── */}}
 <div class="page-wrap-inner">
   <h1 class="page-h1">{{ .Title }}</h1>
+
+  {{/* ── BYLINE：安靜日期（無框無 icon、手帳語氣、僅真文章顯示）── */}}
+  {{ if $isArticle }}
+  <div class="page-byline">
+    <span>{{ .Date.Format "2006 年 1 月 2 日" }}</span>
+    {{ if and (not .Lastmod.IsZero) (.Lastmod.After .Date) }}
+    <span class="page-byline-sep">·</span>
+    <span>更新於 {{ .Lastmod.Format "2006 年 1 月" }}</span>
+    {{ end }}
+    <span class="page-byline-sep">·</span>
+    <span>{{ .ReadingTime }} 分鐘閱讀</span>
+  </div>
+  {{ end }}
 
   {{ $thumb := partial "thumb-resolve.html" . }}
   {{ if $thumb }}
@@ -21,6 +38,15 @@
   <div class="page-content">
     {{ .Content }}
   </div>
+
+  {{/* ── UPDATE NOTE：模板自動產生的白話更新說明（無框無 icon、低調、僅真文章顯示）── */}}
+  {{ if $isArticle }}
+  {{ $noteDate := .Date }}
+  {{ if not .Lastmod.IsZero }}{{ $noteDate = .Lastmod }}{{ end }}
+  <p class="article-update-note">
+    這篇最後更新於 {{ $noteDate.Format "2006 年 1 月" }}——文中數字可能已經變動，看完建議到官網再確認一次。
+  </p>
+  {{ end }}
 </div>
 
 {{ end }}

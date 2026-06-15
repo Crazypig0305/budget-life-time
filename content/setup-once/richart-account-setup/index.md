@@ -10,10 +10,6 @@ image: /images/setup-once/richart-account-setup.jpg
 draft: false
 ---
 
-> 📅 原文發布：2020 年 5 月｜最後更新：2026 年 4 月
-> 本文數字已於 2026 年 4 月對照 Richart 官方現況校對更新。
-> 活存利率與達標條件隨時可能調整，建議對照 [Richart 官網](https://richart.tw/) 確認最新方案。
-
 > 📌 本文含官網連結。點擊連結前往 Richart 官網不影響你的開戶條件，本文為親身設定記錄，非業配。
 
 ---

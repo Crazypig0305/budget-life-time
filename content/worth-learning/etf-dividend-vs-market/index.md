@@ -10,9 +10,6 @@ image: "/images/worth-learning/etf-dividend-vs-market.jpg"
 draft: false
 ---
 
-> 📅 原文發布：2022 年 6 月｜最後更新：2026 年 4 月
-> ETF 成分、費用率與配息機制可能隨市況調整，本文為個人研究筆記，不構成投資建議，數字請至各投信官網或台灣證券交易所確認最新版本。
-
 2022 年 6 月，[0056](https://www.yuantaetfs.com/product/detail/0056) 的討論熱度很高，我身邊幾個同事在問：「要不要把 [0050](https://www.yuantaetfs.com/product/detail/0050) 換成高股息的？」
 
 我沒有馬上換，但我想弄清楚一件事——

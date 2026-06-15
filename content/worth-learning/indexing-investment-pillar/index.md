@@ -10,9 +10,6 @@ image: /images/worth-learning/indexing-investment-pillar.jpg
 draft: false
 ---
 
-> 📅 原文發布：2021 年 7 月｜最後更新：2026 年 4 月
-> 本文所提 ETF 費用率、開戶手續費、最低扣款金額已於 2026 年 4 月對照各券商網站確認。券商條款與 ETF 費用率隨時可能調整，建議至各券商官網確認最新條件。本文不構成投資建議。
-
 那段時間，我在 Dcard 的理財板看到有人說「一個月存三千，[定期定額](https://zh.wikipedia.org/wiki/%E5%85%83%E6%97%A5%E5%B9%B3%E5%9D%87%E6%88%90%E6%9C%AC%E6%B3%95) [0050](https://www.yuantaetfs.com/product/detail/0050)，什麼都不用管」。
 
 看完之後我的第一個反應不是「好，我來試」，而是：**這說得很輕鬆，但我得先弄清楚幾件事吧？**

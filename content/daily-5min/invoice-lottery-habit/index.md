@@ -10,9 +10,6 @@ image: /images/daily-5min/invoice-lottery-habit.jpg
 draft: false
 ---
 
-> 📅 原文發布：2020 年 2 月｜最後更新：2026 年 4 月
-> 本文為個人操作紀錄，[統一發票](https://zh.wikipedia.org/wiki/%E7%B5%B1%E4%B8%80%E7%99%BC%E7%A5%A8)給獎辦法及雲端發票加碼方案由[財政部](https://www.mof.gov.tw/)公布，隨時可能調整，建議參閱財政部[電子發票](https://www.einvoice.nat.gov.tw/)整合服務平台確認最新條件。
-
 設定那天我特地計時了一下。悠遊卡載具申請加上 APP 帳號設定，總共花了我 **12 分鐘**。之後就沒再動過，每兩個月系統自動對獎、有中就自動匯款進帳戶。
 
 這篇用 C 站的時間帳本算法：投入幾分鐘、換回多少錢、折算時薪值不值得，讓你自己判斷。

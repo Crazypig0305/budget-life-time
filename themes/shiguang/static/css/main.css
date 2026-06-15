@@ -1065,6 +1065,19 @@ body {
   border-radius: 2px;
 }
 
+/* 文末更新說明（模板自動產生、低調、上方一條細 hairline） */
+.article-update-note {
+  margin: 0 0 60px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-md);
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--ink-lt);
+  letter-spacing: .02em;
+}
+
 /* ─────────────────────────────────────────────
    v4 NEW COMPONENT 1：數字突出框 .num-highlight
    用途：等效時薪 / 設定分鐘 / 維護分鐘三數字放大強調
@@ -1270,8 +1283,22 @@ body {
   color: var(--ink);
   letter-spacing: .05em;
   line-height: 1.45;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
+/* 標題下安靜日期 byline（無框無 icon、手帳語氣） */
+.page-byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 300;
+  color: var(--ink-lt);
+  letter-spacing: .03em;
+}
+.page-byline-sep { color: var(--ink-xs); }
 .page-content {
   font-family: var(--serif);
   font-size: 15.5px;

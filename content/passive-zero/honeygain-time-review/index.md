@@ -9,10 +9,6 @@ image: /images/passive-zero/honeygain-time-review.jpg
 draft: false
 ---
 
-> 📅 原文發布：2022 年 1 月｜最後更新：2026 年 4 月
-> 本文數字已於 2026 年 4 月對照 <a href="https://www.honeygain.com/" rel="sponsored nofollow noopener" target="_blank">Honeygain</a> 官方說明校對更新（出金門檻 / JumpTask 模式 / 台灣用戶月收區間）。
-> 平台規則隨時可能調整，建議參考本文後仍至官網確認最新條件。
-
 > 📌 本文含聯盟連結。透過文中連結註冊，本站可能獲得分潤，但不影響你的費用或平台條款，也不影響本文評測立場。
 
 ---

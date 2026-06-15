@@ -10,9 +10,6 @@ image: credit-card-choose-hero.jpg
 draft: false
 ---
 
-> 📅 原文發布：2023 年 8 月｜最後更新：2026 年 4 月
-> 信用卡回饋條件與年費豁免規則持續調整，本文整理選卡邏輯與研究時間帳，具體卡別條件請至各銀行官網或 [中華民國銀行公會](https://www.ba.org.tw/) 信用卡業務統計確認最新版本。
-
 {{< figure src="credit-card-choose-hero.jpg" alt="信用卡選卡研究筆記桌面俯拍，紙本記錄與計算機" loading="eager" >}}
 
 2023 年 8 月，我用的信用卡是當年辦帳戶時銀行順手推薦的那張，不是自己選的。

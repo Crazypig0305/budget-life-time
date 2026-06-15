@@ -10,10 +10,6 @@ image: /images/daily-5min/convenience-store-checkin.jpg
 draft: false
 ---
 
-> 📅 原文發布：2021 年 11 月｜最後更新：2026 年 4 月
-> 本文數字已於 2026 年 4 月對照 OPENPOINT 與全家 FamiPoint 現況校對更新。
-> App 功能與簽到規則定期調整，建議至各 App 確認最新簽到機制。
-
 設定那天我特地計時了一下。兩個 App 下載、建帳號、找到簽到按鈕，加起來 14 分鐘。之後每天花的時間不到 1 分鐘。問題只有一個：這 1 分鐘，值不值得？
 
 <div class="num-highlight">
