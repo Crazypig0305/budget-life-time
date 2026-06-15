@@ -267,17 +267,30 @@ body {
 }
 .date-sep { color: var(--ink-xs); }
 
-/* ── HERO ── */
+/* ── HERO（減法：移除 repeating-linear-gradient 紙紋）── */
 .hero {
-  padding: 52px 40px 48px;
-  background:
-    repeating-linear-gradient(
-      transparent,
-      transparent 31px,
-      rgba(122,92,20,.07) 31px,
-      rgba(122,92,20,.07) 32px
-    ),
-    var(--bg);
+  padding: 56px 40px 52px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+/* 兩欄：文字左 / 插畫右（≤900px 堆疊） */
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 45%);
+  align-items: center;
+  gap: 42px;
+}
+.hero-copy { min-width: 0; }
+.hero-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+.hero-illustration svg {
+  width: min(100%, 420px);
+  height: auto;
+  display: block;
 }
 .hero-label {
   display: inline-flex;
@@ -299,12 +312,12 @@ body {
 }
 .hero-h1 {
   font-family: var(--display);
-  font-size: clamp(26px, 3.2vw, 42px);
+  font-size: clamp(28px, 3.2vw, 44px);
   font-weight: 600;
   color: var(--ink);
   line-height: 1.45;
   letter-spacing: .04em;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   max-width: 640px;
 }
 .hero-sub {
@@ -312,53 +325,38 @@ body {
   font-size: 15.5px;
   font-weight: 300;
   color: var(--ink-mid);
-  line-height: 1.95;
+  line-height: 2.0;
   max-width: 440px;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
-/* Time-choice cards */
+/* Time-choice cards（減法：移除 rotate() + ::before washi tape）
+   搬出 .hero-copy 後改整寬 3 欄一排（sibling of .hero-inner）*/
 .hero-cards {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  padding-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 36px;
 }
 .time-card {
   background: var(--paper);
   border: 1px solid var(--border-md);
   border-radius: 3px;
-  padding: 18px 20px 14px;
+  padding: 20px 22px 16px;
   cursor: pointer;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  min-width: 162px;
-  box-shadow: var(--shadow-sm), 2px 3px 0 rgba(35,22,8,.06);
+  gap: 6px;
+  min-width: 0;
+  box-shadow: var(--shadow-sm);
   transition: box-shadow .18s, transform .18s, border-color .18s;
-  position: relative;
 }
-.time-card:nth-child(1) { transform: rotate(-.5deg); }
-.time-card:nth-child(2) { transform: rotate(.3deg); }
-.time-card:nth-child(3) { transform: rotate(-.2deg); }
 .time-card:hover {
-  box-shadow: var(--shadow-md), 2px 4px 0 rgba(35,22,8,.08);
-  transform: rotate(0deg) translateY(-3px);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
   border-color: var(--gold);
 }
-.time-card::before {
-  content: '';
-  position: absolute;
-  top: -7px; left: 50%;
-  transform: translateX(-50%);
-  width: 38px; height: 13px;
-  border-radius: 1px;
-  opacity: .55;
-}
-.time-card:nth-child(1)::before { background: #C4956A; }
-.time-card:nth-child(2)::before { background: #6A9B6A; }
-.time-card:nth-child(3)::before { background: #8A7AB0; }
 .time-card-label {
   font-size: 12.5px;
   font-family: var(--sans);
@@ -368,16 +366,16 @@ body {
 }
 .time-card-title {
   font-family: var(--display);
-  font-size: 15.5px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink);
   letter-spacing: .04em;
   line-height: 1.5;
 }
 .time-card-arrow {
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--gold);
-  margin-top: 6px;
+  margin-top: 8px;
   font-style: italic;
   font-family: var(--mono);
 }
@@ -526,7 +524,7 @@ body {
 .ladder-item {
   display: flex;
   align-items: flex-start;
-  padding: 20px 0;
+  padding: 24px 0;
   position: relative;
   border-bottom: 1px solid var(--border);
   text-decoration: none;
@@ -539,7 +537,7 @@ body {
   left: -136px;
   width: 86px;
   text-align: right;
-  top: 22px;
+  top: 26px;
 }
 .ladder-time-main {
   font-family: var(--tabular); /* v4: tabular mono */
@@ -563,7 +561,7 @@ body {
   background: var(--step-color, var(--gold));
   position: absolute;
   left: -33px;
-  top: 26px;
+  top: 30px;
   box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--step-color, var(--gold));
   opacity: .88;
 }
@@ -572,10 +570,11 @@ body {
   border: 1px solid var(--border);
   border-left: 3px solid var(--step-color, var(--gold));
   border-radius: 3px;
-  padding: 15px 20px;
+  padding: 16px 22px;
   box-shadow: var(--shadow-sm);
   transition: background .15s;
   width: 100%;
+  flex: 0 0 auto;
 }
 .ladder-item:nth-child(1) .ladder-content-box { max-width: 600px; }
 .ladder-item:nth-child(2) .ladder-content-box { max-width: 530px; margin-left: 36px; }
@@ -605,6 +604,21 @@ body {
   color: var(--ink-mid);
   line-height: 1.80;
   font-weight: 300;
+}
+/* 卡片左（維持原寬）／插畫右（填卡片右側空白帶、放大）兩欄 */
+.ladder-card__illu {
+  flex: 1 1 0;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  padding-left: 24px;
+}
+.ladder-card__illu svg {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  max-height: 190px;
+  display: block;
 }
 
 /* ── LATEST ARTICLES ── */
@@ -771,12 +785,8 @@ body {
 /* ── SECTION PAGE (Category listing) ── */
 .cat-header {
   padding: 44px 40px 32px;
-  background:
-    repeating-linear-gradient(
-      transparent, transparent 31px,
-      rgba(122,92,20,.05) 31px, rgba(122,92,20,.05) 32px
-    ),
-    var(--bg);
+  /* 減法：移除 repeating-linear-gradient 橫線紙紋，純底色 + border-bottom */
+  background: var(--bg);
   border-bottom: 1px solid var(--border-md);
 }
 .cat-eyebrow {
@@ -1069,16 +1079,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  position: relative;
-}
-/* Washi tape 裝飾（延續 v3 膠帶語言）*/
-.num-highlight::before {
-  content: '';
-  position: absolute;
-  top: -10px; left: 28px;
-  width: 42px; height: 13px;
-  background: #A88040;
-  border-radius: 1px; opacity: .50;
 }
 .num-cell {
   text-align: center;
@@ -1129,16 +1129,6 @@ body {
   border-radius: 0 3px 3px 0;
   padding: 20px 22px 20px 26px;
   margin: 2em 0;
-  position: relative;
-}
-/* 橙茶 Washi tape（區別正常金色膠帶）*/
-.skip-box::before {
-  content: '';
-  position: absolute;
-  top: -8px; left: 18px;
-  width: 36px; height: 12px;
-  background: var(--warn-tape);
-  border-radius: 1px; opacity: .55;
 }
 .skip-box-header {
   display: flex; align-items: center; gap: 8px;
@@ -1191,16 +1181,6 @@ body {
   border-radius: 3px;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  position: relative;
-}
-/* 表格頂部 Washi tape 裝飾 */
-.budget-table-wrap::before {
-  content: '';
-  position: absolute;
-  top: -8px; right: 36px;
-  width: 40px; height: 13px;
-  background: #7A9B70;
-  border-radius: 1px; opacity: .50;
 }
 .budget-table-head {
   background: var(--gold-pale);
@@ -1360,7 +1340,10 @@ body {
   .main { margin-left: 0; }
 
   .date-strip { padding: 7px 20px; }
-  .hero { padding: 56px 20px 40px; }
+  .hero { padding: 64px 20px 44px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 28px; }
+  .hero-illustration { justify-content: flex-start; }
+  .hero-illustration svg { width: min(100%, 360px); }
   .savings-section { padding: 28px 20px 0; }
   .section-wrap { padding: 36px 20px 0; }
   .cat-header { padding: 56px 20px 24px; }
@@ -1373,6 +1356,10 @@ body {
   .num-highlight { grid-template-columns: 1fr; gap: 0; }
   .num-cell { border-right: none; border-bottom: 1px solid var(--border-md); }
   .num-cell:last-child { border-bottom: none; }
+
+  /* 收合側欄後雖變寬，但插畫退場回純文字卡片清單，保持乾淨 */
+  .ladder-card__illu { display: none; }
+  .ladder-item:nth-child(n) .ladder-content-box { max-width: 100%; margin-left: 0; }
 }
 
 @media (max-width: 680px) {
@@ -1393,8 +1380,8 @@ body {
   .ladder-time { left: -80px; width: 50px; }
   .ladder-node { left: -27px; }
   .ladder-item:nth-child(n) .ladder-content-box { max-width: 100%; margin-left: 0; }
-  .hero-cards { gap: 12px; }
-  .time-card { min-width: 140px; }
+  .ladder-card__illu { display: none; }
+  .hero-cards { grid-template-columns: 1fr; gap: 12px; margin-top: 28px; }
   .footer { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
 
@@ -1429,10 +1416,7 @@ body {
   border: 1px solid var(--border-md);
   background: var(--gold-xlt);
   align-self: center;
-  transform: rotate(-1deg);
-  transition: transform .18s ease;
 }
-.post-row:hover .post-row__thumb { transform: rotate(0deg); }
 .post-row__thumb img {
   width: 100%;
   height: 100%;
@@ -1465,7 +1449,6 @@ body {
   overflow: hidden;
   border: 1px solid var(--border-md);
   box-shadow: var(--shadow-sm);
-  transform: rotate(-1deg);
 }
 .article-thumbnail img {
   width: 100%;
@@ -1476,18 +1459,16 @@ body {
   filter: saturate(.92);
 }
 
-/* 手機 RWD：post-row 縮圖縮小成 80x80 + 取消旋轉避免擁擠 */
+/* 手機 RWD：post-row 縮圖縮小成 80x80 */
 @media (max-width: 640px) {
   .post-row { gap: 12px; }
   .post-row__thumb {
     flex: 0 0 80px;
     width: 80px;
     height: 80px;
-    transform: none;
   }
   .post-row__thumb-icon { font-size: 26px; }
   .article-thumbnail {
     max-width: 280px;
-    transform: none;
   }
 }

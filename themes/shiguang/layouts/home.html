@@ -9,14 +9,98 @@
   <span>用時間換幸福</span>
 </div>
 
-{{/* ── HERO ── */}}
+{{/* ── HERO（兩欄：文字左 / 沙漏→硬幣階梯 SVG 右；time-card 整寬一排在最下）── */}}
 <section class="hero">
-  <div class="hero-label">時光存摺 · 理財日記</div>
-  <h1 class="hero-h1">你每天有幾分鐘？<br>找到最適合你的起點。</h1>
-  <p class="hero-sub">
-    不管你的時間多或少，每一分鐘都值得好好運用。<br>
-    告訴我你能投入多少，我幫你找到最適合的方法。
-  </p>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-label">時光存摺 · 理財日記</div>
+      <h1 class="hero-h1">你每天有幾分鐘？<br>找到最適合你的起點。</h1>
+      <p class="hero-sub">
+        不管你的時間多或少，每一分鐘都值得好好運用。<br>
+        告訴我你能投入多少，我幫你找到最適合的方法。
+      </p>
+    </div>
+    <div class="hero-illustration">
+      <svg class="hero-time-savings-svg" role="img" aria-labelledby="timeSavingsTitle timeSavingsDesc" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+        <title id="timeSavingsTitle">時間變成儲蓄階梯</title>
+        <desc id="timeSavingsDesc">手繪風沙漏中的沙落下後，轉成逐步上升的硬幣階梯，象徵時間累積成存款。</desc>
+        <defs>
+          <linearGradient id="heroStepGoldGreen" x1="120" y1="260" x2="342" y2="144" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#7A5C14"/>
+            <stop offset=".52" stop-color="#6E6B2E"/>
+            <stop offset="1" stop-color="#2A6058"/>
+          </linearGradient>
+        </defs>
+
+        <g fill="none" stroke="#231608" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M105 72c29-3 68-3 96 1"/>
+          <path d="M108 332c28 4 68 4 95 0"/>
+          <path d="M119 82c4 24 20 48 42 63 5 4 5 9 .5 13-22 16-39 41-44 68-4 22-3 53 2 94"/>
+          <path d="M189 83c-5 25-20 48-42 63-5 4-5 9-.2 13 22 16 38 41 43 67 4 24 2 57-1 94"/>
+          <path d="M123 95c18 4 45 4 63 .5"/>
+          <path d="M127 306c17 5 42 5 58 .5"/>
+          <path d="M137 112c10 13 19 20 28 27"/>
+          <path d="M173 112c-8 12-17 20-27 28"/>
+          <path d="M147 171c-4 18-5 42-2 63"/>
+          <path d="M164 170c3 19 4 43 1 64"/>
+        </g>
+
+        <g fill="url(#heroStepGoldGreen)" opacity=".18" stroke="#231608" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M132 120c14 2 33 1 47-.5-5 9-13 16-23 24-9-7-18-14-24-23.5z"/>
+          <path d="M134 288c7-21 37-22 47 0-12 6-34 6-47 0z"/>
+        </g>
+
+        <g fill="none" stroke="#231608" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M154 151c.5 9 .2 20-.4 31"/>
+          <path d="M155 194c-.7 5-.8 10-.2 15"/>
+          <path d="M154 223c0 8 .4 17 1 25"/>
+        </g>
+
+        <g fill="url(#heroStepGoldGreen)" opacity=".42">
+          <circle cx="154" cy="165" r="3.2"/>
+          <circle cx="155" cy="188" r="2.5"/>
+          <circle cx="154" cy="218" r="2.8"/>
+          <circle cx="157" cy="250" r="3.4"/>
+        </g>
+
+        <g fill="none" stroke="#231608" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M167 291c34-2 67-15 96-37 22-16 42-38 58-63"/>
+          <path d="M190 280c9-3 20-8 29-14"/>
+          <path d="M219 264c9-5 18-12 27-20"/>
+          <path d="M249 241c9-8 17-17 25-27"/>
+          <path d="M279 210c8-10 15-21 21-33"/>
+        </g>
+
+        <g stroke="#231608" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="190" cy="281" rx="16" ry="7" fill="url(#heroStepGoldGreen)" opacity=".30"/>
+          <path d="M174 281c1 9 32 9 33 .2" fill="none"/>
+          <path d="M178 276c8 3 18 3 27 .3" fill="none"/>
+
+          <ellipse cx="223" cy="263" rx="17" ry="7.5" fill="url(#heroStepGoldGreen)" opacity=".34"/>
+          <path d="M206 263c1 10 34 10 35 .3" fill="none"/>
+          <path d="M211 258c8 3 20 3 28 .2" fill="none"/>
+
+          <ellipse cx="256" cy="237" rx="18" ry="8" fill="url(#heroStepGoldGreen)" opacity=".38"/>
+          <path d="M238 237c1 10 36 10 37 .4" fill="none"/>
+          <path d="M243 232c9 3 21 3 30 .1" fill="none"/>
+
+          <ellipse cx="288" cy="203" rx="18.5" ry="8" fill="url(#heroStepGoldGreen)" opacity=".42"/>
+          <path d="M270 203c.5 10 37 11 38 .3" fill="none"/>
+          <path d="M275 198c9 3 22 3 30 .3" fill="none"/>
+
+          <ellipse cx="318" cy="164" rx="19" ry="8.5" fill="url(#heroStepGoldGreen)" opacity=".46"/>
+          <path d="M299 164c1 11 38 11 39 .3" fill="none"/>
+          <path d="M305 158.5c9 3.5 22 3.5 30 .4" fill="none"/>
+        </g>
+
+        <g fill="none" stroke="#231608" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" opacity=".78">
+          <path d="M101 355c37 7 78 7 119 1"/>
+          <path d="M245 335c29 2 65-2 91-10"/>
+          <path d="M98 59c35-6 77-6 112 0"/>
+        </g>
+      </svg>
+    </div>
+  </div>
   <div class="hero-cards">
     <a href="/saving-tips/" class="time-card">
       <span class="time-card-label">完全沒有多餘時間</span>
@@ -82,10 +166,13 @@
       </div>
       <div class="ladder-node"></div>
       <div class="ladder-content-box">
-        <div class="ladder-cat">{{ .cat }}</div>
-        <div class="ladder-name">{{ .name }}</div>
-        <div class="ladder-desc">{{ .desc }}</div>
+        <div class="ladder-card__text">
+          <div class="ladder-cat">{{ .cat }}</div>
+          <div class="ladder-name">{{ .name }}</div>
+          <div class="ladder-desc">{{ .desc }}</div>
+        </div>
       </div>
+      <div class="ladder-card__illu">{{ partial "ladder-illu.html" .step }}</div>
     </a>
     {{ end }}
 
