@@ -1387,6 +1387,19 @@ body {
   /* 收合側欄後雖變寬，但插畫退場回純文字卡片清單，保持乾淨 */
   .ladder-card__illu { display: none; }
   .ladder-item:nth-child(n) .ladder-content-box { max-width: 100%; margin-left: 0; }
+
+  /* ── 手機文章欄溢出修法（2026-07-02）──
+     文章欄可縮 + 寬表格/計算表獨立橫滑 + num-highlight 收流動單欄 + 觸控目標 44px */
+  .page-content, .page-wrap-inner { min-width: 0; max-width: 100%; }
+  .budget-table-inner { overflow-x: auto; max-width: 100%; }
+  .budget-table-wrap { max-width: 100%; }
+  .page-content table { display: block; overflow-x: auto; max-width: 100%; }
+  .num-highlight { grid-template-columns: minmax(0, 1fr); }
+  .page-content img { max-width: 100%; height: auto; }
+  .page-content pre { overflow-x: auto; max-width: 100%; }
+  .page-content { overflow-wrap: break-word; }
+  .sidebar-toggle { min-width: 44px; min-height: 44px; }
+  footer a { padding: 6px 0; display: inline-block; }
 }
 
 @media (max-width: 680px) {
