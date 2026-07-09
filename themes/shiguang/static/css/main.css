@@ -1420,7 +1420,7 @@ body {
   .sidebar-toggle { display: flex; }
   .main { margin-left: 0; }
 
-  .date-strip { padding: 7px 20px; }
+  .date-strip { padding: 7px 20px 7px 64px; } /* 讓開左上固定漢堡鈕(右緣58)，避免日期年份被蓋(2026-07-10 RWD) */
   .hero { padding: 64px 20px 44px; }
   .hero-inner { grid-template-columns: 1fr; gap: 28px; }
   .hero-illustration { justify-content: flex-start; }
@@ -1477,6 +1477,14 @@ body {
   .ladder-card__illu { display: none; }
   .hero-cards { grid-template-columns: 1fr; gap: 12px; margin-top: 28px; }
   .footer { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
+
+/* 窄桌面（901-1300px）：固定側欄回來但內容區不夠寬，時間軸插圖（裝飾）退場、
+   內容卡全寬，避免「側欄240 + 內容卡 + 插圖」擠爆橫向溢出（2026-07-10 RWD 修）。
+   實測 illu 需內容區 ~1263px 才不溢（1280 仍溢 12px），故 ≥1301px 才顯示插圖。*/
+@media (min-width: 901px) and (max-width: 1300px) {
+  .ladder-card__illu { display: none; }
+  .ladder-item:nth-child(n) .ladder-content-box { max-width: 100%; margin-left: 0; }
 }
 
 /* ──────────────────────────────────────────────────────────────
