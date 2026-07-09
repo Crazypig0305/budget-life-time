@@ -47,12 +47,23 @@ html { scroll-behavior: smooth; }
 
   --moss-pale:  #DDE8D4;
 
-  --step-0: #7A5C14;
-  --step-1: #6A6420;
-  --step-2: #506A2C;
-  --step-3: #3C6A38;
-  --step-4: #326648;
-  --step-5: #2A6058;
+  /* ── 手帳深化：分層暖色 vintage 印章墨 + 牛皮紙（v5、2026-07-10）── */
+  --kraft:      #E5D8C0;   /* 牛皮紙面（比 surface 深、當郵戳框底） */
+  --kraft-edge: #CDB99A;   /* 牛皮紙撕邊 / 郵票孔邊 / 票券暖框 */
+  --sage:       #4E6A47;   /* 鼠尾草墨（暖綠、非冷藍） */
+  --terra:      #A85834;   /* 赤陶磚墨（暖橘紅、橡皮戳邊 + 郵戳圈） */
+  --mustard:    #B8860B;   /* 芥末金墨（= --warn-border 同支） */
+  --plum:       #7A4B52;   /* 暗玫瑰墨（安靜女性調） */
+  --stamp-ink:  rgba(35,22,8,.82);
+
+  /* 6 支全暖墨階梯（原 gold→莫蘭迪綠→teal 冷調換成暖家族協調漸進：
+     olive→sage→gold→mustard→terra→plum，禁藍/冷綠/teal）*/
+  --step-0: #6E6B2E;   /* 橄欖墨 olive */
+  --step-1: #4E6A47;   /* 鼠尾草 sage */
+  --step-2: #7A5C14;   /* 舊金 gold */
+  --step-3: #B8860B;   /* 芥末 mustard */
+  --step-4: #A85834;   /* 赤陶 terra */
+  --step-5: #7A4B52;   /* 暗玫瑰 plum */
 
   --sb-text:   rgba(255,247,230,.88);
   --sb-muted:  rgba(255,247,230,.44);
@@ -81,7 +92,12 @@ html { scroll-behavior: smooth; }
 }
 
 body {
-  background: var(--bg);
+  /* v5 手帳深化：極淡橫紋紙纖維（~28px 週期），疊在原暖底上、不改底色 */
+  background:
+    repeating-linear-gradient(0deg,
+      transparent, transparent 27px,
+      rgba(35,22,8,.03) 27px, rgba(35,22,8,.03) 28px),
+    var(--bg);
   color: var(--ink);
   font-family: var(--sans);
   font-weight: 300;
@@ -339,8 +355,9 @@ body {
   margin-top: 36px;
 }
 .time-card {
+  --notch: 10px;
   background: var(--paper);
-  border: 1px solid var(--border-md);
+  border: 1px solid var(--kraft-edge);   /* v5：牛皮暖框（取代冷灰 border-md）*/
   border-radius: 3px;
   padding: 20px 22px 16px;
   cursor: pointer;
@@ -351,6 +368,13 @@ body {
   min-width: 0;
   box-shadow: var(--shadow-sm);
   transition: box-shadow .18s, transform .18s, border-color .18s;
+  /* v5 手帳深化：入場票券左右半圓缺角，mask 打洞透出頁面暖底（只 hero 三卡）*/
+  -webkit-mask:
+    radial-gradient(circle var(--notch) at left center, transparent 96%, #000) left / 50.5% 100% no-repeat,
+    radial-gradient(circle var(--notch) at right center, transparent 96%, #000) right / 50.5% 100% no-repeat;
+  mask:
+    radial-gradient(circle var(--notch) at left center, transparent 96%, #000) left / 50.5% 100% no-repeat,
+    radial-gradient(circle var(--notch) at right center, transparent 96%, #000) right / 50.5% 100% no-repeat;
 }
 .time-card:hover {
   box-shadow: var(--shadow-md);
@@ -498,10 +522,20 @@ body {
   letter-spacing: .06em;
 }
 .section-sub {
-  font-size: 14px;
-  color: var(--ink-lt);
-  font-family: var(--mono);
-  font-style: italic;
+  /* v5 手帳深化：橡皮戳分頁標籤——微傾斜 -3deg、赤陶邊框圓角、等寬字 */
+  display: inline-block;
+  font-family: var(--tabular);
+  font-size: 11.5px;
+  letter-spacing: .12em;
+  color: var(--terra);
+  font-style: normal;
+  text-transform: uppercase;
+  border: 1.4px solid var(--terra);
+  border-radius: 3px;
+  padding: 4px 9px;
+  transform: rotate(-3deg);
+  transform-origin: left center;
+  opacity: .9;
 }
 
 /* ── TIME LADDER ── */
@@ -605,19 +639,39 @@ body {
   line-height: 1.80;
   font-weight: 300;
 }
-/* 卡片左（維持原寬）／插畫右（填卡片右側空白帶、放大）兩欄 */
+/* 卡片左（維持原寬）／插畫右（郵戳框、蓋在頁面上的紀念戳章）兩欄
+   v5 手帳深化：插圖收進牛皮郵戳框，flex 由 grow 改 shrink-to-content 貼齊右側，
+   color 依該階暖墨（SVG 內 stroke/fill=currentColor 取此色 → 二色印章感）*/
 .ladder-card__illu {
-  flex: 1 1 0;
+  flex: 0 0 auto;
   align-self: center;
+  margin-left: auto;
   display: flex;
   justify-content: center;
-  padding-left: 24px;
+  position: relative;
+  color: var(--step-color, var(--gold));
+  padding: 6px 8px;
+  border: 1px dashed rgba(205,185,154,.5);   /* 極淡郵票孔邊、去牛皮實底保持安靜 */
+  border-radius: 3px;
+}
+/* 淡赤陶郵戳圈（右下角微溢出）*/
+.ladder-card__illu::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: -9px;
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--terra);
+  border-radius: 50%;
+  opacity: .18;
+  pointer-events: none;
 }
 .ladder-card__illu svg {
-  width: 300px;
+  width: 220px;
   max-width: 100%;
   height: auto;
-  max-height: 190px;
+  max-height: 150px;
   display: block;
 }
 

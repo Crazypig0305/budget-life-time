@@ -1,19 +1,15 @@
 {{/* 時間階梯每階插畫 SVG，依 step (0-5) 注入對應那張（mockup 減法v1 取原樣）。
-     參數：. = step 字串（"0".."5"）。step N → ladderGrad(N+1)、title/desc id 同步。
+     參數：. = step 字串（"0".."5"）。
+     v5 手帳深化（2026-07-10）：所有 stroke/fill 由寫死 #231608 + 冷莫蘭迪綠→teal 漸層
+     改為 currentColor，由 .ladder-card__illu 依該階暖墨設 color（達成每階插圖二色印章感、
+     outline 全墨 + ghost fill 同色低透明）。原 <defs> linearGradient 冷調已移除。
      ≤900px / ≤680px 由 .ladder-card__illu { display:none } 退場。 */ -}}
 {{ $step := . -}}
 {{ if eq $step "0" -}}
 <svg role="img" aria-labelledby="title1 desc1" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
   <title id="title1">省錢優化</title>
   <desc id="desc1">手繪風信用卡與回流箭頭，硬幣落入小存錢罐，象徵日常花費自動回饋。</desc>
-  <defs>
-    <linearGradient id="ladderGrad1" x1="40" y1="110" x2="160" y2="42" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#7A5C14"/>
-      <stop offset=".52" stop-color="#6E6B2E"/>
-      <stop offset="1" stop-color="#2A6058"/>
-    </linearGradient>
-  </defs>
-  <g fill="none" stroke="#231608" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M35 50c1-7 6-10 13-9 23 2 48 5 73 8 7 1 10 5 9 12l-6 43c-1 7-6 10-13 9l-74-8c-7-1-10-5-9-12l7-43z"/>
     <path d="M39 61c25 2 56 5 88 9"/>
     <path d="M50 88c13 1 27 3 39 4"/>
@@ -23,7 +19,7 @@
     <path d="M147 42c-10 4-17 10-21 19"/>
     <path d="M145 42c-3 5-5 9-6 14"/>
   </g>
-  <g fill="url(#ladderGrad1)" opacity=".34" stroke="#231608" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="currentColor" opacity=".30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <ellipse cx="146" cy="42" rx="13" ry="6"/>
     <path d="M133 42c.5 8 25 8 26 .2"/>
     <path d="M137 38c6 2 13 2 19 .2"/>
@@ -35,14 +31,7 @@
 <svg role="img" aria-labelledby="title2 desc2" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
   <title id="title2">零時間躺賺</title>
   <desc id="desc2">手繪風筆電閒置著，旁邊有流線與上升硬幣，象徵電腦開著也能累積收益。</desc>
-  <defs>
-    <linearGradient id="ladderGrad2" x1="44" y1="112" x2="160" y2="38" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#7A5C14"/>
-      <stop offset=".52" stop-color="#6E6B2E"/>
-      <stop offset="1" stop-color="#2A6058"/>
-    </linearGradient>
-  </defs>
-  <g fill="none" stroke="#231608" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M45 43c22-2 55-2 81 0 5 .5 8 4 8 9v45c0 5-3 8-8 8H48c-5 0-8-3-8-8l1-45c0-5 2-8 4-9z"/>
     <path d="M34 113c37 3 83 3 120 0"/>
     <path d="M62 113c3 6 58 6 64 0"/>
@@ -55,13 +44,13 @@
     <path d="M166 27c-2 4-3 7-3 11"/>
     <path d="M166 27c4 2 7 5 10 8"/>
   </g>
-  <g fill="url(#ladderGrad2)" opacity=".34" stroke="#231608" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="currentColor" opacity=".30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <ellipse cx="166" cy="31" rx="13" ry="6.5"/>
     <path d="M153 31c1 8 25 8 26 .3"/>
     <path d="M158 27c6 2 13 2 18 .3"/>
     <path d="M63 85c8-7 20-7 29 0 8 7 20 7 29 0v15H63V85z"/>
   </g>
-  <g fill="none" stroke="#231608" stroke-width="1.7" stroke-linecap="round" opacity=".75">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".75">
     <path d="M72 31c4-4 9-4 12 0"/>
     <path d="M88 30c3-3 7-3 10 0"/>
   </g>
@@ -70,14 +59,7 @@
 <svg role="img" aria-labelledby="title3 desc3" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
   <title id="title3">每天五分鐘</title>
   <desc id="desc3">手繪風手機上的勾選與點數星標，旁邊有小時鐘，象徵每天短時間累積點數。</desc>
-  <defs>
-    <linearGradient id="ladderGrad3" x1="54" y1="116" x2="154" y2="35" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#7A5C14"/>
-      <stop offset=".52" stop-color="#6E6B2E"/>
-      <stop offset="1" stop-color="#2A6058"/>
-    </linearGradient>
-  </defs>
-  <g fill="none" stroke="#231608" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M59 30c17-2 39-2 55 0 5 .5 8 4 8 9l1 76c0 5-4 8-9 8-17 2-39 2-55 0-5-.5-8-4-8-9V39c0-5 3-8 8-9z"/>
     <path d="M73 42c8 1 17 1 25 0"/>
     <path d="M81 113c6 1 12 1 18 0"/>
@@ -88,11 +70,11 @@
     <path d="M132 41c7 1 13 4 18 9"/>
     <path d="M151 52c-3 1-6 3-9 4"/>
   </g>
-  <g fill="url(#ladderGrad3)" opacity=".36" stroke="#231608" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="currentColor" opacity=".32" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M86 54l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1 5-11z"/>
     <circle cx="148" cy="87" r="18"/>
   </g>
-  <g fill="none" stroke="#231608" stroke-width="1.7" stroke-linecap="round" opacity=".72">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".72">
     <path d="M40 67c-5 5-7 11-6 18"/>
     <path d="M165 112c6-2 11-6 14-11"/>
   </g>
@@ -101,14 +83,7 @@
 <svg role="img" aria-labelledby="title4 desc4" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
   <title id="title4">每週花點時間</title>
   <desc id="desc4">手繪風週曆與整齊清單，旁邊有小齒輪，象徵定期整理與回饋最大化。</desc>
-  <defs>
-    <linearGradient id="ladderGrad4" x1="42" y1="116" x2="158" y2="36" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#7A5C14"/>
-      <stop offset=".52" stop-color="#6E6B2E"/>
-      <stop offset="1" stop-color="#2A6058"/>
-    </linearGradient>
-  </defs>
-  <g fill="none" stroke="#231608" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M43 45c28-3 67-3 95 0 5 .5 8 4 8 9v60c0 5-3 8-8 9-28 3-67 3-95 0-5-.5-8-4-8-9V54c0-5 3-8 8-9z"/>
     <path d="M36 64c34 3 73 3 109 0"/>
     <path d="M58 34c0 9 0 17-.5 25"/>
@@ -124,11 +99,11 @@
     <path d="M142 80l6 6"/>
     <path d="M164 106l6 6"/>
   </g>
-  <g fill="url(#ladderGrad4)" opacity=".32" stroke="#231608" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="currentColor" opacity=".28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M36 64c34 3 73 3 109 0v16c-34 3-75 3-109 0V64z"/>
     <circle cx="155" cy="95" r="15"/>
   </g>
-  <g fill="#231608" opacity=".7">
+  <g fill="currentColor" opacity=".7">
     <circle cx="54" cy="77" r="2"/>
     <circle cx="71" cy="77" r="2"/>
     <circle cx="88" cy="77" r="2"/>
@@ -138,14 +113,7 @@
 <svg role="img" aria-labelledby="title5 desc5" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
   <title id="title5">一次設定長期受益</title>
   <desc id="desc5">手繪風扳手與齒輪完成一次設定，旁邊小芽沿著上升線成長，象徵長期受益。</desc>
-  <defs>
-    <linearGradient id="ladderGrad5" x1="42" y1="114" x2="160" y2="35" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#7A5C14"/>
-      <stop offset=".52" stop-color="#6E6B2E"/>
-      <stop offset="1" stop-color="#2A6058"/>
-    </linearGradient>
-  </defs>
-  <g fill="none" stroke="#231608" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M55 99c18-18 35-36 53-55"/>
     <path d="M102 39c9-7 22-5 29 3l-15 8 2 15 16-8c1 11-6 21-17 24-8 2-15 0-21-5L69 104c-5 5-13 5-18 .5-4-5-4-11 4-5.5z"/>
     <path d="M58 101c3 3 7 3 10 0"/>
@@ -160,12 +128,12 @@
     <path d="M166 64c-1 7-1 13 .5 20"/>
     <path d="M166 64c-7 2-12 5-17 9"/>
   </g>
-  <g fill="url(#ladderGrad5)" opacity=".35" stroke="#231608" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="currentColor" opacity=".30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="135" cy="106" r="17"/>
     <path d="M84 111c5-13 16-21 31-24-2 13-12 23-25 27"/>
     <path d="M85 111c-4-11-12-17-23-19 1 11 9 19 20 22"/>
   </g>
-  <g fill="none" stroke="#231608" stroke-width="1.7" stroke-linecap="round" opacity=".72">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".72">
     <path d="M91 116c-.5-10 0-20 2-30"/>
   </g>
 </svg>
@@ -173,14 +141,7 @@
 <svg role="img" aria-labelledby="title6 desc6" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
   <title id="title6">需要學但值得</title>
   <desc id="desc6">手繪風打開的筆記本上有上升階梯與箭頭，象徵學習會隨時間複利成長。</desc>
-  <defs>
-    <linearGradient id="ladderGrad6" x1="42" y1="118" x2="158" y2="34" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#7A5C14"/>
-      <stop offset=".52" stop-color="#6E6B2E"/>
-      <stop offset="1" stop-color="#2A6058"/>
-    </linearGradient>
-  </defs>
-  <g fill="none" stroke="#231608" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M35 45c20-5 43-3 61 6 20-9 44-11 67-5 4 1 6 4 6 8v70c0 4-3 6-7 5-22-5-45-3-64 6-20-9-43-11-64-6-4 1-7-1-7-5V54c0-4 3-8 8-9z"/>
     <path d="M97 52c-.5 27-.5 54 .5 82"/>
     <path d="M48 65c12-1 25 1 37 5"/>
@@ -192,11 +153,11 @@
     <path d="M118 54c11-3 23-3 35-.5"/>
     <path d="M118 66c8-2 17-2 26 0"/>
   </g>
-  <g fill="url(#ladderGrad6)" opacity=".32" stroke="#231608" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="currentColor" opacity=".28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M112 106h14V93h15V80h15V67h14v39h-58z"/>
     <path d="M35 45c20-5 43-3 61 6v15c-20-8-42-10-61-6V45z"/>
   </g>
-  <g fill="none" stroke="#231608" stroke-width="1.7" stroke-linecap="round" opacity=".72">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".72">
     <path d="M54 112c9-2 19-1 29 2"/>
     <path d="M119 119c12-3 25-3 37 0"/>
   </g>
