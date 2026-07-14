@@ -33,7 +33,7 @@
       {{ if $thumb }}
       <img src="{{ $thumb }}" alt="{{ .Title }}" loading="lazy">
       {{ else }}
-      <div class="post-row__thumb-fill" style="background:{{ $cover }}">
+      <div class="post-row__thumb-fill" style="background:{{ $cover | safeCSS }}">
         <span class="post-row__thumb-icon">{{ $emoji }}</span>
       </div>
       {{ end }}

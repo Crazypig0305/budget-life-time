@@ -206,7 +206,7 @@
         {{ if $thumb }}
         <img src="{{ $thumb }}" alt="{{ $p.Title }}" class="article-cover__img" loading="lazy">
         {{ else }}
-        <div class="cover-fill" style="background:{{ $cover }}">
+        <div class="cover-fill" style="background:{{ $cover | safeCSS }}">
           <span class="cover-icon"{{ if gt $i 0 }} style="font-size:28px"{{ end }}>{{ $emoji }}</span>
         </div>
         {{ end }}
