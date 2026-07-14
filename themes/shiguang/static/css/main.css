@@ -86,7 +86,6 @@ html { scroll-behavior: smooth; }
   /* ── 警示色（僅 skip-box 使用，v3 既有色系延伸）── */
   --warn-bg:     #F5EDD8;
   --warn-border: #B8860B;
-  --warn-tape:   #C4813A;
 
   --sidebar-w: 240px;
 }
