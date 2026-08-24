@@ -31,7 +31,7 @@
   {{ $thumb := partial "thumb-resolve.html" . }}
   {{ if $thumb }}
   <figure class="article-thumbnail">
-    <img src="{{ $thumb }}" alt="{{ .Title }}" loading="lazy">
+    <img src="{{ $thumb }}" alt="{{ .Title }}" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async">
   </figure>
   {{ end }}
 
