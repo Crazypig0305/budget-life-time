@@ -5,7 +5,7 @@ lastmod: 2026-04-28
 description: "EarnApp 設定花了我 10 分鐘，裝好就沒再管。三個月後回來看，賺了 $3.8 USD。2026 年改成按時計費，台灣用戶的月均收益有變嗎？電費算進去的真實時薪帳，加上一個自填的 ROI 表讓你判斷。"
 categories: ["passive-zero"]
 tags: ["EarnApp", "掛機", "被動收入", "頻寬共享", "時間帳", "台灣實測", "2026"]
-image: /images/passive-zero/earnapp-2022-review.jpg
+image: "hero.jpg"
 draft: false
 ---
 

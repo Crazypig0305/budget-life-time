@@ -7,7 +7,7 @@ categories: ["weekly-tasks"]
 tags: ["信用卡", "季度切換", "回饋", "Richart", "CUBE卡", "Unicard", "時間成本"]
 description: "手上有 Richart、CUBE 或 Unicard 的人，每季只需要 15 分鐘查一次、更新三個設定，一年回饋差距大約 NT$800–2,400。先用等效時薪算一遍，看看值不值得你的時間。"
 draft: false
-image: /images/weekly-tasks/credit-card-seasonal-switch.jpg
+image: "hero.jpg"
 ---
 
 有一次朋友問我「你這季主力刷哪張」，我才意識到這件事一直被我擺著沒動。

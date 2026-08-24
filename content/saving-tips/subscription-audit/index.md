@@ -6,7 +6,7 @@ slug: "subscription-audit"
 categories: ["省錢優化"]
 tags: ["訂閱費清查", "取消訂閱", "省錢", "APP訂閱", "信用卡帳單", "時薪換算"]
 description: "花 58 分鐘清查訂閱費、砍掉 5 個，一年省 NT$9,696。本文加入等效時薪算法、排除條件自查框、預算比對表，讓你在動手前先判斷值不值得花這段時間。"
-image: "subscription-audit-hero.jpg"
+image: "hero.jpg"
 draft: false
 ---
 

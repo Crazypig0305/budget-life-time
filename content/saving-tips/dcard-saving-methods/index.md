@@ -6,6 +6,7 @@ slug: "dcard-saving-methods"
 categories: ["省錢優化"]
 tags: ["省錢方法", "Dcard", "等效時薪", "數位帳戶", "信用卡回饋", "訂閱費"]
 description: "Dcard 理財板熱議的 6 個省錢方法，這篇不比「省多少」，改算「設定要多久、每月維護多久、折算時薪值不值得」。附等效時薪排序表與排除條件自查，讓你在下班那一小時裡只做 ROI 最高的那幾件。"
+image: "hero.jpg"
 draft: false
 ig_synthesis_signal: true
 ---

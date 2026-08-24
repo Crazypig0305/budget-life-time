@@ -7,7 +7,7 @@ categories: ["weekly-tasks"]
 tags: ["數位帳戶", "高利活存", "利息", "存款優化", "Richart", "每月理財", "時間成本"]
 description: "數位帳戶利率分級、每月有條件——設好之後不整理，每年少拿幾百到一千多元你根本不會發現。實際花了多久、等效時薪多少、哪種人不值得做，時間帳記給你看。"
 draft: false
-image: /images/weekly-tasks/digital-bank-monthly-optimize.jpg
+image: "hero.jpg"
 ---
 
 那次是月底對帳，才看到上個月的利息——比我以為的少了一截。

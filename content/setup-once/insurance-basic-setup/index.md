@@ -6,6 +6,7 @@ slug: "insurance-basic-setup"
 categories: ["setup-once"]
 tags: ["保險", "醫療險", "意外險", "失能險", "重大傷病險", "上班族理財", "一次設定"]
 description: "上班族保險怎麼設定？從研究到投保完成，我把每一步都計時了：醫療＋意外＋失能＋重大傷病 4 大類基本架構，30 歲上班族每月保費約 NT$1,200–2,100，首次設定約 8–10 小時，之後每年 1 小時複審就夠。"
+image: "hero.jpg"
 draft: false
 ---
 

@@ -6,7 +6,7 @@ slug: "indexing-investment-pillar"
 categories: ["需要學但值得"]
 tags: ["指數化投資", "定期定額", "ETF", "0050", "006208", "被動投資", "上班族投資"]
 description: "從第一次聽到指數化投資，到真正設好定期定額扣款，我花了多少時間？研究期、開戶期、設定期分段記錄。適合你的前提、常見卡關點、等效時薪怎麼算，C站時間帳本完整版。"
-image: /images/worth-learning/indexing-investment-pillar.jpg
+image: "hero.jpg"
 draft: false
 ---
 

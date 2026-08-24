@@ -6,11 +6,9 @@ slug: "credit-card-choose"
 categories: ["需要學但值得"]
 tags: ["信用卡", "選卡", "現金回饋", "上班族", "時薪換算", "選卡研究", "主力卡"]
 description: "2023 年花了一個週末研究信用卡怎麼選，6 小時縮小到一張主力卡。整理選卡研究的時間成本、年回饋差距，以及用你自己的時薪算一次「做功課值不值得」。"
-image: credit-card-choose-hero.jpg
+image: "hero.jpg"
 draft: false
 ---
-
-{{< figure src="credit-card-choose-hero.jpg" alt="信用卡選卡研究筆記桌面俯拍，紙本記錄與計算機" loading="eager" >}}
 
 2023 年 8 月，我用的信用卡是當年辦帳戶時銀行順手推薦的那張，不是自己選的。
 

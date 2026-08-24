@@ -6,7 +6,7 @@ slug: "mobile-payment-combo"
 categories: ["省錢優化"]
 tags: ["LINE Pay", "街口支付", "超商", "行動支付", "信用卡回饋", "無腦省錢"]
 description: "超商每月花 NT$1,500 以上？花 20 分鐘設定好 LINE Pay 和街口支付的綁卡組合，之後每次結帳自動回饋，整理設定時間、回饋試算與你的等效時薪計算。"
-image: /images/saving-tips/mobile-payment-combo.jpg
+image: "hero.jpg"
 draft: false
 ---
 

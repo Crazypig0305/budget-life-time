@@ -6,7 +6,7 @@ slug: "emergency-fund-setup"
 categories: ["setup-once"]
 tags: ["緊急備用金", "備用金", "存錢", "理財基礎", "高利活存", "一次設定", "上班族"]
 description: "花一個下午算出自己的緊急備用金目標金額：月必要支出 × 3–6 倍，放進高利活存帳戶，設定後幾乎不用管。整理計算邏輯、帳戶選擇、等效時薪換算，適合還沒建立緊急備用金的上班族。"
-image: /images/setup-once/emergency-fund-setup.jpg
+image: "hero.jpg"
 draft: false
 ---
 

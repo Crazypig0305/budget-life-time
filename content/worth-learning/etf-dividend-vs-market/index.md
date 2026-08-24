@@ -6,7 +6,7 @@ slug: "etf-dividend-vs-market"
 categories: ["需要學但值得"]
 tags: ["高股息ETF", "0056", "0050", "市值型ETF", "00878", "00919", "上班族投資", "長期投資", "ETF比較", "時薪換算"]
 description: "2022 年花了兩個週末研究高股息和市值型 ETF 的差異，最後留在 0050 繼續定期定額。整理每月維護時間差異、長期報酬差多少、以及折算等效時薪後選哪個才划算。"
-image: "/images/worth-learning/etf-dividend-vs-market.jpg"
+image: "hero.jpg"
 draft: false
 ---
 

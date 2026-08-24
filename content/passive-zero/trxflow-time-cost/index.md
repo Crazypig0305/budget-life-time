@@ -5,6 +5,7 @@ lastmod: 2026-06-11
 description: "TRXFlow 協作軌零本金、開瀏覽器就能參與 TRON 網路驗證，這篇把時間帳全部記清楚：初始設定 30 分鐘、每月維護 10 分鐘、出金管道一次建好之後每季 25 分鐘，並用金管會 VASP 名單比較三家台灣交易所的 KYC 時效與台幣出金費用，折算時薪後告訴你怎麼開始最省時。"
 categories: ["passive-zero"]
 tags: ["TRXFlow", "掛機", "時間帳", "USDT", "零本金"]
+image: "hero.jpg"
 draft: false
 ---
 

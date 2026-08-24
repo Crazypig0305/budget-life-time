@@ -6,6 +6,7 @@ slug: "invoice-lottery-habit"
 categories: ["daily-5min"]
 tags: ["電子發票", "發票對獎", "發票載具", "省錢習慣", "台灣理財", "等效時薪"]
 description: "電子發票對獎每天不到 2 分鐘，設定載具一次 15 分鐘，2026 年雲端發票加碼後期望值提高。這篇用時光存摺的時間帳本算法，算出年度等效時薪，讓你決定值不值得花這個時間。"
+image: "hero.jpg"
 draft: false
 ---
 

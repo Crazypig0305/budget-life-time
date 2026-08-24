@@ -6,7 +6,7 @@ slug: "bill-review-hidden-charges"
 categories: ["weekly-tasks"]
 tags: ["帳單回顧", "自動扣款", "訂閱費", "信用卡帳單", "省錢習慣", "上班族理財"]
 description: "每月 10 分鐘，專門找那些你忘記取消的健身房、過期不用的訂閱、悄悄續訂的 App。我花了三個月找出 NT$3,200 / 年的隱藏扣款，等效時薪 NT$1,280。什麼情況可以直接跳過？先看這裡。"
-image: /images/weekly-tasks/bill-review-hidden-charges.jpg
+image: "hero.jpg"
 draft: false
 ---
 

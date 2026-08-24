@@ -6,7 +6,7 @@ slug: "stock-account-setup"
 description: "從選券商到設定好定期定額，完整花了多少時間？開戶 + 設定全流程實測，含等效時薪計算、第一年累積投入時間、以及三種不適合你現在做的情況誠實說。"
 categories: ["需要學但值得"]
 tags: ["開戶", "證券戶", "定期定額", "凱基", "永豐", "新手投資", "ETF", "時間成本"]
-image: /images/worth-learning/stock-account-setup.jpg
+image: "hero.jpg"
 draft: false
 ---
 

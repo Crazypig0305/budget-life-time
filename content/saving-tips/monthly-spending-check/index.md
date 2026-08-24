@@ -7,6 +7,7 @@ categories: ["省錢優化"]
 tags: ["月度健診", "開支審視", "時間成本", "省錢SOP", "等效時薪", "月底回顧"]
 description: "每月花 30 分鐘做開支健診、年度能多省 NT$15,000-25,000、等效時薪 NT$4,200/hr。本文給完整 SOP + 必檢清單 + 時間成本算法，幫你判斷這件事值不值得花這個時間。"
 canonicalURL: "https://timepassbook.com/saving-tips/monthly-spending-check/"
+image: "hero.jpg"
 draft: false
 ---
 

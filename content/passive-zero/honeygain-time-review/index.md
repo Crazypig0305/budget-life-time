@@ -5,7 +5,7 @@ lastmod: 2026-04-28
 description: "Honeygain 設定花了我 8 分鐘，裝好就沒再碰。三個月後打開看，賺了多少？換算時薪值不值？本文給你電費成本一起算進去的真實時間帳，再附一個自己填的 ROI 表讓你判斷。"
 categories: ["passive-zero"]
 tags: ["Honeygain", "掛機", "被動收入", "頻寬共享", "時間帳", "台灣實測"]
-image: /images/passive-zero/honeygain-time-review.jpg
+image: "hero.jpg"
 draft: false
 ---
 
