@@ -4,7 +4,7 @@
 <div class="date-strip">
   <span id="today-date">{{ now.Format "2006年1月2日" }}</span>
   <span class="date-sep">·</span>
-  <span id="today-weekday">星期{{ slice "日一二三四五六" (int (now.Weekday)) (add (int (now.Weekday)) 1) }}</span>
+  <span id="today-weekday">星期{{ substr "日一二三四五六" (int (now.Weekday)) 1 }}</span>
 </div>
 
 {{/* 真正部落格文章判定（與 schema.html 口徑一致）：在 6 內容分類下 + 有真實日期 */}}
