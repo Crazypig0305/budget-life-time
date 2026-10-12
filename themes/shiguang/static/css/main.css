@@ -403,97 +403,6 @@ body {
   font-family: var(--mono);
 }
 
-/* ── 省錢快訊 ── */
-.savings-section { padding: 40px 40px 0; }
-.savings-tip {
-  background: var(--paper);
-  border: 1px solid var(--border-md);
-  border-left: 4px solid var(--gold);
-  border-radius: 0 3px 3px 0;
-  display: flex;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-.tip-week {
-  background: #614A10;
-  color: white;
-  padding: 20px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 62px;
-  gap: 2px;
-  flex-shrink: 0;
-}
-.tip-week-num {
-  font-family: var(--tabular); /* v4: tabular */
-  font-size: 22px;
-  font-weight: 600;
-  font-style: italic;
-  line-height: 1;
-}
-.tip-week-label {
-  font-size: 12px;
-  letter-spacing: .10em;
-  opacity: .80;
-  font-family: var(--sans);
-}
-.tip-body {
-  padding: 18px 24px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.tip-body-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 10px;
-}
-.tip-date {
-  font-size: 13px;
-  color: var(--ink-lt);
-  font-family: var(--tabular); /* v4: tabular */
-  font-style: italic;
-  white-space: nowrap;
-}
-.tip-tag {
-  font-size: 12px;
-  color: var(--gold);
-  letter-spacing: .10em;
-  font-family: var(--sans);
-  font-weight: 400;
-  margin-bottom: 6px;
-}
-.tip-title {
-  font-family: var(--serif);
-  font-size: 17px;
-  font-weight: 400;
-  color: var(--ink);
-  margin-bottom: 6px;
-  letter-spacing: .03em;
-  line-height: 1.6;
-}
-.tip-text {
-  font-size: 15px;
-  color: var(--ink-mid);
-  line-height: 1.85;
-  font-weight: 300;
-}
-.tip-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 14px;
-  color: var(--gold);
-  text-decoration: none;
-  font-family: var(--sans);
-  font-weight: 400;
-}
-.tip-link:hover { text-decoration: underline; }
-
 /* ── SECTIONS ── */
 .section-wrap { padding: 52px 40px 0; }
 .section-header {
@@ -1424,7 +1333,6 @@ body {
   .hero-inner { grid-template-columns: 1fr; gap: 28px; }
   .hero-illustration { justify-content: flex-start; }
   .hero-illustration svg { width: min(100%, 360px); }
-  .savings-section { padding: 28px 20px 0; }
   .section-wrap { padding: 36px 20px 0; }
   .cat-header { padding: 56px 20px 24px; }
   .cat-posts { padding: 24px 20px 0; }

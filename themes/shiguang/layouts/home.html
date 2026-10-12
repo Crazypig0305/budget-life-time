@@ -120,27 +120,6 @@
   </div>
 </section>
 
-{{/* ── 省錢快訊 ── */}}
-{{ with site.Params.tipWeek }}
-<div class="savings-section">
-  <div class="savings-tip">
-    <div class="tip-week">
-      <span class="tip-week-num">{{ . }}</span>
-      <span class="tip-week-label">週</span>
-    </div>
-    <div class="tip-body">
-      <div class="tip-tag">{{ site.Params.tipTag }}</div>
-      <h3 class="tip-title">{{ site.Params.tipTitle }}</h3>
-      <p class="tip-text">{{ site.Params.tipText }}</p>
-      <div class="tip-body-row">
-        <a href="{{ site.Params.tipLink }}" class="tip-link">{{ site.Params.tipLinkText }}</a>
-        <span class="tip-date">{{ site.Params.tipDate }}</span>
-      </div>
-    </div>
-  </div>
-</div>
-{{ end }}
-
 {{/* ── TIME LADDER ── */}}
 <div class="section-wrap">
   <div class="section-header">

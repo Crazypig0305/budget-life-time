@@ -27,14 +27,6 @@ disableKinds = ['taxonomy', 'term']
   brand_sub = '用時間換幸福'
   brand_en = 'Budget Life × Time'
 
-  tipWeek = '17'
-  tipTag = '本週省錢快訊 · WEEKLY TIP'
-  tipTitle = '電費帳單自動扣繳設定教學：一次搞定，再也不怕忘繳'
-  tipText = '台電、各縣市水務、瓦斯公司都支援約定轉帳自動扣繳，分散在不同官網，整合成一份設定手冊。'
-  tipLink = '/setup-once/bill-autopay-setup/'
-  tipLinkText = '看完整文章 →'
-  tipDate = '2026-04-22'
-
 [menus]
   [[menus.sidebar]]
     name = '省錢優化'
