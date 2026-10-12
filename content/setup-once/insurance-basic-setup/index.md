@@ -1,7 +1,7 @@
 ---
 title: "上班族保險基本架構：4 大類保障，設定一次保一輩子"
 date: 2023-05-14
-lastmod: 2026-05-18
+lastmod: 2026-10-13T06:00:00+08:00
 slug: "insurance-basic-setup"
 categories: ["setup-once"]
 tags: ["保險", "醫療險", "意外險", "失能險", "重大傷病險", "上班族理財", "一次設定"]
@@ -107,6 +107,8 @@ draft: false
 ---
 
 ## 投保設定時間表：從研究到投保完成，我記錄了每一步
+
+<!-- IG-firsthand: 作者分兩個週末從研究到投保完成的逐步計時紀錄 -->
 
 這是我自己設定的時間紀錄，分兩個週末：
 
@@ -232,8 +234,8 @@ draft: false
 
 延伸閱讀：
 
-[上班族緊急備用金：要存多少、放哪裡？1.5 小時一次設定完](/setup-once/emergency-fund-setup/)
+[緊急預備金要存多少、放哪裡？上班族 1.5 小時一次設定完](/setup-once/emergency-fund-setup/)
 
 [每月消費回顧 SOP：30 分鐘看清你的錢去哪了](/weekly-tasks/monthly-spending-review-sop/)
 
-[數位帳戶開戶全流程 2026：從選銀行到設定完成，實際花了幾分鐘？](/setup-once/digital-account-setup-time/)
+[2026 數位帳戶推薦：高利活存哪家適合你？4 家條件與時間帳](/setup-once/digital-account-setup-time/)

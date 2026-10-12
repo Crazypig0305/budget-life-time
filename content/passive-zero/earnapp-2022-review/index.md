@@ -1,7 +1,7 @@
 ---
 title: "EarnApp 實測時間帳：設定 10 分鐘、三個月賺多少、2026 年還值不值得跑"
 date: 2022-10-13
-lastmod: 2026-04-28
+lastmod: 2026-10-13T06:00:00+08:00
 description: "EarnApp 設定花了我 10 分鐘，裝好就沒再管。三個月後回來看，賺了 $3.8 USD。2026 年改成按時計費，台灣用戶的月均收益有變嗎？電費算進去的真實時薪帳，加上一個自填的 ROI 表讓你判斷。"
 categories: ["passive-zero"]
 tags: ["EarnApp", "掛機", "被動收入", "頻寬共享", "時間帳", "台灣實測", "2026"]
@@ -56,7 +56,7 @@ draft: false
 
 我計時了，以下是 2022 年安裝的步驟，2026 年流程大致相同：
 
-1. 官網搜尋「EarnApp」、點進去、下載安裝包（Windows 版）：2 分鐘
+1. 搜尋「EarnApp」、點進[官網](https://earnapp.com/)、下載安裝包（Windows 版）：2 分鐘
 2. 安裝完成、程式自動啟動：1 分鐘
 3. 用 Google 帳號或 email 登入：2 分鐘
 4. 綁定出金方式（PayPal）：4 分鐘（需填 PayPal 信箱、確認）
@@ -69,6 +69,8 @@ draft: false
 ---
 
 ## 三個月的實際收益
+
+<!-- IG-firsthand: 作者 EarnApp 與 Honeygain 並跑三個月的逐月收益與設定計時 10 分鐘 -->
 
 在家裡的桌機上跑，和 Honeygain 同時並行。2022 年的計費方式是按流量（GB），以下是當時的紀錄：
 
@@ -118,7 +120,7 @@ draft: false
 - **Wise**：$10 USD 門檻，Wise 收固定 $1.13 USD
 - **Amazon 禮品卡**：$10 USD 門檻，無手續費
 
-以台灣用戶月均 $1.5 USD 估計，大約需要 **6–7 個月**才能累積到第一次出金門檻。比 Honeygain 的 $20 門檻（約需 14 個月）快不少，但也不是裝完隔月就能出金。
+以台灣用戶月均 $1.5 USD 估計，大約需要 **6–7 個月**才能累積到第一次出金門檻。比 Honeygain 的 $20 門檻（[Honeygain 官方出金說明](https://honeygain.com/blog/paypal-payouts-step-by-step-instructions)，約需 14 個月）快不少，但也不是裝完隔月就能出金。
 
 ---
 
@@ -180,7 +182,7 @@ draft: false
 | 月電費成本（W × hr × NT$4.7÷1000）| 80 × 120 × 4.7÷1000 ≈ NT$45 | ＿＿ NT$ |
 | 月收益折台幣（× 31）| $1.5 × 31 ≈ NT$47 | ＿＿ NT$ |
 | **月淨收益（收益 - 額外電費）** | **NT$2（幾乎打平）** | **＿＿ NT$** |
-| 你的時間價值門檻 | NT$180/hr（最低工資換算）| ＿＿ NT$/hr |
+| 你的時間價值門檻 | NT$196/hr（2026 最低工資）| ＿＿ NT$/hr |
 | 折算月維護時薪（月收益 ÷ 月維護分鐘）| NT$47 ÷ 1 min = NT$2,820/hr | ＿＿ NT$/hr |
 {{< /budget-table >}}
 
@@ -219,4 +221,4 @@ draft: false
 
 延伸閱讀：[新手從這裡開始：所有省錢習慣的起點](/start/)
 
-延伸閱讀：[緊急備用金設定：要存多少、放哪裡、設定需要多久？](/setup-once/emergency-fund-setup/)
+延伸閱讀：[緊急預備金要存多少、放哪裡？上班族 1.5 小時一次設定完](/setup-once/emergency-fund-setup/)
