@@ -1,7 +1,7 @@
 ---
 title: "新手開證券戶 + 設定定期定額：完整流程時間記錄（2026）"
 date: 2024-01-19
-lastmod: 2026-04-28
+lastmod: 2026-10-13T06:00:00+08:00
 slug: "stock-account-setup"
 description: "從選券商到設定好定期定額，完整花了多少時間？開戶 + 設定全流程實測，含等效時薪計算、第一年累積投入時間、以及三種不適合你現在做的情況誠實說。"
 categories: ["需要學但值得"]
@@ -21,8 +21,8 @@ draft: false
 <div class="num-highlight">
   <div class="num-cell">
     <div class="num-label">開戶 + 設定（含等待審核）</div>
-    <div class="num-value">3 hr 20 min</div>
-    <div class="num-note">純操作時間約 1 hr 40 min；等待審核約 1 hr 40 min</div>
+    <div class="num-value">3 hr</div>
+    <div class="num-note">純操作時間約 1 hr 20 min；等待審核約 1 hr 40 min</div>
   </div>
   <div class="num-cell">
     <div class="num-label">設定完後每月維護</div>
@@ -31,8 +31,8 @@ draft: false
   </div>
   <div class="num-cell">
     <div class="num-label">第一年累積投入時間</div>
-    <div class="num-value">約 2 hr 40 min</div>
-    <div class="num-note">開戶設定 1 hr 40 min + 每月維護 12 × 5 min</div>
+    <div class="num-value">約 2 hr 20 min</div>
+    <div class="num-note">開戶設定 1 hr 20 min + 每月維護 12 × 5 min</div>
   </div>
 </div>
 
@@ -52,6 +52,8 @@ draft: false
 ---
 
 ## 完整流程時間記錄
+
+<!-- IG-firsthand: 作者幫家人開證券戶並設定定期定額的六個步驟逐段計時（純操作 80 分鐘、等待審核 1 小時 40 分鐘） -->
 
 ### Step 1｜選券商（約 20 分鐘）
 
@@ -110,7 +112,7 @@ draft: false
 {{< skip-box >}}
 以下任一條件成立，建議**先不要做**：
 
-**月儲蓄低於 NT$3,000**：定期定額的[複利](https://zh.wikipedia.org/wiki/%E8%A4%87%E5%88%A9)效果需要本金持續累積，月投入太低加上手續費佔比，前幾年幾乎感覺不到差異，容易中途放棄。建議先從[建立緊急備用金](/setup-once/emergency-fund-setup/)開始。
+**月儲蓄低於 NT$3,000**：定期定額的[複利](https://zh.wikipedia.org/wiki/%E8%A4%87%E5%88%A9)效果需要本金持續累積，月投入太低加上手續費佔比，前幾年幾乎感覺不到差異，容易中途放棄。建議先從[建立緊急預備金](/setup-once/emergency-fund-setup/)開始。
 
 **已有其他定期定額標的且未達設定金額**：同時跑多組定期定額、每組金額太少，分散比集中效果差。先把現有的跑到穩定再說。
 
@@ -145,15 +147,15 @@ draft: false
 {{< budget-table title="開戶 + 定期定額時間成本估算" sub="依你的月薪換算等效成本" >}}
 | 項目 | 數值 | 說明 |
 |---|---|---|
-| 開戶設定純操作時間（小時）| **1.7 hr** | 不含等待審核時間 |
+| 開戶設定純操作時間（小時）| **1.3 hr** | Step 1/2/3/5/6＝20+25+5+10+20＝80 分鐘，不含等待審核時間 |
 | 第一年每月維護（分鐘）| **5 min** | 確認扣款 + 看持倉 |
 | 第一年總維護時間（小時）| **1 hr** | 5 分鐘 × 12 個月 |
-| 第一年累積時間投入 | **約 2.7 hr** | 開戶 1.7 hr + 維護 1 hr |
+| 第一年累積時間投入 | **約 2.3 hr** | 開戶 1.3 hr + 維護 1 hr |
 | **你的時薪（NT$）** | **填入你的數字** | 月薪 ÷ 月工作時數（例：30,000 ÷ 160 = $188）|
-| **等效時間成本（NT$）** | **你的時薪 × 2.7** | 第一年總時間折算金額 |
+| **等效時間成本（NT$）** | **你的時薪 × 2.3** | 第一年總時間折算金額 |
 {{< /budget-table >}}
 
-舉例：時薪 NT$188（月薪 30,000 概估），第一年總時間成本大概 NT$508。如果你每月投入 NT$5,000、一年投入 NT$60,000，這個時間成本佔年投入的 0.8%。
+舉例：時薪 NT$188（月薪 30,000 概估），第一年總時間成本大概 188 × 2.3 ≈ NT$432。如果你每月投入 NT$5,000、一年投入 NT$60,000，這個時間成本約佔年投入的 0.7%。
 
 這個計算只算時間成本，不代替你算投資報酬率——那是另一個問題。
 

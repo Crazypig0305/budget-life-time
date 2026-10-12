@@ -1,7 +1,7 @@
 ---
 title: "Surveyon 每日簽到攻略：每天 2 分鐘換算等效時薪值不值得？"
 date: 2021-01-16
-lastmod: 2026-04-28
+lastmod: 2026-10-13T06:00:00+08:00
 slug: "surveyon-daily-checkin"
 categories: ["daily-5min"]
 tags: ["Surveyon", "問卷平台", "每日簽到", "等效時薪", "台灣理財"]
@@ -29,9 +29,9 @@ draft: false
   </div>
   <div class="num-cell">
     <div class="num-label">純簽到等效時薪</div>
-    <div class="num-value">NT$6–18</div>
+    <div class="num-value">約 NT$6</div>
     <div class="num-unit">/ 小時</div>
-    <div class="num-note">只算簽到 + Quickpoll 時間</div>
+    <div class="num-note">只算簽到 + Quickpoll；加做問卷約 NT$18</div>
   </div>
 </div>
 
@@ -39,7 +39,7 @@ draft: false
 
 ## Surveyon 是什麼？一句話
 
-Surveyon 是台灣常用的線上問卷調查平台，填問卷賺積分，積分可換 [PayPal](https://www.paypal.com/tw/) 現金。除了填問卷，它有兩個每日小任務：**簽到**和 **Quickpoll 投票**，是這篇的重點。
+[Surveyon](https://www.surveyon.com/) 是台灣常用的線上問卷調查平台，填問卷賺積分，積分可換 [PayPal](https://www.paypal.com/tw/) 現金。除了填問卷，它有兩個每日小任務：**簽到**和 **Quickpoll 投票**，是這篇的重點。
 
 ---
 
@@ -86,11 +86,13 @@ Surveyon 的換算基準是 **10,000 積分 = $1 USD**。
 
 ## 純簽到 vs 加做問卷：等效時薪差多少？
 
+<!-- IG-data: 依 Surveyon 10,000 點＝US$1 的兌換門檻，試算純簽到與加做問卷兩種做法的每月積分、到門檻所需月數與等效時薪 -->
+
 這是這篇的核心帳本。
 
 **情況 A：只做每日簽到 + Quickpoll**
 
-每天 1.5 分鐘（取中間值），每月 45 分鐘，累積到 10,000 點約需 7 個月（連簽加成平均值），兌換 $1 ≈ NT$32。
+每天 1.5 分鐘（取中間值），每月 45 分鐘，每月約 1,400 點、累積到 10,000 點約需 7 個月（連簽加成平均值），兌換 $1 ≈ NT$32。
 
 7 個月 × 45 分鐘 = **315 分鐘投入** → 換回 NT$32
 
@@ -106,9 +108,9 @@ Surveyon 的換算基準是 **10,000 積分 = $1 USD**。
 
 | 來源 | 每月時間 | 每月積分 |
 |---|---|---|
-| 簽到 + Quickpoll | 45 分鐘 | 約 1,200 點 |
+| 簽到 + Quickpoll | 45 分鐘 | 約 1,400 點 |
 | 問卷（每週 1 份）| 60 分鐘 | 約 10,000 點 |
-| **合計** | **105 分鐘** | **約 11,200 點** |
+| **合計** | **105 分鐘** | **約 11,400 點** |
 
 1 個月就能達到 10,000 點兌換門檻，換 $1 ≈ NT$32。
 
@@ -170,22 +172,22 @@ Surveyon 的換算基準是 **10,000 積分 = $1 USD**。
       </tr>
       <tr>
         <td class="td-label">月均積分（估計）</td>
-        <td class="td-value">約 1,200 點</td>
+        <td class="td-value">約 1,400 點</td>
         <td class="td-input-hint">約 ____ 點</td>
       </tr>
       <tr>
         <td class="td-label">月均兌換金額（10,000 點 = NT$32）</td>
-        <td class="td-value">約 NT$3.8</td>
+        <td class="td-value">約 NT$4.5</td>
         <td class="td-input-hint">約 NT$____</td>
       </tr>
       <tr>
         <td class="td-label">等效時薪</td>
-        <td class="td-result">約 NT$5–8 / hr</td>
+        <td class="td-result">約 NT$6 / hr</td>
         <td class="td-input-hint">NT$____ / hr</td>
       </tr>
     </tbody>
   </table>
-  <div class="budget-table-footer">等效時薪 NT$30 以上？加做問卷、速度夠快的話可以達到。純簽到 + Quickpoll 通常落在 NT$5–15，只有真的做到「零意識習慣」才值得；若還要特別提醒自己才記得簽，直接跳過。</div>
+  <div class="budget-table-footer">純簽到 + Quickpoll 約 NT$6 / 小時，加做問卷（每週 1 份）約 NT$18；純簽到只有真的做到「零意識習慣」才值得；若還要特別提醒自己才記得簽，直接跳過。</div>
 </div>
 
 ---
@@ -196,7 +198,7 @@ Surveyon 的換算基準是 **10,000 積分 = $1 USD**。
 
 這樣的節奏，大概 5–6 個月可以兌換一次 $1（NT$32 左右）。不多，但也不需要做什麼特別的事。
 
-說實話，純簽到的時薪換算起來很低，大概 NT$5–8。但我對這個數字有不同的解讀——因為那 1.5 分鐘是早上刷手機那段時間，不是我「有意識坐下來工作的時間」。如果真的能做到零意識習慣，它的實際時間成本接近零。
+說實話，純簽到的時薪換算起來很低，大約 NT$6。但我對這個數字有不同的解讀——因為那 1.5 分鐘是早上刷手機那段時間，不是我「有意識坐下來工作的時間」。如果真的能做到零意識習慣，它的實際時間成本接近零。
 
 但如果你發現自己常常忘記，或者設了提醒還是覺得麻煩，就是不適合這個習慣。停掉沒有任何損失——這個時薪，比不上你把那 1 分鐘花在真正讓你放鬆的事情上。
 
