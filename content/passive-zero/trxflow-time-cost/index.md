@@ -52,7 +52,7 @@ draft: false
 
 ## 這個工具在做什麼：開瀏覽器參與網路驗證
 
-<a href="https://trxflow.ai/" rel="sponsored nofollow noopener" target="_blank">TRXFlow</a> 是跑在 TRON 區塊鏈上的能量調度服務，已運營多年。TRON 鏈上每筆 USDT 轉帳都要消耗「能量」，這個平台做的是調度能量資源；協作軌的角色是「監測節點」——你的帳號透過瀏覽器保持在線，定期發訊號協助驗證網路連線品質，平台依參與穩定度派發 USDT 回饋。
+<a href="https://trxflow.io/" rel="sponsored nofollow noopener" target="_blank">TRXFlow</a> 是跑在 TRON 區塊鏈上的能量調度服務，已運營多年。TRON 鏈上每筆 USDT 轉帳都要消耗「能量」，這個平台做的是調度能量資源；協作軌的角色是「監測節點」——你的帳號透過瀏覽器保持在線，定期發訊號協助驗證網路連線品質，平台依參與穩定度派發 USDT 回饋。
 
 要查證它的運作，不用聽任何人的說法。官網自己這樣寫：
 
@@ -196,7 +196,7 @@ KYC 退件重送、審核天數重算，所以動手前先備齊：① 身分證
 
 ---
 
-官網連結：<a href="https://trxflow.ai/" rel="sponsored nofollow noopener" target="_blank">TRXFlow 官網</a>
+官網連結：<a href="https://trxflow.io/" rel="sponsored nofollow noopener" target="_blank">TRXFlow 官網</a>
 
 📌 揭露：上方為聯盟連結，透過連結註冊本站可能獲得分潤，不影響你的費用，也不影響本文以時間成本為準的記帳立場。
 
