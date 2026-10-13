@@ -23,7 +23,7 @@ disableKinds = ['taxonomy', 'term']
 
 [params]
   tagline = '用時間換幸福'
-  description = '省錢優化、掛機躺賺、每日習慣、一次設定——每篇文章都有真實時間成本記錄，幫你找到最適合自己節奏的理財方式'
+  description = '省錢優化、掛機躺賺、每日習慣、一次設定——每篇文章都把時間成本算清楚：設定多久、每月維護多久、折算時薪值不值得，幫你找到最適合自己節奏的理財方式'
   brand_sub = '用時間換幸福'
   brand_en = 'Budget Life × Time'
 
