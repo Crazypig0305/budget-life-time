@@ -1,7 +1,7 @@
 ---
 title: "EarnApp 實測時間帳：設定 10 分鐘、三個月賺多少、2026 年還值不值得跑"
 date: 2022-10-13
-lastmod: 2026-10-13T06:00:00+08:00
+lastmod: 2026-10-13T14:01:00+08:00
 description: "EarnApp 設定花了我 10 分鐘，裝好就沒再管。三個月後回來看，賺了 $3.8 USD。2026 年改成按時計費，台灣用戶的月均收益有變嗎？電費算進去的真實時薪帳，加上一個自填的 ROI 表讓你判斷。"
 categories: ["passive-zero"]
 tags: ["EarnApp", "掛機", "被動收入", "頻寬共享", "時間帳", "台灣實測", "2026"]
@@ -9,11 +9,11 @@ image: "hero.jpg"
 draft: false
 ---
 
-> 📌 本文含聯盟連結。透過文中連結前往 EarnApp 官網，本站可能獲得分潤，不影響你的費用或平台條款，也不影響本文評測立場。
+> 📌 本文的 EarnApp、Honeygain 連結都是官方網址，沒有附帶分潤代碼；你透過連結註冊，本站不會因此獲得分潤。
 
 ---
 
-那時候已經在跑 <a href="https://www.honeygain.com/" rel="sponsored nofollow noopener" target="_blank">Honeygain</a> 了，看到有人說 EarnApp 可以和 Honeygain 同時裝、流量分開走，想說試試看並跑的效果。裝之前我特地計時，想知道「多一個工具」到底要花多少時間設定。
+那時候已經在跑 [Honeygain](https://www.honeygain.com/) 了，看到有人說 EarnApp 可以和 Honeygain 同時裝、流量分開走，想說試試看並跑的效果。裝之前我特地計時，想知道「多一個工具」到底要花多少時間設定。
 
 結果是 10 分鐘，比 Honeygain 多 2 分鐘，主要多在綁定出金那一步。
 
@@ -102,7 +102,7 @@ draft: false
 
 換算一下：台灣用戶的裝置如果 24 小時全開、需求都滿，一個月最多約 $5 USD。實際上不可能時時都有流量需求，台灣 IP 的需求量也比美國低，實際月均通常在 **$1–2 USD** 之間。
 
-按時計費的好處是收益比較穩定、可以預期，不再受「今天有沒有流量」的隨機性影響太大。
+按時計費的好處是費率固定、好估算；但[官方收益說明](https://help.earnapp.com/hc/en-us/articles/38640314568721--Comprehensive-EarnApp-Earnings-Guide)也寫明，要你的 IP 有流量需求、網速夠快才拿得到滿額，需求少的時段只照實際被使用的時間按比例算。
 
 ---
 
@@ -115,10 +115,10 @@ draft: false
 | 2022 年實測時 | $2.5 USD | 無 |
 | 2024 年調整後 | $10 USD | PayPal 2%、Wise $1.13 |
 
-出金方式目前有三種：
-- **PayPal**：$10 USD 門檻，PayPal 收 2% 手續費
+出金方式目前有三種（[EarnApp 官方付款方式說明](https://help.earnapp.com/hc/en-us/articles/10147246886801--What-are-the-available-payment-methods-and-processing-time)、[手續費說明](https://help.earnapp.com/hc/en-us/articles/10147389004049--What-are-the-transaction-fees-on-redeems)）：
+- **PayPal**：$10 USD 門檻，EarnApp 收 2% 手續費
 - **Wise**：$10 USD 門檻，Wise 收固定 $1.13 USD
-- **Amazon 禮品卡**：$10 USD 門檻，無手續費
+- **Amazon 禮品卡**：$50 USD 門檻，無手續費（只發 Amazon.com、.de、.co.uk、.tr 四個站的卡）
 
 以台灣用戶月均 $1.5 USD 估計，大約需要 **6–7 個月**才能累積到第一次出金門檻。比 Honeygain 的 $20 門檻（[Honeygain 官方出金說明](https://honeygain.com/blog/paypal-payouts-step-by-step-instructions)，約需 14 個月）快不少，但也不是裝完隔月就能出金。
 
@@ -144,7 +144,7 @@ draft: false
 | 台灣電費（非夏季）| 約 NT$4.7/度 |
 | **三個月電費** | **172.8 × 4.7 ≈ NT$812** |
 | **三個月收益（EarnApp 單跑）** | **$3.8 USD ≈ NT$118** |
-| **收益 vs 電費** | **虧損約 NT$694** |
+| 收益 − 電費（電腦專為它開著時）| 約 −NT$694 |
 
 這個算法的結論和 Honeygain 一樣：**如果電腦是特地為了掛機開著的，電費遠高於收益。**
 
@@ -154,12 +154,11 @@ draft: false
 
 ## 哪種情況值得裝？哪種情況建議跳過？
 
-{{< skip-box title="這種情況建議跳過" >}}
-- 頻寬 < 10 Mbps（EarnApp 要求下載速度至少 10 Mbps 才能穩定達到正常收益）
-- 每月實際用機時間 < 8 小時（電費成本遠超過收益）
-- 不能接受個人 IP 被第三方使用（EarnApp 背後是 Bright Data，你的 IP 會被用於網路爬蟲等商業用途）
-- 無法接受隨機停權風險（用戶回報曾在無明確原因的情況下遭到帳號停用，Trustpilot 有相關紀錄）
-- 對帳號突然停用、出金被凍結有顧慮的人（2025–2026 Trustpilot 仍有此類投訴）
+{{< skip-box title="裝之前先對照：這幾種情況要換個做法" >}}
+- **網速偏慢**：官方建議台灣這類地區下載速度至少 10 Mbps 才拿得到滿額時薪，慢的話照比例少算（[EarnApp 官方收益說明](https://help.earnapp.com/hc/en-us/articles/38640314568721--Comprehensive-EarnApp-Earnings-Guide)）。先用測速網站量一次，不到的話改裝在家裡網路最快、最好是接網路線的那台。
+- **電腦平常很少開**：收益只在電腦開著時累積，為它特地開機的話，上面算過電費會比收益高。改裝在家裡本來就長時間開著的那台，不要為它另外開機。
+- **在意 IP 被拿去用**：EarnApp 的營運商是 Bright Data（[EarnApp 官網](https://earnapp.com/)頁尾），一家替客戶蒐集公開網頁資料的公司，你分享的頻寬就是給這些流量用。在意的話，只裝在非工作用、沒有機密檔案的電腦，公司網路上不要裝。
+- **擔心帳號被停用、餘額拿不回來**：Trustpilot 上 2025–2026 年仍有用戶回報在出金時帳號被停用；EarnApp 在回覆裡表示只停用違反使用條款的帳號（例如多開帳號、用虛擬機或代理）。對應做法：一人一個帳號、不掛 VPN 或虛擬機；餘額不要放著累積，滿 US$10 就出金，或在後台開 Auto-Redeem，滿 US$10 自動出金（[EarnApp 官方說明](https://help.earnapp.com/hc/en-us/articles/10147246886801--What-are-the-available-payment-methods-and-processing-time)）。
 {{< /skip-box >}}
 
 **適合裝的情況：**
@@ -205,13 +204,13 @@ draft: false
 - 出金門檻：EarnApp $10 < Honeygain $20（EarnApp 仍更低）
 - 月均收益：台灣用戶兩個都差不多，$1–2 USD
 - 設定時間：EarnApp 10 分鐘，Honeygain 8 分鐘
-- 最大差異：EarnApp 改按時計費後收益更穩定，但也有隨機停權的風險（Honeygain 這方面投訴較少）
+- 最大差異：EarnApp 改按時計費後費率固定、好估算（實際仍看流量需求）；帳號停用的回報要靠「滿 US$10 就出金」降低損失（見上方）
 
 如果想只裝一個，EarnApp 的出金門檻仍低於 Honeygain，適合先確認流程是否可行。如果已經裝了 Honeygain，試試並跑也無妨，額外設定只要 10 分鐘。
 
 ---
 
-官網連結：<a href="https://earnapp.com/" rel="sponsored nofollow noopener" target="_blank">EarnApp 官網</a>（官方非推薦碼連結；user 後續如有提供推薦碼可替換）
+官網連結：[EarnApp 官網](https://earnapp.com/)
 
 ---
 

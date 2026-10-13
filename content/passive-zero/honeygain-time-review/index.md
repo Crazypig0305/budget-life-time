@@ -1,7 +1,7 @@
 ---
 title: "Honeygain 台灣時間帳：設定 8 分鐘、三個月賺多少、折算時薪值不值得"
 date: 2022-01-20
-lastmod: 2026-10-13T06:00:00+08:00
+lastmod: 2026-10-13T14:01:00+08:00
 description: "Honeygain 設定花了我 8 分鐘，裝好就沒再碰。三個月後打開看，賺了多少？換算時薪值不值？本文給你電費成本一起算進去的真實時間帳，再附一個自己填的 ROI 表讓你判斷。"
 categories: ["passive-zero"]
 tags: ["Honeygain", "掛機", "被動收入", "頻寬共享", "時間帳", "台灣實測"]
@@ -9,7 +9,7 @@ image: "hero.jpg"
 draft: false
 ---
 
-> 📌 本文含聯盟連結。透過文中連結註冊，本站可能獲得分潤，但不影響你的費用或平台條款，也不影響本文評測立場。
+> 📌 本文的 Honeygain 連結都是官方網址，沒有附帶分潤代碼；你透過連結註冊，本站不會因此獲得分潤。
 
 ---
 
@@ -91,14 +91,14 @@ Honeygain 目前有兩種出金方式：
 **標準模式（PayPal）**
 - 最低出金門檻：$20 USD（20,000 Credits）
 - 以我的月均 $1.37 計算，約需 **14–15 個月**才能第一次出金
-- 出金流程：點 Request Payout → 輸入 PayPal 信箱 → 約 3 個工作天入帳
+- 出金流程：後台按 Request Payout → 收 Honeygain 付款處理商 Tipalti 寄來的邀請信、註冊並填 PayPal 信箱 → 官方說明通常 2 個工作天內入帳（[Honeygain 官方出金說明](https://honeygain.com/blog/paypal-payouts-step-by-step-instructions)）
 
-**JumpTask 模式（JMPT 加密貨幣）**
-- 最低出金門檻：0.5 JMPT（約 $0.5 USD，門檻大幅降低）
-- 比標準模式多 +10% Credits 加成
-- 需要額外建立 JumpTask 錢包，涉及加密貨幣，操作門檻較高
+**JumpTask 模式（收益轉到 JumpTask 平台再出金）**
+- 開啟後，收益會轉到 JumpTask 平台，以點數計，1,000 點＝US$1；US$0.50 起就能出金，可以換 PayPal、禮品卡或加密貨幣（[Honeygain 官方 JumpTask 模式說明](https://www.honeygain.com/jumptask-mode/)）
+- 開啟後另有 +10% 加成（[Honeygain 官方部落格](https://www.honeygain.com/blog/honeygain-and-jumptask-over-a-year-of-thriving-friendship)，2026 年 3 月的文章，沒寫截止日，以後台顯示為準）
+- 開法三步：在 Honeygain 後台右上角按錢包切換鈕 → 註冊一個 JumpTask 帳號 → 把 JumpTask 帳號同步回 Honeygain
 
-對不熟加密貨幣的人，標準模式門檻雖高（$20），流程反而更直接。如果你想知道「領的是加密貨幣」的掛機工具出金到底要過幾關、各花多少時間，我在 [TRXFlow 協作軌時間帳](/passive-zero/trxflow-time-cost/)把交易所 KYC 到台幣到帳整段逐筆記過一次。
+怎麼選：兩種都能領到 PayPal，差別在流程。標準模式只用 Honeygain 一個帳號，但要等累積到 US$20；JumpTask 模式要多註冊一個 JumpTask 帳號，出金改在 JumpTask 平台操作，換來的是 US$0.50 就能領。想早點拿到第一筆錢的人，開 JumpTask 模式；不想多管一個帳號、能等一年多的，用標準模式。
 
 ---
 
@@ -124,7 +124,7 @@ Honeygain 目前有兩種出金方式：
 | 台灣電費（夏天用電段） | 約 NT$4.7/度 |
 | 三個月電費 | 172.8 × 4.7 ≈ **NT$812** |
 | 三個月累積 | $4.10 USD ≈ **NT$127** |
-| **收益 vs 電費** | **虧損約 NT$685** |
+| 收益 − 電費（電腦專為它開著時）| 約 −NT$685 |
 
 如果整台電腦是為了 Honeygain 專門開著，三個月電費比收益多出約 NT$685。
 
@@ -134,12 +134,10 @@ Honeygain 目前有兩種出金方式：
 
 ## 哪種情況值得裝？哪種情況建議跳過？
 
-{{< skip-box title="這種情況建議跳過" >}}
-- 頻寬 < 100 Mbps（台灣用戶月均收益會更低，可能連 $0.5 USD 都難達到）
-- 每月實際用機時間 < 8 小時（電費成本遠高於收益）
-- 在乎個人隱私的用戶（Honeygain 需要共享你的 IP 與頻寬，過去有研究指出資安疑慮）
-- 無法接受 $20 門檻需等 1 年以上才能出金的節奏
-- 電腦裡有高機密資料（官方建議謹慎考慮）
+{{< skip-box title="裝之前先對照：這幾種情況要換個做法" >}}
+- **電腦平常很少開**：收益只在電腦開著時才累積，為它特地開機的話，上面算過電費會比收益高。改裝在家裡本來就長時間開著的那台，不要為它另外開機。
+- **等不了 14–15 個月才出第一次金**：改開 JumpTask 模式，US$0.50 就能出金（見上方出金段）。
+- **在意 IP 與資安**：Honeygain 是拿你的 IP 和頻寬讓別人的流量經過。[Cisco Talos 2021 年的研究](https://blog.talosintelligence.com/proxyware-abuse/)指出兩件事：網路上有假冒 Honeygain 的安裝檔夾帶惡意程式；經過你網路的流量，對外看起來是從你這邊發出去的。降低風險的做法：只從官網下載安裝檔；裝在沒有工作資料、沒有機密檔案的電腦；公司網路或跟家人共用的工作電腦上不要裝。
 {{< /skip-box >}}
 
 **適合繼續裝的情況：**
@@ -181,17 +179,17 @@ Honeygain 目前有兩種出金方式：
 
 它的使用方式就應該是這樣：不期待、不追、設好就讓它跑，某天帳戶裡多一點就看到了。期望不要設太高，月均 $1–2 USD 就是台灣用戶的現實，拿它當「電腦反正在開著、多賺一點閒錢」，而不是當作固定收入來源。
 
-如果你符合「電腦本來就長時間開著」這個條件，裝了不虧。不符合的話，省下那 8 分鐘做別的事。
+電腦本來就長時間開著的人，今天花 8 分鐘從官網裝好，一個月後打開後台看一次 Credits；想早點拿到第一筆錢，就順手切成 JumpTask 模式。電腦平常不常開的人，換成家裡本來就長開的那台來裝，不要為它特地開機。
 
 ---
 
-官網連結：<a href="https://www.honeygain.com/" rel="sponsored nofollow noopener" target="_blank">Honeygain 官網</a>（非推薦碼，純官方連結；user 後續如有提供推薦碼可替換）
+官網連結：[Honeygain 官網](https://www.honeygain.com/)
 
 ---
 
 延伸閱讀：[EarnApp 2022 實測：改版後時薪換算給你看](/passive-zero/earnapp-2022-review/)
 
-延伸閱讀：[TRXFlow 協作軌時間帳：設定 30 分鐘、出金過三關，一年折算時薪值不值得](/passive-zero/trxflow-time-cost/)
+延伸閱讀：[TRXFlow 協作軌時間帳：設定 30 分鐘、第一年動手 4.5 小時，折算時薪值不值得](/passive-zero/trxflow-time-cost/)
 
 延伸閱讀：看完整分類 [零時間躺賺：設定一次、之後完全不用管的被動收入實測](/passive-zero/)
 
