@@ -15,8 +15,11 @@
   {{ $ogImage = "/og-default.jpg" | absURL }}
 {{ end }}
 
-{{/* Open Graph */}}
-<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+{{/* Open Graph — og:type：只有真文章（6 內容分類下 + 有真實日期，與 schema.html / page.html 同口徑）輸出 article、
+     首頁／分類頁／about／privacy／contact／start 等一律 website（2026-10-14） */}}
+{{ $ogSections := slice "saving-tips" "passive-zero" "daily-5min" "weekly-tasks" "setup-once" "worth-learning" }}
+{{ $ogIsArticle := and (eq .Kind "page") (in $ogSections .Section) (not .Date.IsZero) }}
+<meta property="og:type" content="{{ if $ogIsArticle }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">

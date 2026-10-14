@@ -1,10 +1,12 @@
 {{ define "main" }}
 
 {{/* ── DATE STRIP ── */}}
+{{/* 2026-10-14：原顯示「今天日期＋星期」——在文章頂端比 byline 發布日更醒目，訪客容易誤讀成文章日期、
+     Google 發布日期指引也要求頁面上其他日期越少越好；改顯示所在分類（手帳書脊標籤），日期只留 byline。 */}}
 <div class="date-strip">
-  <span id="today-date">{{ now.Format "2006年1月2日" }}</span>
-  <span class="date-sep">·</span>
-  <span id="today-weekday">星期{{ substr "日一二三四五六" (int (now.Weekday)) 1 }}</span>
+  <span>時光存摺</span>
+  {{ with .CurrentSection }}{{ if not .IsHome }}<span class="date-sep">·</span>
+  <span>{{ .Title }}</span>{{ end }}{{ end }}
 </div>
 
 {{/* 真正部落格文章判定（與 schema.html 口徑一致）：在 6 內容分類下 + 有真實日期 */}}

@@ -1,11 +1,13 @@
 {{ define "main" }}
 
 {{/* ── DATE STRIP ── */}}
+{{/* 2026-10-14：原顯示「今天日期＋星期」（建置當下日期、再由 JS 換成訪客本機今天）——不是任何內容的日期，
+     沒跑 JS 的讀取端（AI 爬蟲／curl／預覽卡）看到的是建置日、會停在上次部署那天。改顯示全站真實的最近更新日。 */}}
+{{ $stripSections := slice "saving-tips" "passive-zero" "daily-5min" "weekly-tasks" "setup-once" "worth-learning" }}
+{{ $stripPages := where site.RegularPages "Section" "in" $stripSections }}
 <div class="date-strip">
-  <span id="today-date">{{ now.Format "2006年1月2日" }}</span>
-  <span class="date-sep">·</span>
-  <span id="today-weekday">星期{{ substr "日一二三四五六" (int (now.Weekday)) 1 }}</span>
-  <span class="date-sep">·</span>
+  {{ with $stripPages }}<span>最近更新 {{ (index (sort . "Lastmod" "desc") 0).Lastmod.Format "2006年1月2日" }}</span>
+  <span class="date-sep">·</span>{{ end }}
   <span>用時間換幸福</span>
 </div>
 
@@ -138,7 +140,7 @@
     }}
 
     {{ range $ladderData }}
-    <a href="{{ .url }}" class="ladder-item" style="--step-color:var(--step-{{ .step }})">
+    <a href="{{ .url }}" class="ladder-item" style="--step-color:var(--step-{{ .step }});--step-text:var(--step-{{ .step }}-text)">
       <div class="ladder-time">
         <div class="ladder-time-main">{{ .timeMain }}</div>
         <div class="ladder-time-sub">{{ .timeSub }}</div>
@@ -191,7 +193,7 @@
         {{ end }}
       </div>
       <div class="article-body">
-        <div class="article-cat-tag" style="color:var(--step-{{ $step }})">{{ $p.CurrentSection.Title }}</div>
+        <div class="article-cat-tag" style="color:var(--step-{{ $step }}-text)">{{ $p.CurrentSection.Title }}</div>
         <h3 class="article-title">{{ $p.Title }}</h3>
         {{ if eq $i 0 }}{{ with $p.Params.description }}<p class="article-excerpt">{{ . }}</p>{{ end }}{{ end }}
         <div class="article-meta">
@@ -205,7 +207,7 @@
       <div style="height:6px;background:linear-gradient(90deg,var(--step-5) 0%,var(--step-4) 50%,var(--step-3) 100%);opacity:.70;"></div>
       <div class="article-body">
         <div class="article-body-main">
-          <div class="article-cat-tag" style="color:var(--step-{{ $step }})">{{ $p.CurrentSection.Title }}</div>
+          <div class="article-cat-tag" style="color:var(--step-{{ $step }}-text)">{{ $p.CurrentSection.Title }}</div>
           <h3 class="article-title">{{ $p.Title }}</h3>
           {{ with $p.Params.description }}<p class="article-excerpt">{{ . }}</p>{{ end }}
         </div>
@@ -224,7 +226,7 @@
 {{/* ── NEWBIE BANNER ── */}}
 <div class="newbie-banner">
   <div>
-    <h3 class="banner-h">不確定從哪裡開始？</h3>
+    <h2 class="banner-h">不確定從哪裡開始？</h2>
     <p class="banner-desc">告訴我你的時間狀況，我幫你找到最適合的第一步。</p>
   </div>
   <a href="/start/" class="banner-btn">新手從這裡開始 →</a>

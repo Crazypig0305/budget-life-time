@@ -37,7 +37,7 @@ html { scroll-behavior: smooth; }
 
   --ink:        #231608;
   --ink-mid:    #5C4433;
-  --ink-lt:     #9C8472;
+  --ink-lt:     #776354;   /* 2026-10-14 對比修：#9C8472→#776354 同色相降亮度（只當文字色用）；在 paper 3.38→5.45、bg 2.88→4.63、gold-pale 2.80→4.51 */
   --ink-xs:     #D4C8B4;
 
   --gold:       #7A5C14;
@@ -65,8 +65,19 @@ html { scroll-behavior: smooth; }
   --step-4: #A85834;   /* 赤陶 terra */
   --step-5: #7A4B52;   /* 暗玫瑰 plum */
 
+  /* 文字專用墨（2026-10-14 對比修）：芥末、赤陶當「字色」時在米紙底上不到 4.5:1，
+     同色相降亮度到剛好過 4.5:1；色塊／邊框／插圖／節點仍用上面原色。 */
+  --mustard-text: #876208;  /* 芥末字 #B8860B→#876208：paper 3.12→5.33、bg 2.66→4.53、warn-bg 2.79→4.85 */
+  --terra-text:   #A05431;  /* 赤陶字 #A85834→#A05431：paper 4.90→5.29、bg 4.17→4.50 */
+  --step-0-text: var(--step-0);
+  --step-1-text: var(--step-1);
+  --step-2-text: var(--step-2);
+  --step-3-text: var(--mustard-text);
+  --step-4-text: var(--terra-text);
+  --step-5-text: var(--step-5);
+
   --sb-text:   rgba(255,247,230,.88);
-  --sb-muted:  rgba(255,247,230,.44);
+  --sb-muted:  rgba(255,247,230,.47);   /* 2026-10-14 .44→.47：疊 #1E120A 4.17→4.60 */
   --sb-subtle: rgba(255,247,230,.05);
   --sb-border: rgba(255,247,230,.10);
 
@@ -217,7 +228,7 @@ body {
 }
 .sidebar-footer a {
   font-size: 14px;
-  color: rgba(255,247,230,.44);
+  color: var(--sb-muted);   /* 2026-10-14：原寫死 .44（4.17:1）、改用 token（.47、4.60:1） */
   text-decoration: none;
   font-family: var(--sans);
   font-weight: 300;
@@ -435,15 +446,14 @@ body {
   font-family: var(--tabular);
   font-size: 11.5px;
   letter-spacing: .12em;
-  color: var(--terra);
+  color: var(--terra-text);   /* 2026-10-14：字改文字墨（原 --terra 疊 opacity .9 在 bg 上 3.8:1 → 4.50:1） */
   font-style: normal;
   text-transform: uppercase;
-  border: 1.4px solid var(--terra);
+  border: 1.4px solid rgba(168,88,52,.9);   /* 框線維持原 --terra＋原 .9 淡度（原寫法是整顆 opacity .9、改只作用在框線） */
   border-radius: 3px;
   padding: 4px 9px;
   transform: rotate(-3deg);
   transform-origin: left center;
-  opacity: .9;
 }
 
 /* ── TIME LADDER ── */
@@ -485,7 +495,7 @@ body {
   font-family: var(--tabular); /* v4: tabular mono */
   font-size: 14.5px;
   font-weight: 600;
-  color: var(--step-color, var(--gold));
+  color: var(--step-text, var(--step-color, var(--gold)));
   letter-spacing: .02em;
   line-height: 1;
   margin-bottom: 4px;
@@ -527,7 +537,7 @@ body {
 .ladder-cat {
   font-size: 13px;
   font-family: var(--sans);
-  color: var(--step-color, var(--gold));
+  color: var(--step-text, var(--step-color, var(--gold)));
   letter-spacing: .09em;
   font-weight: 400;
   margin-bottom: 4px;
@@ -1125,7 +1135,7 @@ body {
   font-family: var(--sans);
   font-size: 13.5px;
   font-weight: 500;
-  color: var(--warn-border);
+  color: var(--mustard-text);   /* 2026-10-14：標題字改文字墨（2.79→4.85）、框線／色塊維持 --warn-border */
   letter-spacing: .07em;
 }
 .skip-box-list {
@@ -1209,7 +1219,7 @@ body {
 .budget-table .td-input-hint {
   font-family: var(--tabular);
   font-size: 13px;
-  color: var(--ink-xs);
+  color: var(--ink-lt);   /* 2026-10-14：原 --ink-xs（1.58:1、幾乎看不見）；提示字是要讀的字、改 --ink-lt */
   font-style: italic;
   text-align: right;
   letter-spacing: .04em;
@@ -1218,7 +1228,7 @@ body {
   font-family: var(--tabular);
   font-weight: 600;
   font-size: 15px;
-  color: var(--step-4);
+  color: var(--terra-text);
   font-variant-numeric: tabular-nums;
   text-align: right;
 }

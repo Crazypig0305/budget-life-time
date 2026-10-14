@@ -1,9 +1,9 @@
 {{- /* ══════════════════════════════════════════════════════════════════════
-     schema.html — JSON-LD 結構化資料、依頁面類型分流輸出（GEO 硬閘 G17-G21）
+     schema.html — JSON-LD 結構化資料、依頁面類型分流輸出（GEO 硬閘 G17/G18；G19 FAQPage 為鼓勵項、有輸出才驗合法）
      ─────────────────────────────────────────────────────────────────────
      home（.IsHome）          → WebSite + Organization
      section list（.IsSection）→ CollectionPage + BreadcrumbList
-     真正部落格文章            → BlogPosting (+image 僅非空) + BreadcrumbList + FAQPage(條件)
+     真正部落格文章            → BlogPosting (author=Organization、+image 僅非空) + BreadcrumbList + FAQPage(僅「常見問題」區塊 ≥2 組)
      ceremony / 無真實日期頁   → WebPage（不輸出零日期 BlogPosting）
      #27 制度化：OG image 統一由 og-image-resolve partial 解析
      #29 制度化：dict + jsonify + safeJS
@@ -84,7 +84,9 @@
 {{- $dateModified := $datePublished -}}
 {{- if not .Lastmod.IsZero }}{{ $dateModified = .Lastmod.Format "2006-01-02" }}{{ end -}}
 
-{{- $author := dict "@type" "Person" "name" "時光存摺" -}}
+{{- /* author = Organization（2026-10-14）：署名是品牌名「時光存摺」、本站沒有具名的真人作者；
+     Google Article 結構化資料文件：人用 Person、組織用 Organization。 */ -}}
+{{- $author := dict "@type" "Organization" "name" site.Title "url" site.BaseURL -}}
 {{- $publisher := dict "@type" "Organization" "name" site.Title "url" site.BaseURL -}}
 
 {{- /* BlogPosting：image 僅在解析到非空 url 時才以 merge 加入（解析不到整個 image 鍵省略） */ -}}
@@ -120,31 +122,46 @@
 {{- $breadcrumb := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs -}}
 <script type="application/ld+json">{{ $breadcrumb | jsonify (dict "indent" "  ") | safeJS }}</script>
 
-{{- /* ── FAQPage（條件性硬閘 G19）──
-     偵測渲染後 .Content 中以「？/?」結尾的 H2/H3（問句 heading）、取該 heading 到
-     下一個 H2/H3 之間的 HTML 純文字為答案。≥ 2 組則輸出 FAQPage。
-     口徑對齊 stage-08 G19（H2/H3 結尾 ? / ？）。 */ -}}
+{{- /* ── FAQPage（鼓勵項 G19：有輸出才驗合法；2026-10-14 改只收「常見問題」區塊）──
+     舊版掃全文所有「？」結尾的 H2/H3，把文章步驟小標（例「第一步：找銀行要多久？」、
+     答案 1,600 字）也當 FAQ。現只收標題含「常見問題」的 H2 區塊（到下一個 H2 或 <hr> 為止），
+     區塊內兩種寫法都認：
+       (a) H3 問句：問題＝H3 文字、答案＝到下一個 H3 為止的內文
+       (b) 粗體問句：<p><strong>Q：…？</strong>，答案＝到下一個粗體問句為止的內文
+     問題開頭的「Q：／Q1：」前綴去掉。≥ 2 組才輸出 FAQPage。 */ -}}
 {{- $content := .Content -}}
 {{- $faqItems := slice -}}
-{{- $marked := replaceRE "(?i)(<h[23][ >])" "␟$1" $content -}}
-{{- $chunks := split $marked "␟" -}}
-{{- range $chunks -}}
-  {{- $chunk := . -}}
-  {{- $hMatch := findRE "(?is)<h[23][^>]*>(.*?)</h[23]>" $chunk 1 -}}
-  {{- if $hMatch -}}
-    {{- $hFull := index $hMatch 0 -}}
-    {{- $qText := $hFull | plainify | strings.TrimSpace -}}
-    {{- if or (hasSuffix $qText "？") (hasSuffix $qText "?") -}}
-      {{- $afterH := replaceRE "(?is)^.*?</h[23]>" "" $chunk -}}
-      {{- $answerRaw := replaceRE "(?is)<h[1-6][^>]*>.*$" "" $afterH -}}
-      {{- $answer := $answerRaw | plainify | strings.TrimSpace -}}
-      {{- if and (gt (len $qText) 0) (gt (len $answer) 0) -}}
-        {{- $faqItems = $faqItems | append (dict
-          "@type" "Question"
-          "name" $qText
-          "acceptedAnswer" (dict "@type" "Answer" "text" $answer)
-        ) -}}
-      {{- end -}}
+{{- $faqHead := findRE "(?is)<h2[^>]*>[^<]*常見問題.*?</h2>" $content 1 -}}
+{{- if $faqHead -}}
+  {{- $afterHead := index (split $content (index $faqHead 0)) 1 -}}
+  {{- $section := replaceRE "(?is)(<h2[ >]|<hr).*$" "" $afterHead -}}
+  {{- $useH3 := findRE "(?i)<h3[ >]" $section 1 -}}
+  {{- $marked := "" -}}
+  {{- if $useH3 -}}
+    {{- $marked = replaceRE "(?i)(<h3[ >])" "␟$1" $section -}}
+  {{- else -}}
+    {{- $marked = replaceRE `(?i)(<p>\s*<strong>\s*Q\d*[：:])` "␟$1" $section -}}
+  {{- end -}}
+  {{- range after 1 (split $marked "␟") -}}
+    {{- $chunk := . -}}
+    {{- $qHtml := "" -}}
+    {{- $aHtml := "" -}}
+    {{- if $useH3 -}}
+      {{- $qHtml = index (findRE "(?is)<h3[^>]*>.*?</h3>" $chunk 1) 0 -}}
+      {{- $aHtml = replaceRE "(?is)^.*?</h3>" "" $chunk -}}
+    {{- else -}}
+      {{- $qHtml = index (findRE "(?is)<strong>.*?</strong>" $chunk 1) 0 -}}
+      {{- $aHtml = replaceRE "(?is)^.*?</strong>" "" $chunk -}}
+    {{- end -}}
+    {{- $qText := $qHtml | plainify | htmlUnescape | strings.TrimSpace -}}
+    {{- $qText = replaceRE `^Q\d*[：:]\s*` "" $qText -}}
+    {{- $answer := $aHtml | plainify | htmlUnescape | strings.TrimSpace -}}
+    {{- if and (gt (len $qText) 0) (gt (len $answer) 0) -}}
+      {{- $faqItems = $faqItems | append (dict
+        "@type" "Question"
+        "name" $qText
+        "acceptedAnswer" (dict "@type" "Answer" "text" $answer)
+      ) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
