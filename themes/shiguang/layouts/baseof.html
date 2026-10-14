@@ -32,6 +32,39 @@
     document.querySelectorAll('.nav-item').forEach(function(a){
       if(path.startsWith(a.getAttribute('href'))) a.classList.add('active');
     });
+    // Table scrollers (render-table.html): keep the keyboard stop + region
+    // role only while the table is wider than its box; drop them when it fits.
+    // Raw-HTML tables in posts (budget-table blocks) skip the render hook, so
+    // wrap them here the same way.
+    document.querySelectorAll('.page-content table').forEach(function(t){
+      if(t.parentElement.classList.contains('table-scroll')) return;
+      var heads = [];
+      t.querySelectorAll('thead th').forEach(function(th){ var s = th.textContent.trim(); if(s) heads.push(s); });
+      var label = heads.length ? '表格：' + heads.slice(0,4).join('、') + (heads.length > 4 ? ' 等 ' + heads.length + ' 欄' : '') : '表格';
+      var w = document.createElement('div');
+      w.className = 'table-scroll'; w.setAttribute('data-label', label);
+      t.parentNode.insertBefore(w, t); w.appendChild(t);
+    });
+    var scrollers = document.querySelectorAll('.table-scroll');
+    function syncScrollers(){
+      scrollers.forEach(function(el){
+        if(el.scrollWidth > el.clientWidth + 1){
+          el.setAttribute('tabindex','0'); el.setAttribute('role','region');
+          el.setAttribute('aria-label', el.getAttribute('data-label') || '表格');
+        } else {
+          el.removeAttribute('tabindex'); el.removeAttribute('role'); el.removeAttribute('aria-label');
+        }
+      });
+    }
+    if(scrollers.length){
+      syncScrollers();
+      if(window.ResizeObserver){
+        var ro = new ResizeObserver(syncScrollers);
+        scrollers.forEach(function(el){ ro.observe(el); if(el.firstElementChild) ro.observe(el.firstElementChild); });
+      } else {
+        window.addEventListener('resize', syncScrollers);
+      }
+    }
   })();
   </script>
 

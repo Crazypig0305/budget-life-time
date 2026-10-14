@@ -1287,6 +1287,14 @@ body {
 .page-content strong { font-weight: 500; color: var(--ink); }
 .page-content blockquote { border-left: 3px solid var(--gold); padding: 10px 20px; margin: 20px 0; background: var(--gold-xlt); border-radius: 0 3px 3px 0; }
 .page-content table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; background: var(--paper); border-radius: 3px; overflow: hidden; box-shadow: var(--shadow-sm); }
+/* 表格橫滑容器（2026-10-14）：Markdown 表格一律由 _markup/render-table.html 包一層 .table-scroll。
+   卡片外觀（紙底、圓角、淡陰影、上下距）移到容器上，表格放不下時在容器內左右捲動、
+   卡片不會被裁掉陰影。容器可被鍵盤聚焦（Tab 到後用方向鍵捲）；表格放得下時由
+   baseof.html 的 JS 拿掉 tabindex，不多一個 Tab 停點。 */
+.page-content .table-scroll { overflow-x: auto; max-width: 100%; margin: 20px 0; background: var(--paper); border-radius: 3px; box-shadow: var(--shadow-sm); }
+.page-content .table-scroll > table { margin: 0; border-radius: 0; box-shadow: none; overflow: visible; }
+.page-content .table-scroll:focus { outline: none; }
+.page-content .table-scroll:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }  /* 內縮：預算表外框 overflow:hidden 會裁掉外擴的框線 */
 .page-content th { background: var(--gold-pale); color: var(--gold); font-family: var(--sans); font-weight: 500; font-size: 13px; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border-md); }
 .page-content td { padding: 10px 14px; color: var(--ink-mid); border-bottom: 1px solid var(--border); line-height: 1.7; }
 .page-content tr:last-child td { border-bottom: none; }
@@ -1362,9 +1370,9 @@ body {
   /* ── 手機文章欄溢出修法（2026-07-02）──
      文章欄可縮 + 寬表格/計算表獨立橫滑 + num-highlight 收流動單欄 + 觸控目標 44px */
   .page-content, .page-wrap-inner { min-width: 0; max-width: 100%; }
-  .budget-table-inner { overflow-x: auto; max-width: 100%; }
+  .budget-table-inner { max-width: 100%; }  /* 2026-10-14：橫滑改由內層 .table-scroll 負責（可鍵盤聚焦） */
+  .page-content .budget-table-wrap > table { display: block; overflow-x: auto; max-width: 100%; }  /* 無 JS 退路：內文手寫 HTML 表格由 baseof.html JS 包進 .table-scroll 後此規則即不再命中 */
   .budget-table-wrap { max-width: 100%; }
-  .page-content table { display: block; overflow-x: auto; max-width: 100%; }
   .num-highlight { grid-template-columns: minmax(0, 1fr); }
   .page-content img { max-width: 100%; height: auto; }
   .page-content pre { overflow-x: auto; max-width: 100%; }

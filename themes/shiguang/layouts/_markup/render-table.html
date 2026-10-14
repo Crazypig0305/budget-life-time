@@ -1,0 +1,34 @@
+{{- /*
+  Markdown table render hook (2026-10-14): wraps every article table in a
+  keyboard-reachable horizontal scroller (axe scrollable-region-focusable).
+  Static HTML ships role/tabindex/aria-label so it works without JS;
+  baseof.html JS removes them when the table fits (no extra tab stop).
+  aria-label = header cells, so screen readers hear what the table is about.
+*/ -}}
+{{- $heads := slice -}}
+{{- range .THead -}}{{- range . -}}{{- with .Text | plainify | htmlUnescape | strings.TrimSpace -}}{{- $heads = $heads | append . -}}{{- end -}}{{- end -}}{{- end -}}
+{{- $label := "表格" -}}
+{{- with $heads -}}{{- $label = printf "表格：%s" (delimit (first 4 .) "、") -}}{{- if gt (len $heads) 4 -}}{{- $label = printf "%s 等 %d 欄" $label (len $heads) -}}{{- end -}}{{- end -}}
+<div class="table-scroll" role="region" tabindex="0" aria-label="{{ $label }}" data-label="{{ $label }}">
+<table
+  {{- range $k, $v := .Attributes }}{{- if $v }}{{- printf " %s=%q" $k $v | safeHTMLAttr }}{{- end }}{{- end }}>
+{{- with .THead }}
+<thead>
+  {{- range . }}
+<tr>
+    {{- range . }}<th{{ with .Alignment }}{{ printf " style=%q" (printf "text-align:%s" .) | safeHTMLAttr }}{{ end }}>{{ .Text }}</th>{{- end }}
+</tr>
+  {{- end }}
+</thead>
+{{- end }}
+{{- with .TBody }}
+<tbody>
+  {{- range . }}
+<tr>
+    {{- range . }}<td{{ with .Alignment }}{{ printf " style=%q" (printf "text-align:%s" .) | safeHTMLAttr }}{{ end }}>{{ .Text }}</td>{{- end }}
+</tr>
+  {{- end }}
+</tbody>
+{{- end }}
+</table>
+</div>
