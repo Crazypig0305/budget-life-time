@@ -111,7 +111,7 @@ draft: false
 
 名單內做台幣出入金的主要選項，我拿這篇讀者最在意的三個數字逐家比——KYC 要等幾天（官方數字）、收回饋用的 TRC-20 鏈支不支援、台幣出金抽多少：
 
-| | KYC 官方時效 | TRC-20 USDT 入金 | 台幣出金手續費 |
+| 交易所 | KYC 官方時效 | TRC-20 USDT 入金 | 台幣出金手續費 |
 |---|---|---|---|
 | [HOYA BIT](https://support.hoyabit.com/newers/%E8%BA%AB%E5%88%86%E9%A9%97%E8%AD%89%E9%9C%80%E8%A6%81%E5%A4%9A%E4%B9%85%E6%99%82%E9%96%93%EF%BC%9F/) | 1–2 個工作天（官方）| 支援 | 台新銀行 NT$0、跨行 NT$15（[官方費率頁](https://hoyabit.com/articles/fees)）；365 天可出金、最快 10 分鐘到帳 |
 | [BitoPro 幣託](https://bitopro.zendesk.com/hc/zh-tw/articles/360001179412) | 2–3 個工作天（官方）| 支援 | NT$30／筆、單筆最低 NT$100 起提（[官方提領說明](https://support.bitopro.com/hc/zh-tw/articles/21572752789017)）|
