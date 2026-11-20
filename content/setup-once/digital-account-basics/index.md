@@ -72,7 +72,7 @@ image: "hero.jpg"
 
 **這對你的意思：** 如果開數位帳戶是為了放一筆備用金、領利息，第三類通常夠用，錢轉進去沒有限制。卡住的情況是「哪天要把一大筆錢轉給別人」，例如付房租、付學費。這時候有兩條路：開戶時順便做視訊，或之後依該行流程升級成第一類。視訊這一步照銀行流程估約 5–10 分鐘，升級第一類若要跑分行，交通和排隊另外算。
 
-各家第三類用什麼驗證、限額怎麼寫，本站整理過幾家：[台灣銀行](/setup-once/bank-of-taiwan-digital-account/)、[國泰世華](/setup-once/cathay-digital-account/)、[星展](/setup-once/dbs-digital-account/)、[台新 Richart](/setup-once/richart-account-setup/)。
+各家第三類用什麼驗證、限額怎麼寫，本站整理過幾家：[台灣銀行](/setup-once/bank-of-taiwan-digital-account/)、[國泰世華](/setup-once/cathay-digital-account/)、[星展](/setup-once/dbs-digital-account/)、[台新 Richart](/setup-once/richart-account-setup/)、[玉山](/setup-once/esun-digital-account/)。
 
 ---
 

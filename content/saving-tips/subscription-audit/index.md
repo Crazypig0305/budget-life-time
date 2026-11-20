@@ -243,7 +243,7 @@ App Store 的訂閱項目頁面可以直接操作，兩步驟完成；Google Pla
 
 ### 免費試用忘記取消，可以申請退款嗎？
 
-透過 App Store 扣款的，可以向 Apple 申請退款，一般首次申請成功率較高，可至 reportaproblem.apple.com 提出。直接向商家付款的比較難退，要看各服務的退款政策。最保險的做法是試用開始時設一個到期前兩天的提醒。
+透過 App Store 扣款的，可以向 Apple 申請退款，一般首次申請成功率較高，可至 reportaproblem.apple.com 提出。直接向商家付款的比較難退，要看各服務的退款政策。最保險的做法是試用開始時設一個到期前兩天的提醒。foodpanda 與 Microsoft 這兩家的退款條件與申請步驟另外整理過：[foodpanda 取消訂閱能退款嗎？](/saving-tips/foodpanda-cancel-refund/)、[Microsoft 取消訂閱退款](/saving-tips/microsoft-subscription-refund/)。
 
 ### 每次清查都要從頭做，還是第二次以後會快一點？
 
